@@ -21,16 +21,18 @@ export const useAuth = () => useContext(AuthContext);
 export const AuthContextProvider = ({ children }) => {
     const [user, setUser] = useState({ email: null, uid: null });
     const [loading, setLoading] = useState(true);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
-                setUser({
-                    email: user.email,
-                    uid: user.uid,
-                });
+                setUser({email: user.email,
+                    uid: user.uid,});
+                setIsAuthenticated(true);
             } else {
                 setUser({ email: null, uid: null });
+                setIsAuthenticated(false);
             }
             setLoading(false);
         });
@@ -50,10 +52,9 @@ export const AuthContextProvider = ({ children }) => {
         try {
             const result = await signInWithPopup(auth, provider);
             const user = result.user;
-            setUser({
-                email: user.email,
-                uid: user.uid
-            });
+            setUser({ email: user.email,
+                uid: user.uid });
+            setIsAuthenticated(true);
         } catch (error) {
             console.error(error);
         }
@@ -61,11 +62,12 @@ export const AuthContextProvider = ({ children }) => {
 
     const logOut = async () => {
         setUser({ email: null, uid: null });
+        setIsAuthenticated(false);
         await signOut(auth);
     };
 
     return (
-        <AuthContext.Provider value={{ user, signUp, logIn, logOut, ProviderSignIn }}>
+        <AuthContext.Provider value={{ user, signUp, logIn, logOut, ProviderSignIn, isAuthenticated  }}>
             {loading ? null : children}
         </AuthContext.Provider>
     );

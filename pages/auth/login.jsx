@@ -1,13 +1,14 @@
-import React, { useState, useRef, } from "react";
-import { FormProvider, useForm, useWatch } from "react-hook-form";
+import React, { useState } from "react";
+import { FormProvider, useForm } from "react-hook-form";
 import { useRouter } from "next/router";
 import { useAuth } from "@/context/AuthContext";
 
 
-const SignupPage = () => {
+
+const LoginPage = () => {
   const methods = useForm({ mode: "onBlur" });
   const [errorMessage, setErrorMessage] = useState(null);
-  const { signUp, ProviderSignIn } = useAuth();
+  const { logIn, ProviderSignIn } = useAuth();
   const router = useRouter();
 
   const {
@@ -16,50 +17,32 @@ const SignupPage = () => {
     formState: { errors },
   } = methods;
 
-  const password = useWatch({
-    control: methods.control,
-    name: "password",
-  });
-  const confirmPassword = useWatch({
-    control: methods.control,
-    name: "confirmPassword",
-  });
-
   const onSubmit = async (data) => {
     try {
-      await signUp(data.email, data.password);
-
-      router.push("/dashboard");
+      await logIn(data.email, data.password);
+      router.push("./Profile");
     } catch (error) {
-      console.log(error);
+      console.log(error.message);
       const cleanErrorMessage = error.message.split('/')[1].replace(/[^a-zA-Z ]/g, " ");
       setErrorMessage(cleanErrorMessage);
-
     }
   };
 
-  const handleButtonClick = () => {
-    if (password !== confirmPassword) {
-      setErrorMessage("Passwords do not match");
-    } else {
-      handleSubmit(onSubmit)();
-    }
-  };
-
-
-  const handleGoogleSignUp = async () => {
+  const handleGoogleSignIn = async () => {
     try {
       await ProviderSignIn();
-      router.push("/dashboard");
+      router.push("./Profile");
     } catch (error) {
+      console.log(error.message);
       const cleanErrorMessage = error.message.split('/')[1].replace(/[^a-zA-Z ]/g, " ");
       setErrorMessage(cleanErrorMessage);
     }
   };
 
   return (
+    <>
     <div className="sign-up-form container mx-auto w-96 mt-12 mb-12 border-4 border-[#4285F4] rounded-lg shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80">
-      <h2 className="px-12 mt-8 text-center text-2xl font-semibold text-black-900">Sign Up</h2>
+      <h2 className="px-12 mt-8 text-center text-2xl font-semibold text-black-900">Log In</h2>
       <FormProvider {...methods}>
         <form action="" className="w-80 mx-auto pb-12 px-4" onSubmit={handleSubmit(onSubmit)}>
           <div className="mt-8">
@@ -91,37 +74,14 @@ const SignupPage = () => {
             {errors.password && <p className="text-red-400">{errors.password.message}</p>}
           </div>
 
-          <div className="mt-8">
-            <div className="flex items-center justify-between">
-              <label htmlFor="" className="block mb-3 font-sans text-black-900">
-                Confirm Password
-              </label>
-            </div>
-
-            <input
-              type="password"
-              {...register("confirmPassword", {
-                required: "Verify your password",
-              })}
-              className={`border border-solid rounded-lg ring:0 focus:ring-0 focus:outline-none border-gray-400 text-gray-500 text-normal py-3 h-12 px-6 text-lg w-full flex items-center`}
-            />
-            {errors.confirmPassword && (
-              <p className="text-red-400">{errors.confirmPassword.message}</p>
-            )}
-          </div>
-          {errorMessage && (
-            <div className="mt-8">
-              <p className="text-red-400">{errorMessage}</p>
-            </div>
-          )}
           <div className="flex justify-center pt-8">
             <button
-              type="button"
-              onClick={handleButtonClick}
+              type="submit"
               className={"text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80"}>
             
-              <p className="capitalize text-white font-medium mr-6 ml-6">submit</p>
+              <p className="capitalize text-white font-medium mr-6 ml-6">Login</p>
             </button>
+
           </div>
 
           <div className="inline-flex items-center justify-center w-full">
@@ -129,11 +89,9 @@ const SignupPage = () => {
           <span className="absolute px-3 font-medium text-gray-900 -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900">or</span>
           </div>
 
-
           <div className="flex justify-center pt-4">
-            <button
-              type="button"
-              onClick={handleGoogleSignUp}
+              <button type="button"
+                onClick={handleGoogleSignIn}
                 className={"text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80"}>
               <svg className="w-4 h-4 mr-2 -ml-1" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" role="img" 
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path fill="currentColor" 
@@ -142,11 +100,13 @@ const SignupPage = () => {
               </svg>
                 Continue with Google
               </button>
+              
           </div>
         </form>
       </FormProvider>
     </div>
+    </>
   );
 };
 
-export default SignupPage;
+export default LoginPage;

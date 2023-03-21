@@ -1,8 +1,7 @@
+import CoverLetter1 from '@/components/CoverLetter1';
 import Head from 'next/head'
+import Link from 'next/link';
 import React from "react";
-
-
-
 
 
 export default function Home() {
@@ -21,6 +20,11 @@ export default function Home() {
         <h1 className="text-3xl font-bold underline">
       Hello world!
     </h1>
+    <Link href={'/CoverLetter'}> Cover Letter</Link>
+
+    <CoverLetter1/>
+      
+    
         </>
       </main>
 

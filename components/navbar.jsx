@@ -14,19 +14,19 @@ const Navbar = ({ children }) => {
     {
       id: 2,
       name: "Login",
-      link: "/login",
+      link: "/auth/login",
     },
     {
       id: 3,
       name: "Sign Up",
-      link: "/signup",
+      link: "/auth/signup",
     },
   ];
 
   const handleLogout = async () => {
     try {
       await logOut();
-      router.push("/login");
+      router.push("/");
     } catch (error) {
       console.log(error.message);
     }
@@ -57,8 +57,13 @@ const Navbar = ({ children }) => {
             ):(
                 <>
                   <li className="my-3 md:my-0 items-center mr-4 md:inline-block block ">
-                    <Link href="/dashboard" className="text-blue-800 hover:text-blue-900 transition">
-                        Dashboard
+                    <Link href="/account/Profile" className="text-blue-800 hover:text-blue-900 transition">
+                        Profile
+                    </Link>
+                  </li>
+                  <li className="my-3 md:my-0 items-center mr-4 md:inline-block block ">
+                    <Link href="/CoverLetter" className="text-blue-800 hover:text-blue-900 transition">
+                        Cover Letter
                     </Link>
                   </li>
                   <li className="my-3 md:my-0 items-center mr-4 md:inline-block block ">

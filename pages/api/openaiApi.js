@@ -25,9 +25,9 @@ export default async function openAiRequest(req, res) {
         const response = await openAi.createChatCompletion({
             model:"gpt-3.5-turbo",
             messages:[
-                {"role":"system","content":"you are an expert professional resume and cover letter writer"},
-                {"role":"user","content":`this is the job description for the job that i am applying, and my experience and skills ${text}, i want you to write me a professional cover letter`},   
-                // {"role":"user","content":`hello, i am a candidate ${text}, who are you?`},   
+                // {"role":"system","content":"you are an expert professional resume and cover letter writer"},
+                // {"role":"user","content":`this is the job description for the job that i am applying, and my experience and skills ${text}, i want you to write me a professional cover letter`},   
+                {"role":"user","content":`hello, i am a candidate ${text}, who are you?`},   
 
             ],
             temperature: 0.6,
