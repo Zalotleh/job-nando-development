@@ -120,9 +120,9 @@ const Navbar = ({ children }) => {
               </>
             )}
           </ul>
+          {children}
         </nav>
       </section>
-      {children}
     </>
   );
 };
