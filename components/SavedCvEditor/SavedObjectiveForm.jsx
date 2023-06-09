@@ -9,7 +9,7 @@ export default function SavedObjectiveForm(props) {
 
   useEffect(() => {
     setObjective(props.objective)
-  }, [props.objective])
+  }, [])
 
   const handleChange = (e) => {
     setObjective({
