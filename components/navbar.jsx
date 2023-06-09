@@ -19,6 +19,8 @@ const Navbar = ({ children }) => {
 
   return (
     <>
+    {user.uid? (
+
       <section className={styles.container}>
         <div className={styles.logo}>
           <Link href="/">
@@ -28,7 +30,6 @@ const Navbar = ({ children }) => {
 
         <nav className={styles.navbar}>
           <ul className={styles.navLinks}>
-            {user.uid? (
               <>
                 
                 <li className={`${styles.navLink} ${styles.dropdown}`}>
@@ -74,7 +75,19 @@ const Navbar = ({ children }) => {
                   <a onClick={handleLogout}>Logout</a>
                 </li>
               </>
-            ):(
+          </ul>
+        </nav>
+      </section>
+      ):(
+        <section className={styles.container}>
+        <div className={styles.logo}>
+          <Link href="/">
+            <span className={styles.logoText}>365 Talent Hub</span>
+          </Link>
+        </div>
+
+        <nav className={styles.navbar}>
+          <ul className={styles.navLinks}>
               <>
                 
                 <li className={`${styles.navLink} ${styles.dropdown}`}>
@@ -118,11 +131,11 @@ const Navbar = ({ children }) => {
                   <Link href={'/auth/signup'}>Sign Up</Link>
                 </li>
               </>
-            )}
           </ul>
-          {children}
         </nav>
       </section>
+    )}
+      {children}
     </>
   );
 };

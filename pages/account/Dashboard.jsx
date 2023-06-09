@@ -124,7 +124,7 @@ function Dashboard() {
               href={'/account/deleteProfile'} 
               className={styles.profileLink}> 
               <img src="/delete.png" alt="remove user icon" /> 
-              Delete Accoun
+              Delete Account
             </Link>
 
           </div>
