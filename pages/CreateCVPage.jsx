@@ -35,13 +35,13 @@ export default function CreateCVPage() {
         notificationText={
           <>
           <p>
-            *Useful Tips:<n />
-            - Use the left resume builder to fill in your resume information<n />
-            - The right section is for real time resume preview.<n />
-            - Use the "AI Magic" button to tune and improve your content, the AI-powered model will provide you an improved text specifically for that resume section text.<n />
-            - You can create your own resume Summary and use the Ai-powered model to tune and improve its content Or you can auto generate your resume summary after finishing filling your resume information.<n />
-            - If you dont want a section to be in your resume, just leave the section empty and if necessary click on "Delete" button to remove it from your in the resme builder<n />
-            - Once you are done,add a title to your resume and click on "Save Resume" button<n />
+          <pre-line>Useful Tips:</pre-line>
+          <pre-line>- Use the left resume builder to fill in your resume information</pre-line>
+          <pre-line>- The right section is for real time resume preview.</pre-line>
+          <pre-line>- Use the 'AI Magic' button to tune and improve your content, the AI-powered model will provide you an improved text specifically for that resume section text.</pre-line>
+          <pre-line>- You can create your own resume Summary and use the Ai-powered model to tune and improve its content Or you can auto generate your resume summary after finishing filling your resume information.</pre-line>
+          <pre-line>- If you dont want a section to be in your resume, just leave the section empty and if necessary click on "Delete" button to remove it from your in the resme builder.</pre-line>
+          <pre-line>- Once you are done,add a title to your resume and click on "Save Resume" button.</pre-line>
           </p>
           </>
         }
