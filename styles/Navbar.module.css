@@ -1,0 +1,150 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgb(22 78 99);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    font-family: sans-serif, Helvetica, Arial;
+    width: 100%;
+  }
+
+
+  
+.logoText {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 800;
+  color: rgb(22 78 99); 
+  text-decoration: none;
+  line-height: 22px; 
+  letter-spacing: 0.01em;
+  text-shadow: 0 3px 3px #cdcdcd;
+  }
+
+/* .navbar {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+  } */
+  
+.navLinks {
+    width: auto;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.navLink {
+    font-size: 1.4rem;
+    margin-right: 1.5rem;
+    position: relative;
+    padding: 10px;
+  }
+
+.navLink:hover{
+    text-decoration: underline;
+    background-color: rgb(22 78 99);
+    border-radius: 5px;
+    color: white;
+}
+  
+.dropdown {
+    position: relative;
+  }
+  
+.dropdownToggle {
+    cursor: pointer;
+  }
+  
+.dropdownContent {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(22 78 99);
+    box-shadow: 0 2px 4px rgb(22 78 99);
+    padding: 1rem;
+    z-index: 1;
+    width: 250px;
+    border-radius: 5px;
+  }
+  
+.dropdown:hover .dropdownContent {
+    display: block;
+
+  }
+  
+.dropdownContent a {
+    display: block;
+    color: rgb(22 78 99);
+    font-size: 0.875rem;
+    padding: 0.5rem;
+    margin-top: 5px;
+    text-decoration: none;
+    background-color: #f7f7f7;
+    font-size: 1.25rem;
+
+  }
+  
+.dropdownContent a:hover {
+    color: white;
+    background-color: rgb(22 78 99);
+    border: 2px solid white;
+    font-size: 1.25rem;
+
+  }
+  
+
+
+.log_out{
+    cursor: pointer;
+    padding: 8px;
+    font-size: 1.4rem;
+    border: 1px solid rgb(170, 27, 27);
+    border-radius: 8px;
+    margin-left: 10px;
+    /* background-color: rgb(163, 35, 35); */
+    color: rgb(22 78 99);
+}
+
+.log_out:hover{
+    background-color: #f21f1f;
+    color: rgb(250, 250, 250);
+}
+
+.log_in_btn{
+  background-color: rgb(6 182 212);
+  color: white;
+  padding: 8px 15px;
+  font-size: 1.4rem;
+  border-radius: 8px;
+  margin-left: 10px;
+
+}
+
+.log_in_btn:hover{
+  background-color: rgb(22 78 99);
+  color: white;
+}
+
+.sign_up_btn{
+  background-color: #d41212;
+  color: white;
+  padding: 8px;
+  font-size: 1.4rem;
+  border-radius: 8px;
+  margin-left: 30px;
+}
+
+.sign_up_btn:hover{
+  background-color: rgb(6 182 212);
+  color: white;
+}

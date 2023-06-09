@@ -1,0 +1,380 @@
+.title {
+  padding: 2%;
+  background: repeating-linear-gradient(90deg, rgb(22 78 99), rgb(8 145 178));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: sans-serif, Arial, Helvetica;
+}
+
+.notificationSection{
+  margin: 3%;
+  font-size: 18px;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #ffffff;
+  padding-top: 5px;
+}
+
+.sectionTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(22 78 99);
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: sans-serif, Arial, Helvetica;
+  text-shadow: 1px 1px #929292;
+}
+
+.servicesSection {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif, Arial, Helvetica;
+  margin-top: 0;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 5%;
+  margin: 20px;
+  font-family: sans-serif, Arial, Helvetica;
+  max-width: 1000px;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.gocorner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background-color: rgb(22 78 99);  
+  border-radius: 0 4px 0 32px;
+}
+
+.gostar {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+
+.card {
+  display: block;
+  position: relative;
+  background-color: transparent;
+  border-radius: 4px;
+  padding: 40px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #929292;
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: rgb(22 78 99) ;
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.4s ease-out;
+}
+.card:hover:before {
+  transform: scale(21);
+}
+
+.card:hover {
+  transition: all 0.3s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 6px 12px #929292;
+}
+
+.card img{
+  max-width: 150px;
+  border-radius: 50%;
+}
+
+/* Profile Container styles */
+
+.profileSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  font-family: sans-serif, Arial, Helvetica;
+}
+
+.profileContainer{
+  display: flex;
+  flex-direction: column;
+  background-color:#f9f9f9 ;
+  margin: 20px;
+  border:2px solid rgb(6 182 212);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgb(6 182 212);
+  font-family: sans-serif, Arial, Helvetica;
+  gap: 1rem;
+}
+
+.profileWelcome{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  margin: auto;
+  gap: 20px;
+  font-family: sans-serif, Arial, Helvetica;
+  color: rgb(22 78 99);
+  font-size: x-large;
+  font-weight: 600;
+
+
+}
+.profileWelcome img{
+  width: 40px;
+}
+
+.profileDetails{
+  display: flex;
+  flex-direction: column;
+  background-color:#ffffff ;
+  width: 100%;
+  padding: 5%;
+  border:2px solid rgb(6 182 212);
+  box-shadow: 0 1px 5px rgb(22 78 99);
+  font-family: sans-serif, Arial, Helvetica;
+  font-size: large;
+  gap: 10px;
+
+}
+
+.profileDetails h2{
+  font-size: 20px;
+  color:rgb(22 78 99) ;
+}
+
+.profileDetailsText p{
+  margin: 1rem;
+  color: rgb(22 78 99);
+  font-size: larger;
+  font-weight: 600;
+
+}
+
+.profileDetailsText h2{
+  margin-top: 15px;
+  font-weight: 600;
+
+}
+.profileDetailsText h3 {
+  margin: 1rem;
+  color: rgb(22 78 99);
+  font-weight: 600;
+
+}
+
+.updateProfile{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1rem;
+}
+
+
+
+
+.accountSettings{
+  display: flex;
+  flex-direction: column;
+  background-color:#ffffff ;
+  width: 100%;
+  padding: 5%;
+  border:2px solid rgb(6 182 212);
+  box-shadow: 0 1px 5px rgb(22 78 99);
+  font-family: sans-serif, Arial, Helvetica;
+  font-size: larger;
+  font-weight: 600;
+}
+
+.accountSettings h2{
+  font-size: 20px;
+  color:rgb(22 78 99) ;
+
+}
+
+.lists{
+  display: flex;
+  flex-direction: column;
+  background-color:#ffffff ;
+  padding: 5%;
+  border:2px solid #37C9EF;
+  box-shadow: 0 1px 2px #007bff;
+  font-family: sans-serif, Arial, Helvetica;
+  font-size: larger;
+  font-weight: 600;
+}
+.lists h2{
+  font-size: 20px;
+  color:rgb(22 78 99) ;
+
+}
+
+.profileLink{
+  padding: 1rem;
+  color: rgb(6 182 212);
+  font-size: large;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-weight: 600;
+
+}
+
+
+.profileLink:hover{
+  background-color: rgb(22 78 99);
+  border-radius: 5px;
+  color: white;
+}
+
+.profileLink:hover img{
+  background-color: #ffffff;
+  color: white;
+}
+
+.profileLink img{
+  width: 30px;
+  border-radius: 50%;
+}
+
+.notification {
+  background-color: rgb(21 94 117);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.notification p{
+  padding: 10px 0;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+}
+
+.closeButton {
+  margin-left: 10px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.closeButton:hover{
+  background-color: white;
+  color: rgb(22 78 99);
+}
+
+/* Articles Section styles */
+
+.articlesSection{
+  margin-top: 40px;
+}
+.articlesContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 5%;
+  margin: 20px;
+  border: 2px solid rgb(6 182 212);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgb(22 78 99);
+  font-family: sans-serif, Arial, Helvetica;
+  max-width: 1000px;
+}
+
+.articleCard {
+  display: block;
+  position: relative;
+  background-color: transparent;
+  border-radius: 4px;
+  padding: 40px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #929292;
+  max-width: 400px;
+
+}
+
+
+.articleCard:hover {
+  transition: all 0.3s ease-out;
+  box-shadow: 0 10px 20px #929292;
+}
+
+.articleCard h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+  font-weight: 600;
+  color: rgb(22 78 99);
+}
+
+.article_card_text{
+  margin-top: 20px;
+  font-size: 16px;
+  color: rgb(22 78 99);
+}
+
+
+
+
+
+

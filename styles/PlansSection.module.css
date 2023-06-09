@@ -1,0 +1,121 @@
+
+.sectionTitle{
+  font-family: sans-serif, Arial, Helvetica;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: rgb(22 78 99); 
+  text-align: center;
+  margin: 3rem 0 0;
+  padding: 1rem 2rem;
+  background-color: #f9f8f8;
+  border-radius: 4px;
+  width: 100%;
+  text-decoration: underline;
+  box-shadow: 0 5px 5px #f9f8f8;
+  text-underline-offset: 12px;
+}
+
+
+  .plansSection {
+    margin-top: 5px;
+    margin-bottom: 5rem;
+    width: 100%;
+    background-color: #f9f8f8;
+    font-family: sans-serif, Arial, Helvetica;
+    border-radius: 5px;
+  }
+
+  
+  
+  .planOptions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5rem;
+    width: 60%;
+    margin: auto;
+
+  }
+
+  
+  
+  .planOption {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 1px 2px #b3b3b3;
+    height: 100%;
+  }
+
+  .planOption:hover{
+    box-shadow: 0px 10px 16px rgb(8 145 178);
+    transition: box-shadow 0.4s ease;
+  }
+  
+  .planTitle {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: rgb(6 182 212); 
+    padding: 8px 12px; 
+    margin-bottom: 20px; 
+  }
+  
+  .plansPrice {
+    font-size: 28px;
+    color: rgb(22 78 99);
+    position: relative;
+    text-align: center;
+
+  }
+  
+  .dollarSign {
+    top: -5px;
+    left: -12px;
+    font-size: 16px;
+
+  }
+  
+  .price {
+    font-size: 40px;
+  }
+  
+  .month {
+    font-size: 16px;
+  }
+  
+  .horizontalLine {
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+  }
+  
+  .benefitsList {
+    color: rgb(22 78 99);
+    margin-bottom: 15px;
+  }
+  .benefitsList li{
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .planButton {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(22 78 99);
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0079FF;
+    transition: box-shadow 0.3s;
+  }
+  
+  .planButton:hover {
+    background-color: rgb(6 182 212);
+  }

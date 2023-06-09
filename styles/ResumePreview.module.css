@@ -1,0 +1,107 @@
+/* styles for the whole Create Resume Page */
+.page {
+  padding:10px ;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.forms_section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: aliceblue;
+  box-shadow:  5px 5px 5px #f2f2f2;
+  padding: 5px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 100vh;
+  border-radius: 7px;
+  width: 30%;
+}
+
+/* styles for the Preview section */
+.preview_section{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  max-width: 100vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 100vh;
+  box-shadow:  0 5px 5px 5px rgb(233, 233, 233);
+  border-radius: 7px;
+}
+
+/* Additional styles for small screens */
+@media screen and (max-width: 768px) {
+  .forms_section,
+  .preview_section {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* this is to make sure that the sections are having the display flex column so the personal details section stays in center */
+.saved_cv_preview_page{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.personal_details{
+  max-width: 100%; 
+  margin: auto;
+}
+
+.objective_section{
+  max-width: 100%; 
+  word-wrap: break-word;
+}
+
+.summary_section{
+  max-width: 100%; 
+  word-wrap: break-word;
+}
+
+.work_experience_section{
+  max-width: 100%; 
+  word-wrap: break-word;
+}
+
+.certificates_section{
+  max-width: 100%; 
+  word-wrap: break-word;
+}
+
+.educations_section{
+  max-width: 100%; 
+  word-wrap: break-word;
+}
+
+.skills_section{
+  max-width: 100%; 
+  word-wrap: break-word;
+}
+
+.links_section{
+  max-width: 100%; 
+  word-wrap: break-word;
+}
+
+.projects_section{
+  max-width: 100%; 
+  word-wrap: break-word;
+}
+
+.volunteers_section{
+  max-width: 100%; 
+  word-wrap: break-word;
+}
+
+.languages_section{
+  max-width: 100%; 
+  word-wrap: break-word;
+}

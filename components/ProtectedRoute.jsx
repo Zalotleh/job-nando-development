@@ -1,17 +1,38 @@
 import { useRouter } from "next/router";
-import React, { useEffect } from "react";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "@/context/AuthContext";
+import React from "react";
 
 const ProtectedRoute = ({ children }) => {
   const router = useRouter();
-  const { user } = useAuth();
+  const { user, isLoading } = useAuth();
 
-  useEffect(() => {
-    if (!user.uid) {
-      router.push("/access-denied");
-    }
-  }, [router, user]);
-  return <div>{user ? children : null}</div>;
+  const unprotectedRoutes = [
+    "/",
+    "/auth/login",
+    "/auth/forgotPassword",
+    "/auth/signup",
+    "/auth/access-denied",
+    '/about/AboutUs',
+    '/about/HowItWorks',
+    '/terms/PrivacyPolicy',
+    '/terms/TermsAndConditions',
+    '/articles/InterviewTips',
+    '/articles/JobSearchTips',
+    '/articles/ResumeTips',
+  ];
+
+  const isUnprotectedRoute = unprotectedRoutes.includes(router.pathname);
+
+  if (!isLoading && !isUnprotectedRoute && !user.uid) {
+    router.replace("/auth/login");
+    return null; // Redirecting, so no need to render the children
+  }
+
+  if (isLoading) {
+    return <div></div>;
+  }
+
+  return <div>{children}</div>;
 };
 
 export default ProtectedRoute;
