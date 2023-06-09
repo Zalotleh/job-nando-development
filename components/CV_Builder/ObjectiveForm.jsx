@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import React,{ useContext, useState } from 'react';
 import { ResumeContext } from '@/context/ResumeContext';
 import axios from 'axios';
 

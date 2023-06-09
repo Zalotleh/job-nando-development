@@ -67,12 +67,12 @@ const CareerAdviceForm = () => {
   };
 
   const cards = [
-    <InterestsPassionsCard formData={formData} setFormData={setFormData} name ='interests' />,
-    <CareerGoalsCard formData={formData} setFormData={setFormData} name ="careerGoals.shortTermGoals,careerGoals.longTermGoals"/>,
-    <IndustryPreferencesCard formData={formData} setFormData={setFormData} name='industryPreferences'/>,
-    <GeographicPreferencesCard formData={formData} setFormData={setFormData} name='geographicPreferences.relocation,geographicPreferences.preferredLocation'/>,
-    <WorkEnvironmentCultureCard formData={formData} setFormData={setFormData} name='workEnvironmentCulture.workEnvironment,workEnvironmentCulture.companyCulture'/>,
-    <ProfessionalDevelopmentCard formData={formData} setFormData={setFormData} name= 'professionalDevelopment.professionalDevelopmentOpp,professionalDevelopment.preferredLearning'/>,
+    <InterestsPassionsCard key={'interest'} formData={formData} setFormData={setFormData} name ='interests' />,
+    <CareerGoalsCard key={'careerGoals'} formData={formData} setFormData={setFormData} name ="careerGoals.shortTermGoals,careerGoals.longTermGoals"/>,
+    <IndustryPreferencesCard key={'industryPreferences'} formData={formData} setFormData={setFormData} name='industryPreferences'/>,
+    <GeographicPreferencesCard key={'geographicPreferences'} formData={formData} setFormData={setFormData} name='geographicPreferences.relocation,geographicPreferences.preferredLocation'/>,
+    <WorkEnvironmentCultureCard key={'workEnvironmentCulture'} formData={formData} setFormData={setFormData} name='workEnvironmentCulture.workEnvironment,workEnvironmentCulture.companyCulture'/>,
+    <ProfessionalDevelopmentCard key={'professionalDevelopment'} formData={formData} setFormData={setFormData} name= 'professionalDevelopment.professionalDevelopmentOpp,professionalDevelopment.preferredLearning'/>,
   ];
 
 

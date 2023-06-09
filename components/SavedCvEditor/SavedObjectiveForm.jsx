@@ -1,15 +1,15 @@
-import { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { SavedResumeContext } from '@/context/SavedResumeContext';
 import axios from 'axios';
 
-export default function savedObjectiveForm(props) {
+export default function SavedObjectiveForm(props) {
   const { objective, setObjective } = useContext(SavedResumeContext);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
   useEffect(() => {
     setObjective(props.objective)
-  }, [])
+  }, [props.objective])
 
   const handleChange = (e) => {
     setObjective({

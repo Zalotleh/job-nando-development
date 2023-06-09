@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../../styles/PlansSection.module.css';
+import Link from 'next/link';
 
 const PlansSection = () => {
   return (
@@ -24,9 +25,9 @@ const PlansSection = () => {
               <li>Access to 1 learning path</li>
               <li>No interview preparation</li>
             </ul>
-            <a href="/auth/signup" className={styles.planButton}>
+            <Link href="/auth/signup" className={styles.planButton}>
               Sign Up for Free
-            </a>
+            </Link>
           </div>
 
           <div className={styles.planOption}>
@@ -48,9 +49,9 @@ const PlansSection = () => {
               <li>Cancel Anytime</li>
 
             </ul>
-            <a href="/auth/signup" className={styles.planButton}>
+            <Link href="/auth/signup" className={styles.planButton}>
               Buy Now
-            </a>
+            </Link>
           </div>
         </div>
       </section>
