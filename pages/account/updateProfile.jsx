@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { getAuth, updateProfile, updateEmail } from 'firebase/auth';
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-
+import Navbar from '@/components/Navbar';
 
 export default function UpdateProfile() {
   const auth = getAuth();
