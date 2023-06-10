@@ -17,7 +17,7 @@
 
   
 .logoText {
-  font-size: 2rem;
+  font-size: 36px;
   font-style: normal;
   font-weight: 800;
   color: rgb(22 78 99); 
@@ -43,7 +43,7 @@
   }
   
 .navLink {
-    font-size: 1.4rem;
+    font-size: 1rem;
     margin-right: 1.5rem;
     position: relative;
     padding: 10px;
@@ -139,7 +139,7 @@
   background-color: #d41212;
   color: white;
   padding: 8px;
-  font-size: 1.4rem;
+  font-size: 1rem;
   border-radius: 8px;
   margin-left: 30px;
 }

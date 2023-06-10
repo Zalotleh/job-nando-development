@@ -73,7 +73,7 @@ const AllNavbar = ({ children }) => {
                     </li>
 
                     <li className={styles.log_out}>
-                        <Link onClick={handleLogout}>Logout</Link>
+                        <button onClick={handleLogout} className={styles.log_out}>Logout</button>
                     </li>
                     </>
                     ):(
@@ -82,8 +82,8 @@ const AllNavbar = ({ children }) => {
                             <Link href="/auth/login">Log in</Link>
                         </li>
     
-                        <li className={styles.navLink}>
-                            <Link href={'/auth/signup'}>Sign Up</Link>
+                        <li className={styles.sign_up_btn}>
+                            <Link href='/auth/signup'>Sign Up</Link>
                         </li>
                         </>
 
