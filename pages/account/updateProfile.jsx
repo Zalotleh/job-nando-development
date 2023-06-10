@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { getAuth, updateProfile, updateEmail } from 'firebase/auth';
 import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
+import AllNavbar from '@/components/landingPage/LandingPageNavbar';
+
 
 export default function UpdateProfile() {
   const auth = getAuth();
@@ -61,13 +62,12 @@ export default function UpdateProfile() {
     }
   };
   
-
   return (
     <>
      <Head>
       <title>Update Your Profile information page</title>
     </Head>
-        <Navbar/>
+    <AllNavbar/>
         <div className="container justify-around gap-5 px-16 py-16 mx-auto  mt-5 shadow-lg shadow-cyan-500">
         <form>
         <h2 className="text-3xl font-semibold text-cyan-900 mb-20 underline">Your Profile Details</h2>

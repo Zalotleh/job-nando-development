@@ -2,11 +2,10 @@ import React, {useState, useEffect} from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import styles from '../../styles/Dashboard.module.css';
-import Navbar from '@/components/Navbar';
+import AllNavbar from '@/components/landingPage/LandingPageNavbar';
 import { useAuth } from '@/context/AuthContext';
 import getCvsList from '../api/CvProcessing/getCvsList'
 import Footer from '@/components/Footer';
-
 
 
 function Dashboard() {
@@ -47,7 +46,7 @@ function Dashboard() {
       <title>Your Dashboard and Profile settings page</title>
     </Head>
 
-    <Navbar/>
+    <AllNavbar/>
     <section className={styles.title}>
       <h1>Dashboard</h1>
     </section>
