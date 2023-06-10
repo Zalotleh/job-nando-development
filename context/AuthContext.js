@@ -8,7 +8,7 @@ import {
     signOut,
     GoogleAuthProvider,
 } from 'firebase/auth';
-import { firebase_app} from '../firebase/config'
+import  firebase_app from '../firebase/config'
 import { collection, getFirestore, setDoc, doc } from '@firebase/firestore'
 
 const database = getFirestore(firebase_app);

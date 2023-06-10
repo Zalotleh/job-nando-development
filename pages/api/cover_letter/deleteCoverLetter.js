@@ -1,5 +1,5 @@
 import { getFirestore, doc, deleteDoc } from 'firebase/firestore'
-import {firebase_app} from '@/firebase/config'
+import firebase_app from '@/firebase/config'
 const database = getFirestore(firebase_app)
 
 export default async function deleteCoverLetterFunction(user_id, coverLetter_id) {

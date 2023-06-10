@@ -1,5 +1,5 @@
 import initializeStripe from './initializeStripe';
-import { firebase_app} from '../firebase/config'
+import firebase_app from '../firebase/config'
 import { collection, getFirestore, addDoc, onSnapshot} from '@firebase/firestore';
 
 const database = getFirestore(firebase_app);

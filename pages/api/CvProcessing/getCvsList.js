@@ -1,5 +1,5 @@
 import { getDocs, getFirestore,collection, doc } from 'firebase/firestore'
-import {firebase_app} from '@/firebase/config'
+import firebase_app from '@/firebase/config'
 const database = getFirestore(firebase_app)
 
 export default async function getCvsList (user_id) {

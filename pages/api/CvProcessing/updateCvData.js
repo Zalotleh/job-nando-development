@@ -1,4 +1,4 @@
-import {firebase_app} from '../../../firebase/config'
+import firebase_app from '../../../firebase/config'
 import { doc, getFirestore,setDoc, serverTimestamp} from '@firebase/firestore';
 
 
