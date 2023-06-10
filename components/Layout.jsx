@@ -1,8 +1,8 @@
 import React,{useState} from 'react'
 import Head from 'next/head'
-import Navbar from '../components/Navbar'
 import Footer from './Footer'
 import styles from '../styles/Layout.module.css'
+import Navbar from './Navbar'
 
 function Layout({metaTitle, pageTitle,notificationText, children}) {
   const [showNotification, setShowNotification] = useState(true);
