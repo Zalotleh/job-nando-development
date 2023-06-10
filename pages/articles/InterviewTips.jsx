@@ -19,8 +19,8 @@ const InterviewTips = () => {
             When it comes to job interviews, proper preparation can make all the difference.
             Whether you're a seasoned professional or a recent graduate, these interview tips will help you navigate the process and increase your chances of success.
           </p>
+          <h2>1. Research the company:</h2>
           <p>
-            <h2>1. Research the company:</h2>
              Before your interview, take the time to learn about the company's mission, values, and recent projects. 
             Understanding the organization will allow you to tailor your answers and demonstrate your interest in the role.
           </p>

@@ -17,6 +17,8 @@ const Navbar = ({ children }) => {
     }
   };
 
+  console.log(user.uid)
+
   return (
     <>
     {user.uid? (
