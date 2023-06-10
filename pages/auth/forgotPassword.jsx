@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { sendPasswordResetEmail, getAuth } from 'firebase/auth';
-import Navbar from '@/components/Navbar';
+import AllNavbar from '@/components/landingPage/LandingPageNavbar';
 
 const ForgotPasswordPage = () => {
   const [email, setEmail] = useState('');
@@ -25,7 +25,7 @@ const ForgotPasswordPage = () => {
     <section className="flex flex-col mb-4" >
 
     <div className="flex flex-row justify-around	">
-        <Navbar />
+    <AllNavbar/>
     </div>
 
     <div className="container px-16 py-16 mx-auto max-w-lg mt-32 shadow-md shadow-cyan-500">

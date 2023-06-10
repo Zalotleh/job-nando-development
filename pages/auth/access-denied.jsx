@@ -1,11 +1,11 @@
 import React from "react"
 import LoginPage from "./login"
-import Navbar from "@/components/Navbar"
+import AllNavbar from "@/components/landingPage/LandingPageNavbar"
 
 export default function AccessDenied() {
   return (
     <>
-    <Navbar/>
+          <AllNavbar/>
     <div >
       <LoginPage/>
       <h1 className="px-12 mt-8 text-center text-2xl font-semibold text-blue-900">Access Denied</h1>

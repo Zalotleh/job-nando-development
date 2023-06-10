@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Head from 'next/head';
 import { getAuth, updatePassword } from "firebase/auth";
 import Link from 'next/link';
-import Navbar from '@/components/Navbar';
+import AllNavbar from '@/components/landingPage/LandingPageNavbar';
 
 const auth = getAuth();
 export default function UpdatePassowrd (){
@@ -67,7 +67,7 @@ return(
      <Head>
       <title>Change your password page</title>
     </Head>
-    <Navbar/>
+    <AllNavbar/>
     {!successMessage?
     (
         <div className="container px-16 py-16 mx-auto max-w-md mt-32 shadow-lg shadow-cyan-500">

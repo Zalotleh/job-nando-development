@@ -3,7 +3,7 @@ import Head from "next/head";
 import { FormProvider, useForm } from "react-hook-form";
 import { useRouter } from "next/router";
 import { useAuth } from "@/context/AuthContext";
-import Navbar from "@/components/Navbar";
+import AllNavbar from "@/components/landingPage/LandingPageNavbar";
 
 const LoginPage = () => {
   const methods = useForm({ mode: "onBlur" });
@@ -50,7 +50,8 @@ const LoginPage = () => {
       </Head>
 
       <div className="flex flex-row justify-around" >
-          <Navbar/>
+      <AllNavbar/>
+
       </div>
       <section className="flex flex-col mb-4" >
 

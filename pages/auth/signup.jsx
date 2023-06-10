@@ -3,7 +3,7 @@ import Head from "next/head";
 import { FormProvider, useForm, useWatch } from "react-hook-form";
 import { useRouter } from "next/router";
 import { useAuth } from "@/context/AuthContext";
-import Navbar from "@/components/Navbar";
+import AllNavbar from "@/components/landingPage/LandingPageNavbar";
 
 const SignupPage = () => {
   const methods = useForm({ mode: "onBlur" });
@@ -75,7 +75,7 @@ const SignupPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex flex-row justify-around" >
-        <Navbar/>
+      <AllNavbar/>
       </div>
       <section className="flex flex-col mb-8" >
         <div className="sign-up-form container mx-auto w-96 mt-5 mb-12 font-sans border-4  rounded-lg shadow-lg shadow-cyan-600 dark:shadow-lg dark:shadow-[#37C9EF]">
