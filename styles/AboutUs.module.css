@@ -57,7 +57,7 @@ max-width: 100%;
 
 .our_mission_text p{
 padding: 10px;
-font-size: 24px;
+font-size: 20px;
 }
 
 /* what we offer section styles */
@@ -82,7 +82,7 @@ margin-bottom: 100px;
 }
 
 .what_we_offer_section p {
-font-size: 20px;
+font-size: 16px;
 margin: 10px  0 25px 0;
 }
 
@@ -98,7 +98,7 @@ max-width: 900px;
 
 .what_we_offer_section_container strong {
 font-weight: bold;
-font-size: 20px;
+font-size: 18px;
 }
 
 
@@ -123,7 +123,7 @@ border-radius: 5px;
 }
 
 .why_choose_us_section_container p {
-font-size: 20px;
+font-size: 16px;
 margin: 10px  0 25px 0;
 }
 
@@ -138,7 +138,7 @@ max-width: 900px;
 
 .why_choose_us_section_container strong {
 font-weight: bold;
-font-size: 20px;
+font-size: 18px;
 }
 
 
@@ -150,7 +150,7 @@ font-size: 20px;
 }
 
 .get_started_section p {
-  font-size: 20px;
+  font-size: 16px;
   max-width: 1400px;
   padding-left: 20px;
 }
