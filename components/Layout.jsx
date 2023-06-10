@@ -2,8 +2,7 @@ import React,{useState} from 'react'
 import Head from 'next/head'
 import Footer from './Footer'
 import styles from '../styles/Layout.module.css'
-import AllNavbar from './landingPage/LandingPageNavbar'
-
+import PageNavbar from './landingPage/PageNavbar'
 
 function Layout({metaTitle, pageTitle,notificationText, children}) {
   const [showNotification, setShowNotification] = useState(true);
@@ -21,7 +20,7 @@ function Layout({metaTitle, pageTitle,notificationText, children}) {
       </Head>
 
         <div className={styles.container}>
-          <AllNavbar/>
+          <PageNavbar/>
           <section className={styles.pageTitle}>
             <h1>{pageTitle}</h1>
           </section>

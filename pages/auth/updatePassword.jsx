@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Head from 'next/head';
 import { getAuth, updatePassword } from "firebase/auth";
 import Link from 'next/link';
-import AllNavbar from '@/components/landingPage/LandingPageNavbar';
+import AllNavbar from '@/components/landingPage/PageNavbar';
 
 const auth = getAuth();
 export default function UpdatePassowrd (){

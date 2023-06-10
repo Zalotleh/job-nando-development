@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import Head from "next/head";
 import { FormProvider, useForm, useWatch } from "react-hook-form";
 import { useRouter } from "next/router";
 import { useAuth } from "@/context/AuthContext";
-import AllNavbar from "@/components/landingPage/LandingPageNavbar";
+import Layout2 from "@/components/Layout2";
 
 const SignupPage = () => {
   const methods = useForm({ mode: "onBlur" });
@@ -70,16 +69,13 @@ const SignupPage = () => {
 
   return (
     <>
-      <Head>
-        <title>Sign up Page</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="flex flex-row justify-around" >
-      <AllNavbar/>
-      </div>
+      <Layout2
+        metaTitle={'Sign Up Page'}
+        pageTitle={'Sign Up'}
+      >
+
       <section className="flex flex-col mb-8" >
         <div className="sign-up-form container mx-auto w-96 mt-5 mb-12 font-sans border-4  rounded-lg shadow-lg shadow-cyan-600 dark:shadow-lg dark:shadow-[#37C9EF]">
-          <h2 className="px-12 mt-8 text-center text-4xl font-semibold font-sans text-cyan-900">Sign Up</h2>
 
           <FormProvider {...methods}>
             <form 
@@ -194,6 +190,8 @@ const SignupPage = () => {
           &copy; 2023 Ziad Alotleh. All rights reserved.
         </div>
       </section>
+    </Layout2>
+
     </>
   );
 };

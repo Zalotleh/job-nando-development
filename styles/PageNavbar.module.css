@@ -11,13 +11,13 @@
     top: 0;
     z-index: 50;
     font-family: sans-serif, Helvetica, Arial;
-    width: 100%;
+    max-width: 2000px;
   }
 
 
   
 .logoText {
-  font-size: 36px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 800;
   color: rgb(22 78 99); 

@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import Head from 'next/head';
 import { getAuth, updateProfile, updateEmail } from 'firebase/auth';
-import Footer from '@/components/Footer';
-import AllNavbar from '@/components/landingPage/LandingPageNavbar';
+import Layout2 from '@/components/Layout2';
 
 
 export default function UpdateProfile() {
@@ -64,10 +62,11 @@ export default function UpdateProfile() {
   
   return (
     <>
-     <Head>
-      <title>Update Your Profile information page</title>
-    </Head>
-    <AllNavbar/>
+    <Layout2
+      metaTitle={'Update Your Profile information page'}
+      pageTitle={'Update Your Profile'}
+    >
+
         <div className="container justify-around gap-5 px-16 py-16 mx-auto  mt-5 shadow-lg shadow-cyan-500">
         <form>
         <h2 className="text-3xl font-semibold text-cyan-900 mb-20 underline">Your Profile Details</h2>
@@ -94,7 +93,7 @@ export default function UpdateProfile() {
           <label 
             htmlFor="newName"
             className="block text-cyan-900 text-2x1 font-medium mb-1 mt-2"
-          >
+            >
             New Name
           </label>
           <input
@@ -103,18 +102,18 @@ export default function UpdateProfile() {
             value={newName} 
             onChange={handleNameChange}
             className="w-auto py-2 px-4 mb-2 mr-5 border border-cyan-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:border-transparent"
-          />
+            />
           <button 
             onClick={handleUpdateProfileInfoButton}
             className="bg-cyan-900 text-white font-medium text-lg py-2 px-4 mt-2 mb-10 rounded-md hover:bg-cyan-500 transition"
-          >
+            >
             Update User Name
           </button>
 
           <label 
             htmlFor="newEmail"
             className="block text-cyan-900 text-2x1 font-medium mb-1"
-          >
+            >
             New email
           </label>
           <input 
@@ -123,11 +122,11 @@ export default function UpdateProfile() {
             value={newEmail} 
             onChange={handleEmailChange}
             className="w-auto py-2 px-4 mb-2 mr-5 border border-cyan-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:border-transparent"
-          />
+            />
           <button 
             onClick={handleUpdateEmailButton}
             className="bg-cyan-900 text-white font-medium text-lg py-2 px-4 mt-2 mb-10 rounded-md hover:bg-cyan-500 transition"
-          >
+            >
             Update Email Address
           </button>
 
@@ -147,7 +146,7 @@ export default function UpdateProfile() {
           </div>
         )}
       </div>
-      <Footer/>
+    </Layout2>
     </>
   );
 }

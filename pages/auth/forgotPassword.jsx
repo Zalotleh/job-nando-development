@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { sendPasswordResetEmail, getAuth } from 'firebase/auth';
-import AllNavbar from '@/components/landingPage/LandingPageNavbar';
+import Layout2 from '@/components/Layout2';
 
 const ForgotPasswordPage = () => {
   const [email, setEmail] = useState('');
@@ -22,15 +22,16 @@ const ForgotPasswordPage = () => {
 
   return (
     <>
+    <Layout2
+      metaTitle={'Reset your password'}
+      pageTitle={'Reset your password'}
+    >
     <section className="flex flex-col mb-4" >
 
     <div className="flex flex-row justify-around	">
-    <AllNavbar/>
     </div>
 
     <div className="container px-16 py-16 mx-auto max-w-lg mt-32 shadow-md shadow-cyan-500">
-
-      <h2 className="text-3xl font-semibold text-black-900 mb-4">Reset your password</h2>
 
       {successMessage?
        (
@@ -76,7 +77,7 @@ const ForgotPasswordPage = () => {
     </div>
     </section>
 
-    
+    </Layout2>
     
   </>
   );

@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import AllNavbar from './landingPage/LandingPageNavbar'
+import PageNavbar from './landingPage/PageNavbar'
 import Footer from './Footer'
 import styles from '../styles/Layout.module.css'
 
@@ -15,7 +15,7 @@ function Layout2({metaTitle, pageTitle, children}) {
     </Head>
 
     <div className={styles.container}>
-    <AllNavbar/>
+    <PageNavbar/>
     <section className={styles.pageTitle}>
       <h1>{pageTitle}</h1>
     </section>

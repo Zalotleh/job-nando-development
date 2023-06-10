@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useAuth } from "@/context/AuthContext";
-import styles from "@/styles/Navbar.module.css";
+import styles from "@/styles/PageNavbar.module.css";
 
-const AllNavbar = ({ children }) => {
+const PageNavbar = ({ children }) => {
   const {user,logOut } = useAuth();
   const router = useRouter();
 
@@ -72,7 +72,7 @@ const AllNavbar = ({ children }) => {
                         <Link href="/account/Dashboard">Dashboard</Link>
                     </li>
 
-                    <li className={styles.log_out}>
+                    <li >
                         <button onClick={handleLogout} className={styles.log_out}>Logout</button>
                     </li>
                     </>
@@ -98,4 +98,4 @@ const AllNavbar = ({ children }) => {
   );
 };
 
-export default AllNavbar;
+export default PageNavbar;

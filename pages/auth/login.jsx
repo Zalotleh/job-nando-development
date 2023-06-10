@@ -3,7 +3,8 @@ import Head from "next/head";
 import { FormProvider, useForm } from "react-hook-form";
 import { useRouter } from "next/router";
 import { useAuth } from "@/context/AuthContext";
-import AllNavbar from "@/components/landingPage/LandingPageNavbar";
+import AllNavbar from "@/components/landingPage/PageNavbar";
+import Layout2 from "@/components/Layout2";
 
 const LoginPage = () => {
   const methods = useForm({ mode: "onBlur" });
@@ -44,19 +45,15 @@ const LoginPage = () => {
   return (
     <>
 
-      <Head>
-        <title>Log in Page</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Layout2
+        metaTitle={'Log in Page'}
+        pageTitle={'Log in'}
+      >
 
-      <div className="flex flex-row justify-around" >
-      <AllNavbar/>
-
-      </div>
       <section className="flex flex-col mb-4" >
 
-        <div className="sign-up-form container mx-auto w-96 mt-28 mb-12 font-sans border-4  rounded-lg shadow-lg shadow-cyan-500 dark:shadow-lg dark:shadow-cyan-900">
-          <h2 className="px-12 mt-8 text-center text-4xl font-semibold font-sans text-cyan-900">Log In</h2>
+        <div className="sign-up-form container mx-auto w-96 mt-20 mb-12 font-sans border-4  rounded-lg shadow-lg shadow-cyan-500 dark:shadow-lg dark:shadow-cyan-900">
+          {/* <h2 className="px-12 mt-8 text-center text-4xl font-semibold font-sans text-cyan-900">Log In</h2> */}
           <FormProvider {...methods}>
             <form action="" className="w-80 mx-auto pb-12 px-4" onSubmit={handleSubmit(onSubmit)}>
               <div className="mt-8">
@@ -132,7 +129,9 @@ const LoginPage = () => {
           &copy; 2023 Ziad Alotleh. All rights reserved.
         </div>
       </section>
-    </>
+
+      </Layout2>  
+   </>
   );
 };
 
