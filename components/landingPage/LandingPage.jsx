@@ -4,14 +4,14 @@ import Header from './Header'
 import ServicesSection from './ServicesSection'
 import BenefitsSection from './BenefitsSection'
 import PlansSection from './PlansSection'
-import Navbar from '../Navbar'
+import LandingPageNavbar from './LandingPageNavbar'
 import Footer from '../Footer'
 import QA from './Q&A'
 
 function LandingPage() {
   return (
     <body className={styles.mainPage}>
-      <Navbar/>
+      <LandingPageNavbar/>
       <main className={styles.main}>
         <Header/>
         <ServicesSection/>
