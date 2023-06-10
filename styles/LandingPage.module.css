@@ -25,15 +25,16 @@
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-justify-content: space-between;
+justify-content: space-evenly;
 width: 100%;
 margin-bottom: 2rem;
+gap: 100px;
 
 }
 
 .heroContent {
     padding: 10% 0;
-    max-width: 50%;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -74,11 +75,9 @@ margin-bottom: 1rem;
 
 
 .heroImage {
-    width: 100%;
-    max-width: 500px;
+    max-width: 450px;
     height: auto;
     margin-top: 2rem;
-    align-self: flex-end;
 }
 
 .CTAbtn {
