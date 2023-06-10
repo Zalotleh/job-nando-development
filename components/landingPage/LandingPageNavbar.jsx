@@ -5,7 +5,7 @@ import { useAuth } from "@/context/AuthContext";
 import styles from "@/styles/Navbar.module.css";
 
 const AllNavbar = ({ children }) => {
-  const {logOut } = useAuth();
+  const {user,logOut } = useAuth();
   const router = useRouter();
 
   const handleLogout = async () => {
