@@ -61,18 +61,18 @@ function ServicesSection() {
             <div className={styles.service_container}>
                 
               <div className={styles.service_card}>
-                <img src="/fingers-snapping.png" alt="minimalist graphic for someone fingers snapping" className={styles.service_card_image}/>
+                  <img src="/fingers-snapping.png" alt="minimalist graphic for someone fingers snapping" className={styles.service_card_image}/>
 
                   <div className={styles.service_card_content}>
                     <div className={styles.service_card_text}>
-                    <h1 className={styles.service_title}>
-                      Generate your <span className={styles.service_title_span}>cover letter</span>!
-                    </h1>
-                        <h1 className={styles.service_card_h1}>In 1 click, as simple as that!</h1>
-                        <h2 className={styles.service_card_h2}>Create your Resume.</h2>
-                        <h2 className={styles.service_card_h2}>Add the job description you are applying for.</h2>
-                        <h2 className={styles.service_card_h2}>Hit 'Generate Resume Button.</h2>
-                        <h2 className={styles.service_card_h2}>Download your proffesional cover letter.</h2>
+                      <h1 className={styles.service_title}>
+                        Generate your <span className={styles.service_title_span}>cover letter</span>!
+                      </h1>
+                      <h1 className={styles.service_card_h1}>In 1 click, as simple as that!</h1>
+                      <h2 className={styles.service_card_h2}>-Create your Resume.</h2>
+                      <h2 className={styles.service_card_h2}>-Add the job description you are applying for.</h2>
+                      <h2 className={styles.service_card_h2}>-Hit 'Generate Resume Button.</h2>
+                      <h2 className={styles.service_card_h2}>-Download your proffesional cover letter.</h2>
                     </div>
                     <button className={styles.CTA_btn}><Link href="/auth/signup">Create Your Free Account</Link></button>
                   </div>
@@ -97,11 +97,11 @@ function ServicesSection() {
                     <div className={styles.service_card_text}>
                         
                         <h1 className={styles.service_card_h1}>Our Interview Practice tool will:</h1>
-                        <h2 className={styles.service_card_h2}>Provide you with the most Common questions for the job you are applying for.</h2>
-                        <h2 className={styles.service_card_h2}>Practice your answers on those questions.</h2>
-                        <h2 className={styles.service_card_h2}>Provides you with an immediate feedback on your answers.</h2>
-                        <h2 className={styles.service_card_h2}>Helps you to overcome the fear and get ready for your inetrview.</h2>
-                        <h2 className={styles.service_card_h2}>Will answer any question related to your interview.</h2>
+                        <h2 className={styles.service_card_h2}>-Provide you with the most Common questions for the job you are applying for.</h2>
+                        <h2 className={styles.service_card_h2}>-Practice your answers on those questions.</h2>
+                        <h2 className={styles.service_card_h2}>-Provides you with an immediate feedback on your answers.</h2>
+                        <h2 className={styles.service_card_h2}>-Helps you to overcome the fear and get ready for your inetrview.</h2>
+                        <h2 className={styles.service_card_h2}>-Will answer any question related to your interview.</h2>
                     </div>
                     <button className={styles.CTA_btn}><Link href="/auth/signup">Start Practicing</Link></button>
 
@@ -126,9 +126,8 @@ function ServicesSection() {
                           <div className={styles.service_card_text}>
 
                             <h1 className={styles.service_card_h1}>Get a comprehensive and professional career advice!</h1>
-                            <h2 className={styles.service_card_h2}>Use your resume and answer few questions, then...</h2>
-                            <h2 className={styles.service_card_h2}>We will provide you with a comprehensive and personalized career advice. </h2>
-                            <h2 className={styles.service_card_h2}>We will provide you with a comprehensive and personalized career advice. </h2>
+                            <h2 className={styles.service_card_h2}>-Use your resume and answer few questions, then...</h2>
+                            <h2 className={styles.service_card_h2}>-We will provide you with a comprehensive and personalized career advice. </h2>
                             <button className={styles.CTA_btn}><Link href="/auth/signup">Get Your Own Coach</Link></button>
 
                           </div>
@@ -152,9 +151,9 @@ function ServicesSection() {
                         </h1>
                         <div className={styles.service_card_text}>
                             <h1 className={styles.service_card_h1}>Now you don't have to start from ZERO, our tool will:</h1>
-                            <h2 className={styles.service_card_h2}>Provide you with best advices on the skills you want to build.</h2>
-                            <h2 className={styles.service_card_h2}>Provide you with a full learning path, where to start and how to start learning.</h2>
-                            <h2 className={styles.service_card_h2}>Provide you with list of reliable resources to get you started immediately.</h2>
+                            <h2 className={styles.service_card_h2}>-Provide you with best advices on the skills you want to build.</h2>
+                            <h2 className={styles.service_card_h2}>-Provide you with a full learning path, where to start and how to start learning.</h2>
+                            <h2 className={styles.service_card_h2}>-Provide you with list of reliable resources to get you started immediately.</h2>
                             <button className={styles.CTA_btn}><Link href="/auth/signup">Start Learning Now</Link></button>
                         </div>
                       </div>
