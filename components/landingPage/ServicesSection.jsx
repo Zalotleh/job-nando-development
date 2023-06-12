@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '../../styles/LandingPage.module.css'
+import Link from 'next/link'
 
 function ServicesSection() {
   return (
@@ -51,10 +52,11 @@ function ServicesSection() {
                       </div>
                   </div>
               </div>
-              <button type='button' className={styles.CTAbtn}>Start Building Your Resume</button>
+              <Link href="/auth/signup"><button className={styles.CTAbtn}>Start Building Your Resume</button></Link>
           </div>
 
             {/* Cover Letter service section */}
+          <div className={styles.services_group}>
 
           <div className={styles.coverLetterServiceContainer}>
               
@@ -72,7 +74,7 @@ function ServicesSection() {
                             <h2 className={styles.coverLetterServiceCardh2}>Hit 'Generate Resume Button.</h2>
                             <h2 className={styles.coverLetterServiceCardh2}>Download your proffesional cover letter.</h2>
                         </div>
-                        <button type='button' className={styles.CTAbtn}>Create Your Free Account</button>
+                        <Link href="/auth/signup"><button className={styles.CTAbtn}>Create Your Free Account</button></Link>
                       </div>
 
                   </div>
@@ -86,7 +88,8 @@ function ServicesSection() {
               
                   <div className={styles.interviewServiceCard}>
                     
-                      
+                  <img src="/interview.png" alt="minimalist graphic for someone having an interview" className={styles.interviewServiceCardImage}/>
+
                       <div className={styles.interviewServiceCardContent}>
                       <h1 className={styles.interviewServiceTitle}>
                       Get ready for your <span className={styles.interviewServiceTitleSpan}>interview</span>!
@@ -99,15 +102,16 @@ function ServicesSection() {
                             <h2 className={styles.interviewServiceCardh2}>Helps you to overcome the fear and get ready for your inetrview.</h2>
                             <h2 className={styles.interviewServiceCardh2}>Will answer any question related to your interview.</h2>
                         </div>
-                        <button type='button' className={styles.CTAbtn}>Start Practicing</button>
+                        <Link href="/auth/signup"><button className={styles.CTAbtn}>Start Practicing</button></Link>
+
                       </div>
-                      <img src="/interview.png" alt="minimalist graphic for someone having an interview" className={styles.interviewServiceCardImage}/>
 
                   </div>
           </div>
+          </div>
 
           {/* Career coach service section */}
-
+          <div className={styles.services_group}>
           <div className={styles.adviceServiceContainer}>
               
                   <div className={styles.adviceServiceCard}>
@@ -123,7 +127,7 @@ function ServicesSection() {
                             <h2 className={styles.adviceServiceCardh2}>Use your resume and answer few questions, then...</h2>
                             <h2 className={styles.adviceServiceCardh2}>We will provide you with a comprehensive and personalized career advice. </h2>
                             <h2 className={styles.adviceServiceCardh2}>We will provide you with a comprehensive and personalized career advice. </h2>
-                            <button type='button' className={styles.CTAbtn}>Get Your Own Coach</button>
+                            <Link href="/auth/signup"><button className={styles.CTAbtn}>Get Your Own Coach</button></Link>
 
                         </div>
                       </div>
@@ -148,13 +152,15 @@ function ServicesSection() {
                             <h2 className={styles.learningPathServiceCardh2}>Provide you with best advices on the skills you want to build.</h2>
                             <h2 className={styles.learningPathServiceCardh2}>Provide you with a full learning path, where to start and how to start learning.</h2>
                             <h2 className={styles.learningPathServiceCardh2}>Provide you with list of reliable resources to get you started immediately.</h2>
-                            <button type='button' className={styles.CTAbtn}>Start Learning Now</button>
+                            <Link href="/auth/signup"><button className={styles.CTAbtn}>Start Learning Now</button></Link>
+
 
                         </div>
                       </div>
                       <img src="/learning-path.png" alt="minimalist graphic for someone having an learningPath" className={styles.learningPathServiceCardImage}/>
 
                   </div>
+          </div>
           </div>
 
                     {/* END OF Learning Path section */}

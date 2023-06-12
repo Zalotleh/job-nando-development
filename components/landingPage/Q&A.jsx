@@ -25,7 +25,7 @@ const QAPairs = [
   {
     question: 'Can I customize my resume and cover letter?',
     answer:
-      'Yes, our platform offers customizable sections and templates for resume and cover letter creation.',
+      'Yes, our platform offers customizable sections for resume and cover letter creation.',
   },
 ];
 

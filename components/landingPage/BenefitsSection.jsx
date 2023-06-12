@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from '../../styles/LandingPage.module.css'
 
 const BenefitsSection = () => {
@@ -44,7 +45,9 @@ const BenefitsSection = () => {
           </p>
         </div>
       </div>
-      <button type='button' className={styles.CTAbtn}>Click Here To Create Your Free Account</button>
+      {/* <Link href="/auth/signup"><button className={styles.CTAbtn}>Start Learning Now</button></Link> */}
+
+      <button type='button' className={styles.CTAbtn}><Link href="/auth/signup">Click Here To Create Your Free Account</Link></button>
     </section>
     </>
   );

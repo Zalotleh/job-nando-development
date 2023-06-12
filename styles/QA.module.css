@@ -1,6 +1,9 @@
 .qaContainer {
-    max-width: 100%;
     margin: 0 auto 5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 80vw;
   }
 
 .section_title{

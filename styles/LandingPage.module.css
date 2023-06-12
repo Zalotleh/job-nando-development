@@ -20,7 +20,6 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    /* align-items: center; */
     flex-wrap: wrap;
     min-height: 100vh;
     padding: 2rem;
@@ -30,12 +29,12 @@
 
 .header {
 display: flex;
-flex-direction: row;
+flex-direction: row-reverse;
 flex-wrap: wrap;
-justify-content: space-around; /* Add this */
+justify-content: space-around;
+align-items: center; 
 width: 100%;
-margin-bottom: 2rem;
-gap: 50px;
+padding: 20px;
 }
 
 .heroContent {
@@ -82,10 +81,14 @@ margin-bottom: 1rem;
 
 
 .heroImage {
-    max-width: auto;
-    width: 400px;
-    height: auto;
+    max-width: 500px;
     margin-top: 2rem;
+}
+@media screen and (max-width: 400px){
+    .heroImage {
+        max-width: 350px;
+    }
+
 }
 
 .CTAbtn {
@@ -113,21 +116,24 @@ background-color: rgb(6 182 212);
     font-weight: 700;
     color: rgb(22 78 99); 
     text-align: center;
-    margin: 3rem 0;
+    margin: 1rem 0;
     padding: 1rem 2rem;
     text-decoration: underline;
     text-underline-offset: 12px;
 
 }
 
+
+
 /* Services Section styles */
 
 .servicesSection{
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
-
+    background-color: #f9f8f8;
 }
 
 
@@ -137,7 +143,7 @@ background-color: rgb(6 182 212);
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 15rem;
+    gap: 10rem;
 
 }
 
@@ -156,7 +162,7 @@ background-color: rgb(6 182 212);
     line-height: 60px;
     letter-spacing: 0.01em;
     color: rgb(22 78 99);
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 
 }
 
@@ -170,7 +176,8 @@ background-color: rgb(6 182 212);
     display: flex;
     flex-direction: row;
     flex-flow: row wrap;
-    gap: 20px;
+    gap: 60px;
+
 }
 
 .resumeServiceCard{
@@ -180,7 +187,7 @@ background-color: rgb(6 182 212);
 }
 
 .resumeServiceCardImages{
-    max-width: 150px;
+    max-width: 100px;
 }
 
 .resumeServiceCardText{
@@ -215,15 +222,11 @@ letter-spacing: -0.067em;
 color: rgb(22 78 99);
 }
 
+
+
 /* Cover Letter Service styles */
 
-.coverLetterServiceContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
-    width: 100%;
-}
+
 
 .coverLetterServiceTitle{
     font-style: normal;
@@ -242,13 +245,17 @@ color: rgb(22 78 99);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    /* justify-content: flex-start; */
+    align-items: center;
     width: 100%;
+    gap: 100px;
 }
 
 
 .coverLetterServiceCardImage{
-    max-width: 350px;
+    max-width: 200px;
+    margin: auto;
+
 }
 
 .coverLetterServiceCardContent{
@@ -280,17 +287,16 @@ color: rgb(22 78 99);
     color: rgb(8 145 178);
 }
 
-
+.services_group{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 150px;
+}
 
 /* Interview Service styles */
 
-.interviewServiceContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
-    width: 100%;
-}
 
 .interviewServiceTitle{
     font-style: normal;
@@ -309,13 +315,15 @@ color: rgb(22 78 99);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    align-items: center;
     width: 100%;
+    gap: 100px;
 }
 
 
 .interviewServiceCardImage{
-    max-width: 350px;
+    max-width: 200px;
+    margin: auto;
 }
 
 .interviewServiceCardContent{
@@ -349,13 +357,7 @@ color: rgb(22 78 99);
 
 /* career coach Service styles */
 
-.adviceServiceContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-}
+
 
 .adviceServiceTitle{
     font-style: normal;
@@ -374,13 +376,15 @@ color: rgb(22 78 99);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    align-items: center;
     width: 100%;
+    gap: 100px;
 }
 
 
 .adviceServiceCardImage{
-    max-width: 350px;
+    max-width: 200px;
+    margin: auto;
 }
 
 .adviceServiceCardContent{
@@ -414,13 +418,7 @@ color: rgb(22 78 99);
 
 /* Learning Path Service styles */
 
-.learningPathServiceContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-}
+
 
 .learningPathServiceTitle{
     font-style: normal;
@@ -439,13 +437,15 @@ color: rgb(22 78 99);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    align-items: center;
     width: 100%;
+    gap: 100px;
 }
 
 
 .learningPathServiceCardImage{
-    max-width: 500px;
+    max-width: 200px;
+    margin: auto;
 }
 
 .learningPathServiceCardContent{
@@ -490,6 +490,8 @@ color: rgb(22 78 99);
   
   .benefitsContainer {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
     margin-top: 5rem;

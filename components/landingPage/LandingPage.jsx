@@ -17,10 +17,9 @@ function LandingPage() {
       </header>
       <main className={styles.page_container}>
         <ServicesSection/>
-        <PlansSection/>
         <BenefitsSection/>
+        <PlansSection/>
         <QA/>
-       
       </main>
       <Footer/>
     </body>
