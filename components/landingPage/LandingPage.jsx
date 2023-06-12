@@ -10,7 +10,7 @@ import QA from './Q&A'
 
 function LandingPage() {
   return (
-    <body className={styles.mainPage}>
+    <body className={styles.main_page}>
       <header>
       <PageNavbar/>
       <Header/>

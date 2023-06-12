@@ -1,4 +1,4 @@
-.mainPage{
+.main_page{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,7 +37,7 @@ width: 100%;
 padding: 20px;
 }
 
-.heroContent {
+.hero_content {
     padding: 10% 0;
     max-width: 500px;
     display: flex;
@@ -47,7 +47,7 @@ padding: 20px;
 
   }
 
-.textContainer {
+.text_container {
     margin-bottom: 1rem;
     display: flex;
     flex-wrap: wrap;
@@ -55,7 +55,7 @@ padding: 20px;
 }
 
 
-.heroText {
+.hero_text {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 1rem;
@@ -64,7 +64,7 @@ padding: 20px;
 
 
   
-.heroSpan {
+.hero_span {
 color: rgb(6 182 212); 
 }
 
@@ -74,7 +74,7 @@ margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 400px){
-    .heroText {
+    .hero_text {
         font-size: 24px;
     }
     .header h2 {
@@ -86,20 +86,20 @@ margin-bottom: 1rem;
 
 
 
-.heroImage {
+.hero_image {
     max-width: 500px;
     margin-top: 2rem;
 }
 @media screen and (max-width: 400px){
-    .heroImage {
+    .hero_image {
         max-width: 350px;
     }
 
 }
 
-.CTAbtn {
-    padding: 1rem 2rem;
-    font-size: 20px;
+.CTA_btn {
+    padding: 15px 20px;
+    font-size: 18px;
     font-weight: bold;
     background-color: rgb(22 78 99); 
     color: white;
@@ -107,33 +107,20 @@ margin-bottom: 1rem;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 3rem;
+    margin-top: 40px;
     box-shadow: 0 5px 10px lightblue;
+    max-width: fit-content;
 }
     
-.CTAbtn:hover {
+.CTA_btn:hover {
 /* background-color: rgb(8 145 178); */
 background-color: rgb(6 182 212);
 
 }
-    
-.sectionTitle{
-    font-size: 2rem;
-    font-weight: 700;
-    color: rgb(22 78 99); 
-    text-align: center;
-    margin: 1rem 0;
-    padding: 1rem 2rem;
-    text-decoration: underline;
-    text-underline-offset: 12px;
 
-}
+/* Our services section general styles */
 
-
-
-/* Services Section styles */
-
-.servicesSection{
+.services_section{
     margin-top: 5rem;
     margin-bottom: 4rem;
     padding-bottom: 2rem;
@@ -142,155 +129,24 @@ background-color: rgb(6 182 212);
     background-color: #f9f8f8;
 }
 
-
-.servicesContainers{
+.services_containers{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 10rem;
-
 }
-
-.resumeServiceContainer{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.resumeServiceTitle{
-    font-style: normal;
+    
+.section_title{
+    font-size: 28px;
     font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 60px;
-    letter-spacing: 0.01em;
-    color: rgb(22 78 99);
-    margin-bottom: 3rem;
-
-}
-
-
-.resumeServiceTitleSpan{
-    color:rgb(6 182 212);
-}
-
-/* resume service container styles */
-.resumeServiceCards{
-    display: flex;
-    flex-direction: row;
-    flex-flow: row wrap;
-    gap: 60px;
-
-}
-
-.resumeServiceCard{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-
-.resumeServiceCardImages{
-    max-width: 100px;
-}
-
-.resumeServiceCardText{
-    display: flex;
-    flex-flow: row wrap;
-    gap: 1rem;
-}
-
-.resumeServiceCardh1{
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1rem;
-    letter-spacing: -0.067em;
-    color: rgb(22 78 99);
-}
-
-.resumeServiceCardh2{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1rem;
-    letter-spacing: -0.067em;
-    color: rgb(8 145 178);
-}
-
-.resumeServiceCardNumber{
-
-font-style: normal;
-font-weight: 650;
-font-size: 2rem;
-line-height: 70px;
-letter-spacing: -0.067em;
-color: rgb(22 78 99);
-}
-
-
-
-/* Cover Letter Service styles */
-
-
-
-.coverLetterServiceTitle{
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 60px;
-    letter-spacing: 0.01em;
-    color: rgb(22 78 99);
-    margin-bottom: 3rem;
-}
-.coverLetterServiceTitleSpan{
-    color:rgb(6 182 212);
-}
-
-.coverLetterServiceCard{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    /* justify-content: flex-start; */
-    align-items: center;
-    width: 100%;
-    gap: 100px;
-}
-
-
-.coverLetterServiceCardImage{
-    max-width: 200px;
-    margin: auto;
-
-}
-
-.coverLetterServiceCardContent{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.coverLetterServiceCardText{
-    display: flex;
-    flex-flow: column wrap;
-    gap: 1rem;
-}
-
-.coverLetterServiceCardh1{
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.2rem;
-    letter-spacing: -0.067em;
-    color: rgb(22 78 99);
-}
-
-.coverLetterServiceCardh2{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1rem;
-    letter-spacing: -0.067em;
-    color: rgb(8 145 178);
+    color: rgb(22 78 99); 
+    text-align: center;
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+    text-decoration: underline;
+    text-underline-offset: 12px;
 }
 
 .services_group{
@@ -299,25 +155,12 @@ color: rgb(22 78 99);
     flex-wrap: wrap;
     align-items: center;
     gap: 150px;
+    padding: 0 20px;
 }
 
-/* Interview Service styles */
+/* service items styles except resume service */
 
-
-.interviewServiceTitle{
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 60px;
-    letter-spacing: 0.01em;
-    color: rgb(22 78 99);
-    margin-bottom: 3rem;
-}
-.interviewServiceTitleSpan{
-    color:rgb(6 182 212);
-}
-
-.interviewServiceCard{
+.service_card{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -326,162 +169,120 @@ color: rgb(22 78 99);
     gap: 100px;
 }
 
-
-.interviewServiceCardImage{
-    max-width: 200px;
-    margin: auto;
-}
-
-.interviewServiceCardContent{
+.service_card_content{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.interviewServiceCardText{
-    display: flex;
-    flex-flow: column wrap;
-    gap: 1rem;
-}
 
-.interviewServiceCardh1{
+
+.service_title{
     font-style: normal;
     font-weight: 700;
-    font-size: 1.2rem;
-    letter-spacing: -0.067em;
-    color: rgb(22 78 99);
-}
-
-.interviewServiceCardh2{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1rem;
-    letter-spacing: -0.067em;
-    color: rgb(8 145 178);
-}
-
-/* career coach Service styles */
-
-
-
-.adviceServiceTitle{
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 60px;
+    font-size: 20px;
+    line-height: 30px;
     letter-spacing: 0.01em;
     color: rgb(22 78 99);
-    margin-bottom: 2.5rem;
+    margin-bottom: 30px;
 }
-.adviceServiceTitleSpan{
+
+.service_title_span{
     color:rgb(6 182 212);
 }
 
-.adviceServiceCard{
+.service_card_text{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-    gap: 100px;
+    flex-flow: column wrap;
+    gap: 2px;
 }
 
+.service_card_h1{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.067em;
+    color: rgb(22 78 99);
+    margin-bottom: 5px;
+}
 
-.adviceServiceCardImage{
+.service_card_h2{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.067em;
+    color: rgb(14 116 144);
+}
+
+.service_card_image{
     max-width: 200px;
     margin: auto;
 }
 
-.adviceServiceCardContent{
+/* resume service container styles */
+
+.resume_service_container{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
 
-.adviceServiceCardText{
-    display: flex;
-    flex-flow: column wrap;
-    gap: 1rem;
-}
-
-.adviceServiceCardh1{
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.2rem;
-    letter-spacing: -0.067em;
-    color: rgb(22 78 99);
-}
-
-.adviceServiceCardh2{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1rem;
-    letter-spacing: -0.067em;
-    color: rgb(8 145 178);
-}
-
-/* Learning Path Service styles */
 
 
-
-.learningPathServiceTitle{
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 60px;
-    letter-spacing: 0.01em;
-    color: rgb(22 78 99);
-    margin-bottom: 2rem;
-}
-.learningPathServiceTitleSpan{
-    color:rgb(6 182 212);
-}
-
-.learningPathServiceCard{
+.resume_service_cards{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-    gap: 100px;
+    flex-flow: row wrap;
+    gap: 50px;
+
 }
 
-
-.learningPathServiceCardImage{
-    max-width: 200px;
-    margin: auto;
-}
-
-.learningPathServiceCardContent{
+.resume_service_card{
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-around;
 }
 
-.learningPathServiceCardText{
-    display: flex;
-    flex-flow: column wrap;
-    gap: 1rem;
+.resume_service_card_image{
+    max-width: 90px;
 }
 
-.learningPathServiceCardh1{
+.resume_service_card_text{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 5px;
+}
+
+.resume_service_card_h1{
     font-style: normal;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 16px;
     letter-spacing: -0.067em;
     color: rgb(22 78 99);
 }
 
-.learningPathServiceCardh2{
+.resume_service_card_h2{
     font-style: normal;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 16px;
     letter-spacing: -0.067em;
     color: rgb(8 145 178);
 }
+
+.resume_service_card_number{
+
+font-style: normal;
+font-weight: 650;
+font-size: 20px;
+line-height: 32px;
+letter-spacing: -0.067em;
+color: rgb(22 78 99);
+}
+
+
 
 /* Benefits Section styles */
 

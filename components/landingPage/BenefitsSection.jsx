@@ -6,7 +6,7 @@ const BenefitsSection = () => {
   return (
     <>
     <section className={styles.benefitsSection}>
-    <h1 className={styles.sectionTitle}>Why you should use our services</h1>
+    <h1 className={styles.section_title}>Why you should use our services</h1>
       <div className={styles.benefitsContainer}>
         <div className={styles.benefitItem}>
           
@@ -47,7 +47,7 @@ const BenefitsSection = () => {
       </div>
       {/* <Link href="/auth/signup"><button className={styles.CTAbtn}>Start Learning Now</button></Link> */}
 
-      <button type='button' className={styles.CTAbtn}><Link href="/auth/signup">Click Here To Create Your Free Account</Link></button>
+      <button type='button' className={styles.CTA_btn}><Link href="/auth/signup">Click Here To Create Your Free Account</Link></button>
     </section>
     </>
   );
