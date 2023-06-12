@@ -10,75 +10,75 @@ function ServicesSection() {
 
       <section className={styles.services_section}>
         <h1 className={styles.section_title}>Our Services</h1>
-        <div className={styles.services_containers}>
+        <div className={styles.services_container}>
 
                 {/* resume service section */}
 
           <div className={styles.resume_service_container}>
-              <h1 className={styles.service_title}>
-                Build your <span className={styles.service_title_span}>resume</span> in 3 steps
-              </h1>
-              <div className={styles.resume_service_cards}>
-                  <div className={styles.resume_service_card}>
-                      <img src="/writing-resume.png" alt="minimalist graphic for someone writing a resume" className={styles.resume_service_card_image}/>
-                      <div className={styles.resume_service_card_text}>
-                        <h1 className={styles.resume_service_card_number}>1.</h1>
-                        <div>
-                          <h1 className={styles.resume_service_card_h1}>Fill in</h1>
-                          <h2 className={styles.resume_service_card_h2}>Fill in the blanks and see results in real-time</h2>
-                        </div>
-                      </div>
+            <h1 className={styles.service_title}>
+              Build your <span className={styles.service_title_span}>resume</span> in 3 steps
+            </h1>
+            <div className={styles.resume_service_cards}>
+              <div className={styles.resume_service_card}>
+                <img src="/writing-resume.png" alt="minimalist graphic for someone writing a resume" className={styles.resume_service_card_image}/>
+                <div className={styles.resume_service_card_text}>
+                  <h1 className={styles.resume_service_card_number}>1.</h1>
+                  <div>
+                    <h1 className={styles.resume_service_card_h1}>Fill in</h1>
+                    <h2 className={styles.resume_service_card_h2}>Fill in the blanks and see results in real-time</h2>
                   </div>
-
-                  <div className={styles.resume_service_card}>
-                      <img src="/magic-wand.png" alt="minimalist graphic for magic wand" className={styles.resume_service_card_image}/>
-                      <div className={styles.resume_service_card_text}>
-                        <h1 className={styles.resume_service_card_number}>2.</h1>
-                        <div>
-                          <h1 className={styles.resume_service_card_h1}>Get help from our A.I. Tools</h1>
-                          <h2 className={styles.resume_service_card_h2}>Tune your resume text using our A.I tools</h2>
-                        </div>
-                      </div>
-                  </div>
-
-                  <div className={styles.resume_service_card}>
-                      <img src="/woman-download.png" alt="minimalist graphic for someone writing a resume" className={styles.resume_service_card_image}/>
-                      <div className={styles.resume_service_card_text}>
-                        <h1 className={styles.resume_service_card_number}>3.</h1>
-                        <div>
-                          <h1 className={styles.resume_service_card_h1}>Hit 'Download</h1>
-                          <h2 className={styles.resume_service_card_h2}>Downlaod your reusme, get more interviews</h2>
-                        </div>
-                      </div>
-                  </div>
+                </div>
               </div>
-              <Link href="/auth/signup"><button className={styles.CTA_btn}>Start Building Your Resume</button></Link>
+
+              <div className={styles.resume_service_card}>
+                <img src="/magic-wand.png" alt="minimalist graphic for magic wand" className={styles.resume_service_card_image}/>
+                <div className={styles.resume_service_card_text}>
+                  <h1 className={styles.resume_service_card_number}>2.</h1>
+                  <div>
+                    <h1 className={styles.resume_service_card_h1}>Get help from our A.I. Tools</h1>
+                    <h2 className={styles.resume_service_card_h2}>Tune your resume text using our A.I tools</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.resume_service_card}>
+                <img src="/woman-download.png" alt="minimalist graphic for someone writing a resume" className={styles.resume_service_card_image}/>
+                <div className={styles.resume_service_card_text}>
+                  <h1 className={styles.resume_service_card_number}>3.</h1>
+                  <div>
+                    <h1 className={styles.resume_service_card_h1}>Hit 'Download</h1>
+                    <h2 className={styles.resume_service_card_h2}>Downlaod your reusme, get more interviews</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <Link href="/auth/signup"><button className={styles.CTA_btn}>Start Building Your Resume</button></Link>
           </div>
 
             {/* Cover Letter service section */}
           <div className={styles.services_group}>
 
-          <div className={styles.service_container}>
-              
-                  <div className={styles.service_card}>
-                    <img src="/fingers-snapping.png" alt="minimalist graphic for someone fingers snapping" className={styles.service_card_image}/>
+            <div className={styles.service_container}>
+                
+              <div className={styles.service_card}>
+                <img src="/fingers-snapping.png" alt="minimalist graphic for someone fingers snapping" className={styles.service_card_image}/>
 
-                      <div className={styles.service_card_content}>
-                        <div className={styles.service_card_text}>
-                        <h1 className={styles.service_title}>
-                          Generate your <span className={styles.service_title_span}>cover letter</span>!
-                        </h1>
-                            <h1 className={styles.service_card_h1}>In 1 click, as simple as that!</h1>
-                            <h2 className={styles.service_card_h2}>Create your Resume.</h2>
-                            <h2 className={styles.service_card_h2}>Add the job description you are applying for.</h2>
-                            <h2 className={styles.service_card_h2}>Hit 'Generate Resume Button.</h2>
-                            <h2 className={styles.service_card_h2}>Download your proffesional cover letter.</h2>
-                        </div>
-                        <button className={styles.CTA_btn}><Link href="/auth/signup">Create Your Free Account</Link></button>
-                      </div>
-
+                  <div className={styles.service_card_content}>
+                    <div className={styles.service_card_text}>
+                    <h1 className={styles.service_title}>
+                      Generate your <span className={styles.service_title_span}>cover letter</span>!
+                    </h1>
+                        <h1 className={styles.service_card_h1}>In 1 click, as simple as that!</h1>
+                        <h2 className={styles.service_card_h2}>Create your Resume.</h2>
+                        <h2 className={styles.service_card_h2}>Add the job description you are applying for.</h2>
+                        <h2 className={styles.service_card_h2}>Hit 'Generate Resume Button.</h2>
+                        <h2 className={styles.service_card_h2}>Download your proffesional cover letter.</h2>
+                    </div>
+                    <button className={styles.CTA_btn}><Link href="/auth/signup">Create Your Free Account</Link></button>
                   </div>
-          </div>
+
+              </div>
+            </div>
 
 
 
@@ -86,29 +86,29 @@ function ServicesSection() {
 
             <div className={styles.service_container}>
               
-                  <div className={styles.service_card}>
-                    
-                  <img src="/interview.png" alt="minimalist graphic for someone having an interview" className={styles.service_card_image}/>
+              <div className={styles.service_card}>
+                
+              <img src="/interview.png" alt="minimalist graphic for someone having an interview" className={styles.service_card_image}/>
 
-                      <div className={styles.service_card_content}>
-                      <h1 className={styles.service_title}>
-                              Get ready for your <span className={styles.service_title_span}>interview</span>!
-                            </h1>
-                        <div className={styles.service_card_text}>
-                            
-                            <h1 className={styles.service_card_h1}>Our Interview Practice tool will:</h1>
-                            <h2 className={styles.service_card_h2}>Provide you with the most Common questions for the job you are applying for.</h2>
-                            <h2 className={styles.service_card_h2}>Practice your answers on those questions.</h2>
-                            <h2 className={styles.service_card_h2}>Provides you with an immediate feedback on your answers.</h2>
-                            <h2 className={styles.service_card_h2}>Helps you to overcome the fear and get ready for your inetrview.</h2>
-                            <h2 className={styles.service_card_h2}>Will answer any question related to your interview.</h2>
-                        </div>
-                        <button className={styles.CTA_btn}><Link href="/auth/signup">Start Practicing</Link></button>
-
-                      </div>
+                  <div className={styles.service_card_content}>
+                  <h1 className={styles.service_title}>
+                          Get ready for your <span className={styles.service_title_span}>interview</span>!
+                        </h1>
+                    <div className={styles.service_card_text}>
+                        
+                        <h1 className={styles.service_card_h1}>Our Interview Practice tool will:</h1>
+                        <h2 className={styles.service_card_h2}>Provide you with the most Common questions for the job you are applying for.</h2>
+                        <h2 className={styles.service_card_h2}>Practice your answers on those questions.</h2>
+                        <h2 className={styles.service_card_h2}>Provides you with an immediate feedback on your answers.</h2>
+                        <h2 className={styles.service_card_h2}>Helps you to overcome the fear and get ready for your inetrview.</h2>
+                        <h2 className={styles.service_card_h2}>Will answer any question related to your interview.</h2>
+                    </div>
+                    <button className={styles.CTA_btn}><Link href="/auth/signup">Start Practicing</Link></button>
 
                   </div>
-          </div>
+
+              </div>
+            </div>
           </div>
 
           {/* Career coach service section */}
@@ -156,8 +156,6 @@ function ServicesSection() {
                             <h2 className={styles.service_card_h2}>Provide you with a full learning path, where to start and how to start learning.</h2>
                             <h2 className={styles.service_card_h2}>Provide you with list of reliable resources to get you started immediately.</h2>
                             <button className={styles.CTA_btn}><Link href="/auth/signup">Start Learning Now</Link></button>
-
-
                         </div>
                       </div>
 
