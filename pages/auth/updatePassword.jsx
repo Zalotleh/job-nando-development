@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import Head from 'next/head';
 import { getAuth, updatePassword } from "firebase/auth";
 import Link from 'next/link';
-import AllNavbar from '@/components/landingPage/PageNavbar';
+import Layout2 from '@/components/Layout2';
 
 const auth = getAuth();
 export default function UpdatePassowrd (){
@@ -64,60 +63,62 @@ export default function UpdatePassowrd (){
     }
 return(
     <>
-     <Head>
-      <title>Change your password page</title>
-    </Head>
-    <AllNavbar/>
-    {!successMessage?
-    (
-        <div className="container px-16 py-16 mx-auto max-w-md mt-32 shadow-lg shadow-cyan-500">
 
-        <form>
-        <h2 className="text-3xl font-semibold text-cyan-900 mb-8">Update your password</h2>
-
-            <label 
-            htmlFor="newPassword" 
-            className="block text-cyan-900 text-2x1 font-medium mb-4"
-            >New Password</label>
-            <input 
-            type="password" 
-            name="newPassword" 
-            id="newPassword"
-            onChange={handleChange}
-            value={newPassword}
-            className="w-full py-2 px-4 mb-12 border border-cyan-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:border-transparent"
-            />
-            <label htmlFor="newPassword" className="block text-cyan-900 text-2x1 font-medium mb-4">Confirm New Password</label>
-            <input 
-            type="password" 
-            name="confirmNewPassword" 
-            id="confirmNewPassword" 
-            onChange={handleConfirmPasswordChange} 
-            value={confirmNewPassword} 
-            className="w-full py-2 px-4 mb-12 border border-cyan-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:border-transparent"
-
-            />
-        </form>
-
-        {errorMessage&&<p>{errorMessage}</p>}
-        {loginErrorMessage&&(
-            <p>
-            {loginErrorMessage}
-            <Link href={'./login'}>Log In</Link>
-            </p>
-        )}
-        <button 
-            type='button' 
-            onClick={handleClick}
-            className="bg-cyan-900 text-white font-medium text-lg py-2 px-4 mt-4 rounded-md hover:bg-cyan-500 transition"
+        <Layout2
+            metaTitle={'Change your password page'}
+            pageTitle={'Update Your Password'}
         >
-            Change Password
-        </button>
-        </div>
-    ): (
-        <p className='text-cyan-900'>{successMessage}</p>
-        )
-        }
+
+            {!successMessage?
+            (
+                <div className="container px-16 py-16 mx-auto max-w-md mt-8 shadow-lg shadow-cyan-500">
+
+                    <form>
+
+                        <label 
+                        htmlFor="newPassword" 
+                        className="block text-cyan-900 text-sm font-medium mb-2"
+                        >New Password</label>
+                        <input 
+                        type="password" 
+                        name="newPassword" 
+                        id="newPassword"
+                        onChange={handleChange}
+                        value={newPassword}
+                        className="w-full py-2 px-4 mb-6 text-sm border border-cyan-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:border-transparent"
+                        />
+                        <label htmlFor="newPassword" className="block text-cyan-900 text-sm font-medium mb-2">Confirm New Password</label>
+                        <input 
+                        type="password" 
+                        name="confirmNewPassword" 
+                        id="confirmNewPassword" 
+                        onChange={handleConfirmPasswordChange} 
+                        value={confirmNewPassword} 
+                        className="w-full py-2 px-4 mb-6 text-sm border border-cyan-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:border-transparent"
+
+                        />
+                    </form>
+
+                    {errorMessage&&<p>{errorMessage}</p>}
+                    {loginErrorMessage&&(
+                        <p>
+                        {loginErrorMessage}
+                        <Link href={'./login'}>Log In</Link>
+                        </p>
+                    )}
+                    <button 
+                        type='button' 
+                        onClick={handleClick}
+                        className="bg-cyan-900 text-white font-medium text-sm py-2 px-4 mt-4 rounded-md hover:bg-cyan-500 transition"
+                    >
+                        Change Password
+                    </button>
+                </div>
+            ): (
+                <p className='text-cyan-900'>{successMessage}</p>
+            )}
+        </Layout2>
+
     </>
 )
 }

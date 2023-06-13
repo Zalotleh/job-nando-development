@@ -16,10 +16,10 @@
 }
 
 .section_title{
-  font-size: 30px;
+  font-size: 18px;
   font-weight: 600;
   color: rgb(8 145 178);
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 
@@ -32,8 +32,7 @@
 /* our mission section styles */
 
 .our_mission_section{
-margin-top: 100px;
-margin-bottom: 100px;
+margin-bottom: 50px;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
@@ -43,28 +42,28 @@ gap: 50px;
 }
 
 .welcome_message{
-  font-size: 24px;
+  font-size: 16px;
   padding: 0 10px;
 }
 
 .our_mission_text{
-max-width: 800px;
+max-width: 400px;
 }
 
 .our_mission_image{
-max-width: 100%;
+max-width: 400px;
 }
 
 .our_mission_text p{
 padding: 10px;
-font-size: 20px;
+font-size: 14px;
 }
 
 /* what we offer section styles */
 
 .what_we_offer_section{
-margin-top: 200px;
-margin-bottom: 100px;
+margin-top: 50px;
+margin-bottom: 50px;
 }
 
 .what_we_offer_section_container{
@@ -76,13 +75,12 @@ margin-bottom: 100px;
 }
 
 .what_we_offer_image{
-  max-height: 1000px;
-  margin-right: 50px;
+  max-height: 700px;
   border-radius: 5px;
 }
 
 .what_we_offer_section p {
-font-size: 16px;
+font-size: 12px;
 margin: 10px  0 25px 0;
 }
 
@@ -91,14 +89,14 @@ list-style-type: circle;
 padding-left: 20px;
 margin-top: 10px;
 margin-bottom: 20px;
-max-width: 900px;
+max-width: 700px;
 }
 
 
 
 .what_we_offer_section_container strong {
 font-weight: bold;
-font-size: 18px;
+font-size: 16px;
 }
 
 
@@ -117,40 +115,39 @@ margin-top: 100px;
 }
 
 .why_choose_us_image{
-max-width: 100%;
+max-width: 500px;
 margin-left: 50px;
 border-radius: 5px;
 }
 
 .why_choose_us_section_container p {
-font-size: 16px;
+font-size: 12px;
 margin: 10px  0 25px 0;
 }
 
 .why_choose_us_section_container ul {
 list-style-type: decimal;
 padding-left: 20px;
-margin-top: 10px;
 margin-bottom: 20px;
-max-width: 900px;
+max-width: 600px;
 }
 
 
 .why_choose_us_section_container strong {
 font-weight: bold;
-font-size: 18px;
+font-size: 16px;
 }
 
 
 /* get started section styles */
 
 .get_started_section{
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 50px;
 }
 
 .get_started_section p {
-  font-size: 16px;
-  max-width: 1400px;
+  font-size: 12px;
+  max-width: 1000px;
   padding-left: 20px;
+  font-weight: 600;
 }

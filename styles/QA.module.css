@@ -1,5 +1,5 @@
-.qaContainer {
-    margin: 0 auto 5rem;
+.qa_container {
+    margin: 0 auto 100px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -7,22 +7,24 @@
   }
 
 .section_title{
-    font-size: 2rem;
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: 28px;
     font-weight: 700;
     color: rgb(22 78 99); 
     text-align: center;
-    margin: 3rem 0;
-    padding: 1rem 2rem;
+    margin: 50px 0 0;
+    padding: 40px 0 50px;
     text-decoration: underline;
-    text-underline-offset: 12px;
+    box-shadow: 0 5px 5px #f9f8f8;
+    text-underline-offset: 6px;
   }
   
-.qaItem {
+.qa_item {
     display: flex;
     flex-direction: column;
     width: 100%;
     border-bottom: 1px solid #ccc;
-    font-size: 20px;
+    font-size: 14px;
     
 }
 
@@ -34,6 +36,7 @@
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
+    font-weight: 600;
 }
 
 .question:hover{
@@ -43,7 +46,9 @@
 .answer {
     display: flex;
     flex-wrap: wrap;
-    background-color: #ffffff;
+    background-color: #ebebeb;
     padding: 20px 25px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
   

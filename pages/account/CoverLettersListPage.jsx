@@ -89,32 +89,33 @@ export default function CoverLettersListPage () {
         </div>
 
         <div className={styles.articles_section}>
-            <h2 className={styles.section_title}>Tips for you</h2>
-            <div className={styles.articles_container}>
-    
-            <Link href={'/Tips'}>
+          <h2 className={styles.section_title}>Tips for you</h2>
+          <div className={styles.articles_container}>
+
+            <Link href={'/articles/InterviewTips'}>
                 <div className={styles.article_card}>
-                  <h2>Tips and Tricks</h2>
-                  <img src="/interview.png" alt="" />
+                  <h2>Interview Tips</h2>
+                  <img src="/interview_tips_thumbnail.png" alt="" className={styles.article_image} />
                   <div className={styles.article_card_text} >
-                  8 tips will help you navigate the process and increase your chances of success.
+                    8 tips will help you navigate the process and increase your chances of success.
+                    
+                    ...read more
                   </div>
-                  Click To Read...
                 </div>
-                </Link>
-                <Link href={'/HowItWorks'}>
-                <div className={styles.article_card}>
-                  <h2>How it Works</h2>
-                  <img src="/writing-resume.png" alt="" />
-                  <div className={styles.article_card_text} >
-                  Discover how our platform can empower you in your career journey. 
-                  </div>
-                  Click To Read...
-                </div>
-                </Link>
-    
+            </Link>
+            <Link href={'/about/HowItWorks'}>
+            <div className={styles.article_card}>
+              <h2>How it Works</h2>
+              <img src="/how-it-works-article-thumbnail.png" alt="" className={styles.article_image} />
+              <div className={styles.article_card_text} >
+              Discover how our platform can empower you in your career journey. 
+              ...read more
+              </div>
             </div>
-            </div>
+            </Link>
+
+          </div>
+        </div>
       </Layout>
     </>
   );

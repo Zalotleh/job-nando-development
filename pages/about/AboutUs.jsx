@@ -20,7 +20,7 @@ function AboutUs() {
 
           <div className={styles.our_mission_text}>
             <h2 className={styles.welcome_message}>
-              Welcome to our Career Hub Platform! 
+              Welcome to our Talent Hub Platform! 
             </h2>
             <p>
               Our mission is to empower individuals by equipping them with the

@@ -15,7 +15,7 @@ function HowItWorks() {
         <img src='/how_it_works.png' alt="how it works" className={styles.main_image}/>
         <div className={styles.text_container}>
 
-          <p>Discover how our platform can empower you in your career journey.
+          <p className={styles.closure_text}>Discover how our platform can empower you in your career journey.
              From creating professional resumes and cover letters to honing your interview skills
               and accessing personalized career advice, our comprehensive set 
               of features and services will help you achieve your career goals

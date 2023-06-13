@@ -35,9 +35,9 @@ export default function CvsListPage() {
   return (
     <>
       <Layout 
-        metaTitle={'Your Resume Lists - 365 Talent Hub'}
-        pageTitle={'Your Resume List'}
-        notificationText={<p>* Here you can see your resumes list, click on the resume to view it or click on the "Create Resume button" to create a new one</p>}
+        metaTitle={'Your Resumes List - 365 Talent Hub'}
+        pageTitle={'Your Resumes List'}
+        notificationText={<p>* Here you can see your resumes list, click on the resume to view it or click on the "Create New Resume button" to create a new one</p>}
       >
         <div className={styles.list_section}>
           {loading ? (
@@ -69,7 +69,7 @@ export default function CvsListPage() {
               <div className={styles.create_section}>
                 <Link href={'../CreateCVPage'}>
                   <button type='button' className={styles.create_section_btn}>
-                    Create Resume
+                    Create New Resume
                   </button>
                 </Link>
               </div>
@@ -78,32 +78,33 @@ export default function CvsListPage() {
         </div>
 
         <div className={styles.articles_section}>
-            <h2 className={styles.section_title}>Tips for you</h2>
-            <div className={styles.articles_container}>
-    
-            <Link href={'/Tips'}>
+          <h2 className={styles.section_title}>Tips for you</h2>
+          <div className={styles.articles_container}>
+
+            <Link href={'/articles/InterviewTips'}>
                 <div className={styles.article_card}>
-                  <h2>Tips and Tricks</h2>
-                  <img src="/interview.png" alt="" />
+                  <h2>Interview Tips</h2>
+                  <img src="/interview_tips_thumbnail.png" alt="" className={styles.article_image} />
                   <div className={styles.article_card_text} >
-                  8 tips will help you navigate the process and increase your chances of success.
+                    8 tips will help you navigate the process and increase your chances of success.
+                    
+                    ...read more
                   </div>
-                  Click To Read...
                 </div>
-                </Link>
-                <Link href={'/HowItWorks'}>
-                <div className={styles.article_card}>
-                  <h2>How it Works</h2>
-                  <img src="/writing-resume.png" alt="writing resume image" />
-                  <div className={styles.article_card_text} >
-                  Discover how our platform can empower you in your career journey. 
-                  </div>
-                  Click To Read...
-                </div>
-                </Link>
-    
+            </Link>
+            <Link href={'/about/HowItWorks'}>
+            <div className={styles.article_card}>
+              <h2>How it Works</h2>
+              <img src="/how-it-works-article-thumbnail.png" alt="" className={styles.article_image} />
+              <div className={styles.article_card_text} >
+              Discover how our platform can empower you in your career journey. 
+              ...read more
+              </div>
             </div>
-            </div>
+            </Link>
+
+          </div>
+        </div>
       </Layout>
     </>
   );

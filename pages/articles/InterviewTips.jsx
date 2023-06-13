@@ -15,7 +15,7 @@ const InterviewTips = () => {
         <div className={styles.container}>
 
         <article>
-          <p>
+          <p className={styles.bold_text}>
             When it comes to job interviews, proper preparation can make all the difference.
             Whether you're a seasoned professional or a recent graduate, these interview tips will help you navigate the process and increase your chances of success.
           </p>
@@ -56,7 +56,7 @@ const InterviewTips = () => {
             </p>
         </article>
         <article>
-            <p>
+            <p className={styles.bold_text}>
                 Remember, interviews are an opportunity for you to showcase your skills, experiences, and passion for the role.
                 By following these interview tips, you can approach your next interview with confidence and increase your chances of success.
                 Stay calm, be yourself, and remember that preparation and a positive attitude can go a long way.

@@ -69,16 +69,16 @@ export default function UpdateProfile() {
 
         <div className="container justify-around gap-5 px-16 py-16 mx-auto  mt-5 shadow-lg shadow-cyan-500">
         <form>
-        <h2 className="text-3xl font-semibold text-cyan-900 mb-20 underline">Your Profile Details</h2>
+        <h2 className="text-lg font-semibold text-cyan-900 mb-5 underline">Your Profile Details</h2>
         {user ? (
           <div className="flex flex-row flex-wrap gap-20">
             <div>
-              <h2 className="text-cyan-900 text-2xl font-medium mb-4">User name:</h2>
-              <p className="text-cyan-700 text-2xl mb-10 border rounded-md w-fit px-2 py-2">{user.displayName}</p>
+              <h2 className="text-cyan-900 text-sm font-medium mb-4">User name:</h2>
+              <p className="text-cyan-700 text-sm mb-10 border rounded-md w-fit px-2 py-2">{user.displayName}</p>
             </div>
             <div>
-              <h2 className="text-cyan-900 text-2xl font-medium mb-4">Email address:</h2>
-              <p className="text-cyan-700 text-2xl mb-20 border rounded-md w-fit px-2 py-2 ">{user.email}</p>
+              <h2 className="text-cyan-900 text-sm font-medium mb-4">Email address:</h2>
+              <p className="text-cyan-700 text-sm mb-10 border rounded-md w-fit px-2 py-2 ">{user.email}</p>
             </div>
           </div>
         ) : (
@@ -88,11 +88,11 @@ export default function UpdateProfile() {
       <hr />
 
         <form>
-          <h2 className="text-3xl font-semibold text-cyan-900 mt-20 mb-8 underline">Update your Profile Details</h2>
+          <h2 className="text-lg font-semibold text-cyan-900 mt-10 mb-5 underline">Update your Profile Details</h2>
           
           <label 
             htmlFor="newName"
-            className="block text-cyan-900 text-2x1 font-medium mb-1 mt-2"
+            className="block text-cyan-900 text-sm font-medium mb-1 mt-2"
             >
             New Name
           </label>
@@ -101,18 +101,18 @@ export default function UpdateProfile() {
             id="newName" 
             value={newName} 
             onChange={handleNameChange}
-            className="w-auto py-2 px-4 mb-2 mr-5 border border-cyan-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:border-transparent"
+            className="w-auto py-2 px-4 mb-2 mr-5 text-sm border border-cyan-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:border-transparent"
             />
           <button 
             onClick={handleUpdateProfileInfoButton}
-            className="bg-cyan-900 text-white font-medium text-lg py-2 px-4 mt-2 mb-10 rounded-md hover:bg-cyan-500 transition"
+            className="bg-cyan-900 text-white font-medium text-sm py-2 px-4 mt-1 mb-10 rounded-md hover:bg-cyan-500 transition"
             >
             Update User Name
           </button>
 
           <label 
             htmlFor="newEmail"
-            className="block text-cyan-900 text-2x1 font-medium mb-1"
+            className="block text-cyan-900 text-sm font-medium mb-1"
             >
             New email
           </label>
@@ -121,11 +121,11 @@ export default function UpdateProfile() {
             id="newEmail" 
             value={newEmail} 
             onChange={handleEmailChange}
-            className="w-auto py-2 px-4 mb-2 mr-5 border border-cyan-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:border-transparent"
+            className="w-auto py-2 px-4 mb-2 mr-5 border text-sm border-cyan-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:border-transparent"
             />
           <button 
             onClick={handleUpdateEmailButton}
-            className="bg-cyan-900 text-white font-medium text-lg py-2 px-4 mt-2 mb-10 rounded-md hover:bg-cyan-500 transition"
+            className="bg-cyan-900 text-white font-medium text-sm py-2 px-4 mt-1 mb-10 rounded-md hover:bg-cyan-500 transition"
             >
             Update Email Address
           </button>

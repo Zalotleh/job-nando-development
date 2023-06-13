@@ -1,5 +1,5 @@
 .page {
-    padding: 100px;
+    padding: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -19,22 +19,23 @@
 }
   
   .page article {
-    font-size: 20px;
+    font-size: 12px;
     line-height: 1.6;
-    padding: 50px;
-    ;
+    padding: 30px;
+
   }
   
   .page h2{
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 14px;
     padding: 5px;
+    font-weight: 600;
   }
   .page p {
+    margin-left: 15px;
     margin-bottom: 15px;
   }
 
-  .boldText{
-    font-weight: 500;
+  .bold_text{
+    font-weight: 600;
   }
   

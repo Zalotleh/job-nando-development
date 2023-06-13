@@ -37,10 +37,10 @@ const QA = () => {
   };
 
   return (
-    <div className={styles.qaContainer}>
+    <div className={styles.qa_container}>
         <h1 className={styles.section_title}>Q&A</h1>
       {QAPairs.map((pair, index) => (
-        <div key={index} className={styles.qaItem}>
+        <div key={index} className={styles.qa_item}>
           <div className={styles.question} onClick={() => toggleQuestion(index)}>
             {pair.question}
           </div>

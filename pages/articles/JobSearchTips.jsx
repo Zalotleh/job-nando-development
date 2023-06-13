@@ -15,7 +15,7 @@ const JobSearchTips = () => {
         <div className={styles.container}>
 
         <article>
-          <p>
+          <p className={styles.bold_text}>
             Searching for a job can be a challenging and overwhelming process.
             Whether you're a recent graduate or someone looking for a career change, these job search tips will help you navigate the competitive job market and increase your chances of success.
           </p>
@@ -65,7 +65,7 @@ const JobSearchTips = () => {
             </p>
         </article>
         <article>
-          <p>
+          <p className={styles.bold_text}>
             Remember, job searching requires persistence and resilience.
             Stay proactive, stay positive, and continue to refine your job search strategy as needed.
             By implementing these job search tips, you'll be better equipped to navigate the job market and land the job you desire.

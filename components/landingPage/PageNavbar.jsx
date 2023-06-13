@@ -25,17 +25,17 @@ const PageNavbar = ({ children }) => {
       <section className={styles.container}>
         <div className={styles.logo}>
           <Link href="/">
-            <span className={styles.logoText}>365 Talent Hub</span>
+            <span className={styles.logo_text}>365 Talent Hub</span>
           </Link>
         </div>
 
         <nav className={styles.navbar}>
-          <ul className={styles.navLinks}>
+          <ul className={styles.nav_links}>
               <>
                 
-                <li className={`${styles.navLink} ${styles.dropdown}`}>
-                  <span className={styles.dropdownToggle}>Services</span>
-                  <div className={styles.dropdownContent}>
+                <li className={`${styles.nav_link} ${styles.dropdown}`}>
+                  <span className={styles.dropdown_toggle}>Services</span>
+                  <div className={styles.dropdown_content}>
                     <Link href="/CreateCVPage">Create Resume</Link>
                     <Link href="/CreateCoverLetter">Create Cover Letter</Link>
                     <Link href="/GetCareerAdvice">Get Career Advice</Link>
@@ -44,31 +44,31 @@ const PageNavbar = ({ children }) => {
                   </div>
                 </li>
                 
-                <li className={`${styles.navLink} ${styles.dropdown}`}>
-                  <span className={styles.dropdownToggle}>About</span>
-                  <div className={styles.dropdownContent}>
+                <li className={`${styles.nav_link} ${styles.dropdown}`}>
+                  <span className={styles.dropdown_toggle}>About</span>
+                  <div className={styles.dropdown_content}>
                     <Link href="/about/AboutUs">About Us</Link>
                     <Link href="/terms/TermsAndConditions">Terms and Conditions</Link>
                     <Link href="/terms/PrivacyPolicy">Privacy Policy</Link>
                   </div>
                 </li>
 
-                <li className={`${styles.navLink} ${styles.dropdown}`}>
-                  <span className={styles.dropdownToggle}>Useful Tips</span>
-                  <div className={styles.dropdownContent}>
+                <li className={`${styles.nav_link} ${styles.dropdown}`}>
+                  <span className={styles.dropdown_toggle}>Useful Tips</span>
+                  <div className={styles.dropdown_content}>
                     <Link href="/articles/InterviewTips">Interview Tips</Link>
                     <Link href="/articles/JobSearchTips">Job Search Tips</Link>
                     <Link href="/articles/ResumeTips">Resume Tips</Link>
                   </div>
                 </li>
 
-                <li className={styles.navLink}>
+                <li className={styles.nav_link}>
                   <Link href="/about/HowItWorks">How It Works</Link>
                 </li>
 
                 {user.uid?(
                     <>
-                    <li className={styles.navLink}>
+                    <li className={styles.nav_link}>
                         <Link href="/account/Dashboard">Dashboard</Link>
                     </li>
 
@@ -78,7 +78,7 @@ const PageNavbar = ({ children }) => {
                     </>
                     ):(
                         <>
-                        <li className={styles.navLink}>
+                        <li className={styles.log_in_btn}>
                             <Link href="/auth/login">Log in</Link>
                         </li>
     

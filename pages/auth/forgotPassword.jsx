@@ -29,9 +29,9 @@ const ForgotPasswordPage = () => {
     <section className="flex flex-col mb-4" >
 
     <div className="flex flex-row justify-around	">
-    </div>
+   
 
-    <div className="container px-16 py-16 mx-auto max-w-lg mt-32 shadow-md shadow-cyan-500">
+    <div className="container px-16 py-8 mx-auto max-w-lg mt-10 shadow-md shadow-cyan-500">
 
       {successMessage?
        (
@@ -50,8 +50,8 @@ const ForgotPasswordPage = () => {
 
       <form onSubmit={handleResetPassword}>
         <div className="mb-4">
-          <p className="block text-cyan-900 text-lg font-medium mb-6">Please type in the email address connected to your account</p>
-          <label htmlFor="email" className="block text-2xl text-cyan-900 font-medium mb-4">
+          <p className="block text-cyan-900 text-md font-medium mb-6">Please type in the email address connected to your account</p>
+          <label htmlFor="email" className="block text-lg text-cyan-900 font-medium mb-2">
             Email Address:
           </label>
           <input
@@ -59,22 +59,21 @@ const ForgotPasswordPage = () => {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full py-2 px-4 border border-cyan-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            className="w-full py-2 px-2 border border-cyan-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
             required
             />
         </div>
         <button
           type="submit"
-          className="bg-cyan-900 text-lg text-white font-medium py-2 px-4 mt-4 rounded-md hover:bg-cyan-500 transition"
+          className="bg-cyan-900 text-md text-white font-medium py-2 px-4 mt-4 rounded-md hover:bg-cyan-500 transition"
           >
           Reset Password
         </button>
       </form>
       
     </div>
-    <div className='mx-auto mt-4 text-cyan-900' >
-        &copy; 2023 Ziad Alotleh. All rights reserved.
     </div>
+  
     </section>
 
     </Layout2>

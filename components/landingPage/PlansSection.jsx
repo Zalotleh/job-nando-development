@@ -5,41 +5,41 @@ import Link from 'next/link';
 const PlansSection = () => {
   return (
     <>
-      <h3 className={styles.sectionTitle}>Plans & Pricing</h3>
+      <h3 className={styles.section_title}>Plans & Pricing</h3>
 
-      <section className={styles.plansSection}>
-        <div className={styles.planOptions}>
-          <div className={styles.planOption}>
-            <h1 className={styles.planTitle}>Free Plan</h1>
-            <h2 className={styles.plansPrice}>
-              <span className={styles.dollarSign}>$</span>
+      <section className={styles.plans_section}>
+        <div className={styles.plan_options}>
+          <div className={styles.plan_option}>
+            <h1 className={styles.plan_title}>Free Plan</h1>
+            <h2 className={styles.plans_price}>
+              <span className={styles.dollar_sign}>$</span>
               <span className={styles.price}>0</span>
               <span className={styles.month}>/month</span>
             </h2>
-            <hr className={styles.horizontalLine} />
+            <hr className={styles.horizontal_line} />
 
-            <ul className={styles.benefitsList}>
+            <ul className={styles.benefits_list}>
               <li>Create 1 resume</li>
               <li>Create 1 cover letter</li>
               <li>Access to 1 career advice</li>
               <li>Access to 1 learning path</li>
               <li>No interview preparation</li>
             </ul>
-            <Link href="/auth/signup" className={styles.planButton}>
+            <Link href="/auth/signup" className={styles.plan_button}>
               Sign Up for Free
             </Link>
           </div>
 
-          <div className={styles.planOption}>
-            <h1 className={styles.planTitle}>Premium Plan</h1>
-            <h2 className={styles.plansPrice}>
-              <span className={styles.dollarSign}>$</span>
+          <div className={styles.plan_option}>
+            <h1 className={styles.plan_title}>Premium Plan</h1>
+            <h2 className={styles.plans_price}>
+              <span className={styles.dollar_sign}>$</span>
               <span className={styles.price}>9.99</span>
               <span className={styles.month}>/month</span>
             </h2>
-            <hr className={styles.horizontalLine} />
+            <hr className={styles.horizontal_line} />
 
-            <ul className={styles.benefitsList}>
+            <ul className={styles.benefits_list}>
               <li >Create unlimited resumes</li>
               <li>Create unlimited cover letters</li>
               <li>Access to all career advice</li>
@@ -49,7 +49,7 @@ const PlansSection = () => {
               <li>Cancel Anytime</li>
 
             </ul>
-            <Link href="/auth/signup" className={styles.planButton}>
+            <Link href="/auth/signup" className={styles.plan_button}>
               Buy Now
             </Link>
           </div>

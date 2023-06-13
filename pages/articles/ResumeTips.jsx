@@ -66,7 +66,7 @@ const ResumeTips = () => {
             With the help of our application, you can create a standout resume that grabs attention, tailor it to specific job opportunities, optimize it for applicant tracking systems, highlight your achievements, and ensure it is error-free.
             Remember, your resume is a reflection of your professional brand, so invest time and effort into perfecting it.
         </p>
-        <p className={styles.boldText}>
+        <p className={styles.bold_text}>
             Take advantage of the features and tools our application offers to enhance your resume and make it stand out from the competition.
             Combine a well-structured resume with a compelling cover letter, interview preparation, and career guidance to maximize your chances of success.
             Start using our application today and take your resume to new heights!

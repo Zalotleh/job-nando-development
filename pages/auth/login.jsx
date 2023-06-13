@@ -52,13 +52,12 @@ const LoginPage = () => {
 
       <section className="flex flex-col mb-4" >
 
-        <div className="sign-up-form container mx-auto w-96 mt-20 mb-12 font-sans border-4  rounded-lg shadow-lg shadow-cyan-500 dark:shadow-lg dark:shadow-cyan-900">
-          {/* <h2 className="px-12 mt-8 text-center text-4xl font-semibold font-sans text-cyan-900">Log In</h2> */}
+        <div className="sign-up-form container mx-auto w-96 mt-10 mb-12 font-sans border-4  rounded-lg shadow-lg shadow-cyan-500 dark:shadow-lg dark:shadow-cyan-900">
           <FormProvider {...methods}>
-            <form action="" className="w-80 mx-auto pb-12 px-4" onSubmit={handleSubmit(onSubmit)}>
-              <div className="mt-8">
+            <form action="" className="w-80 mx-auto pb-8 px-4" onSubmit={handleSubmit(onSubmit)}>
+              <div className="mt-6">
                 <div className="flex items-center justify-between">
-                  <label htmlFor="" className="block mb-3 font-sans text-cyan-900">
+                  <label htmlFor="" className="block mb-2 font-sans text-sm text-cyan-900">
                     Email
                   </label>
                 </div>
@@ -66,13 +65,13 @@ const LoginPage = () => {
                 <input
                   type="email"
                   {...register("email", { required: "Email is required" })}
-                  className={`border border-solid rounded-lg ring:0 focus:ring-0 focus:outline-none border-cyan-500 text-black-500 text-normal py-3 h-12 px-6 text-lg w-full flex items-center`}
+                  className={`border border-solid rounded-lg ring:0 focus:ring-0 focus:outline-none border-cyan-500 text-black-500 text-normal py-2 h-10 px-6 text-base w-full flex items-center`}
                   />
                 {errors.email && <p className="text-red-400">{errors.email.message}</p>}
               </div>
-              <div className="mt-8">
+              <div className="mt-6">
                 <div className="flex items-center justify-between">
-                  <label htmlFor="" className="block mb-3 font-sans text-cyan-900">
+                  <label htmlFor="" className="block mb-2 font-sans text-sm text-cyan-900">
                     Password
                   </label>
                 </div>
@@ -80,7 +79,7 @@ const LoginPage = () => {
                 <input
                   type="password"
                   {...register("password", { required: "Password is required" })}
-                  className={`border border-solid rounded-lg ring:0 focus:ring-0 focus:outline-none border-cyan-500 text-black-500 text-normal py-3 h-12 px-6 text-lg w-full flex items-center`}
+                  className={`border border-solid rounded-lg ring:0 focus:ring-0 focus:outline-none border-cyan-500 text-black-500 text-normal py-2 h-10 px-6 text-base w-full flex items-center`}
                 />
                 {errors.password && <p className="text-red-400">{errors.password.message}</p>}
               </div>
@@ -91,24 +90,24 @@ const LoginPage = () => {
 
                 {errorMessage && <p className="text-red-400" >Please try again: <span style={{textTransform: "capitalize"}}>{errorMessage}</span></p>}
 
-              <div className="flex justify-center pt-8">
+              <div className="flex justify-center pt-6">
                 <button
                   type="submit"
-                  className="border border-b-gray-400 rounded-md text-white text-xl font-bold bg-cyan-900 hover:bg-cyan-500 hover:text-white px-10 py-5">
+                  className="border border-b-gray-400 rounded-md font-normal text-white text-sm bg-cyan-900 hover:bg-cyan-500 hover:text-white px-5 py-2">
                   Log In
                 </button>
 
               </div>
 
               <div className="inline-flex items-center justify-center w-full">
-              <hr className="w-64 h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"/>
-              <span className="absolute px-3 font-medium text-cyan-900 -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-black-900">or</span>
+              <hr className="w-64 h-px my-6 bg-gray-200 border-0 dark:bg-gray-700"/>
+              <span className="absolute px-2 font-medium text-cyan-900 -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-black-900">or</span>
               </div>
 
-              <div className="flex justify-center pt-4">
+              <div className="flex justify-center pt-2">
                   <button type="button"
                     onClick={handleGoogleSignIn}
-                    className=" font-bold	rounded-lg  px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 shadow-lg border border-b-gray-400 text-white text-xl bg-cyan-900 hover:bg-cyan-500 hover:text-white"
+                    className=" font-normal text-white text-sm	rounded-lg  px-5 py-2 text-center inline-flex items-center mr-2 mb-2 shadow-lg border border-b-gray-400  bg-cyan-900 hover:bg-cyan-500 hover:text-white"
                   >
                   <svg className="w-4 h-4 mr-2 -ml-1 " aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" role="img" 
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path fill="currentColor" 
@@ -125,9 +124,7 @@ const LoginPage = () => {
           </FormProvider>
           
         </div>
-        <div className='mx-auto text-cyan-900' >
-          &copy; 2023 Ziad Alotleh. All rights reserved.
-        </div>
+      
       </section>
 
       </Layout2>  

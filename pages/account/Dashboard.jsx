@@ -1,11 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import Link from 'next/link';
-import Head from 'next/head';
 import styles from '../../styles/Dashboard.module.css';
-import PageNavbar from '@/components/landingPage/PageNavbar';
 import { useAuth } from '@/context/AuthContext';
 import getCvsList from '../api/CvProcessing/getCvsList'
-import Footer from '@/components/Footer';
+import Layout2 from '@/components/Layout2';
 
 
 function Dashboard() {
@@ -42,16 +40,14 @@ function Dashboard() {
 
   return (
     <>
-    <Head>
-      <title>Your Dashboard and Profile settings page</title>
-    </Head>
 
-    <PageNavbar/>
-    <section className={styles.title}>
-      <h1>Dashboard</h1>
-    </section>
+    <Layout2
+      metaTitle={'Your Dashboard and Profile settings page'}
+      pageTitle={'Dashboard'}
+    >
 
-    <section className={styles.notificationSection}>
+
+    <section className={styles.notification_section}>
       {/* Show loader if data is still loading */}
       {isLoading ? (
             <div className={styles.loader}></div>
@@ -63,7 +59,7 @@ function Dashboard() {
                   <p>* Welcome to your personal career coach and advisor, lets start by creating your first resume.
                     please click on Create Resume service below to get started.
                   </p>
-                  <button className={styles.closeButton} onClick={closeNotification}>
+                  <button className={styles.close_button} onClick={closeNotification}>
                     Close
                   </button>
                 </div>
@@ -74,54 +70,52 @@ function Dashboard() {
     </section>
 
     <div className={styles.dashboard}>
-    <section className={styles.profileSection}>
-        <h2 className={styles.sectionTitle}></h2>
-        <div className={styles.profileContainer}>
-        <div className={styles.profileWelcome}>
-                <p>Hello, {userName} </p>
-                <img src="/user.png" alt="profile icon" />
-              </div>
-          <div className={styles.profileDetails}>
-            <div className={styles.profileDetailsText}>
-              
-            <hr />
-            <h2>Profile Information:</h2>
-              <h3>-User Name: {userName}</h3>
-              <h3>-Email address: {userEmail}</h3>
-              <h3>-Plan: Premium</h3>
-            </div>
-          <div className={styles.updateProfile}>
-          
-            <Link 
-              href={'/account/updateProfile'} 
-              className={styles.profileLink}> 
-              <img src="/update.png" alt="update icon"/>
-              Update Profile Details
-            </Link>
+      <section className={styles.profile_section}>
+        <div className={styles.profile_container}>
+          <div className={styles.profile_welcome}>
+            <p>Hello, {userName} </p>
+            <img src="/user.png" alt="profile icon" />
           </div>
-          
+          <div className={styles.profile_details}>
+            <div className={styles.profile_details_text}>
+              
+              <hr />
+                <h2>Profile Information:</h2>
+                <h3>-User Name: {userName}</h3>
+                <h3>-Email address: {userEmail}</h3>
+                <h3>-Plan: Premium</h3>
+            </div>
+            <div className={styles.update_profile}>
+            
+              <Link 
+                href={'/account/updateProfile'} 
+                className={styles.profile_link}> 
+                <img src="/update.png" alt="update icon"/>
+                Update Profile Details
+              </Link>
+            </div>
           </div>
 
-          <div className={styles.accountSettings}>
+          <div className={styles.account_settings}>
             <h2>Account Settings:</h2>
 
             <Link 
               href={'/auth/updatePassword'} 
-              className={styles.profileLink}>
+              className={styles.profile_link}>
                 <img src="/lock.png" alt="lock" />
                 Change Password 
             </Link>
 
             <Link 
               href={'/account/SubscriptionPage'} 
-              className={styles.profileLink}> 
+              className={styles.profile_link}> 
               <img src="/subscription.png" alt="plan or subscription details" /> 
               Subscription Details
             </Link>
 
             <Link 
               href={'/account/deleteProfile'} 
-              className={styles.profileLink}> 
+              className={styles.profile_link}> 
               <img src="/delete.png" alt="remove user icon" /> 
               Delete Account
             </Link>
@@ -132,13 +126,13 @@ function Dashboard() {
             <h2>Your Reumes & Cover Letters Lists:</h2>
             <Link 
               href={'/account/CvsListPage'} 
-              className={styles.profileLink}>
+              className={styles.profile_link}>
                 <img src="/list.png" alt="list icon" />
                 Your Resumes
             </Link>
             <Link 
               href={'/account/CoverLettersListPage'} 
-              className={styles.profileLink}>
+              className={styles.profile_link}>
                 <img src="/list.png" alt="list icon" />
                 Your Cover Letters
             </Link>
@@ -147,15 +141,15 @@ function Dashboard() {
 
         </div>
       </section>
-      <section className={styles.servicesSection}>
-        <h2 className={styles.sectionTitle}>Services</h2>
-        <div className={styles.cardContainer}>
+      <section className={styles.services_section}>
+        <h2 className={styles.section_title}>Services</h2>
+        <div className={styles.card_container}>
           <Link href={'/CreateCVPage'}>
             <div className={styles.card}>
               <h2>Create Resume</h2>
-              <img src="/interview.png" alt="" />
-              <div className={styles.gocorner}>
-                <div className={styles.gostar}>
+              <img src="/writing-resume.png" alt="" />
+              <div className={styles.go_corner}>
+                <div className={styles.go_star}>
                   *
                 </div>
               </div>
@@ -165,9 +159,9 @@ function Dashboard() {
           <Link href={'/CreateCoverLetter'}>
             <div className={styles.card}>
               <h2>Create Cover Letter</h2>
-              <img src="/interview.png" alt="" />
-              <div className={styles.gocorner}>
-                <div className={styles.gostar}>
+              <img src="/fingers-snapping.png" alt="" />
+              <div className={styles.go_corner}>
+                <div className={styles.go_star}>
                 *
                 </div>
               </div>
@@ -177,9 +171,9 @@ function Dashboard() {
           <Link href={'/GetCareerAdvice'}>
             <div className={styles.card}>
               <h2>Your Career Advisor</h2>
-              <img src="/interview.png" alt="" />
-              <div className={styles.gocorner} href="#">
-                <div className={styles.gostar}>
+              <img src="/career-coach.png" alt="" />
+              <div className={styles.go_corner} href="#">
+                <div className={styles.go_star}>
                   *
                 </div>
               </div>
@@ -189,9 +183,9 @@ function Dashboard() {
           <Link href={'/LearningPathPage'}>
             <div className={styles.card}>
             <h2>Learn New Skill</h2>
-            <img src="/interview.png" alt=""/>
-              <div className={styles.gocorner} >
-                <div className={styles.gostar}>
+            <img src="/learning-path.png" alt=""/>
+              <div className={styles.go_corner} >
+                <div className={styles.go_star}>
                   *
                 </div>
               </div>
@@ -202,8 +196,8 @@ function Dashboard() {
             <div className={styles.card}>
               <h2>Interview Room</h2>
               <img src="/interview.png" alt=""/>
-              <div className={styles.gocorner} >
-                <div className={styles.gostar}>
+              <div className={styles.go_corner} >
+                <div className={styles.go_star}>
                   *
                 </div>
               </div>
@@ -212,38 +206,39 @@ function Dashboard() {
 
         </div>
         <hr />
-        <div className={styles.articlesSection}>
-        <h2 className={styles.sectionTitle}>Tips for you</h2>
-        <div className={styles.articlesContainer}>
+        <div className={styles.articles_section}>
+          <h2 className={styles.section_title}>Tips for you</h2>
+          <div className={styles.articles_container}>
 
-        <Link href={'/articles/InterviewTips'}>
-            <div className={styles.articleCard}>
-              <h2>Interview Tips</h2>
-              <img src="/interview.png" alt="" />
-              <div className={styles.article_card_text} >
-                8 tips will help you navigate the process and increase your chances of success.
-                
-              </div>
-              Click To Read...
-            </div>
+            <Link href={'/articles/InterviewTips'}>
+                <div className={styles.article_card}>
+                  <h2>Interview Tips</h2>
+                  <img src="/interview_tips_thumbnail.png" alt="" className={styles.article_image} />
+                  <div className={styles.article_card_text} >
+                    8 tips will help you navigate the process and increase your chances of success.
+                    
+                    ...read more
+                  </div>
+                </div>
             </Link>
             <Link href={'/about/HowItWorks'}>
-            <div className={styles.articleCard}>
+            <div className={styles.article_card}>
               <h2>How it Works</h2>
-              <img src="/writing-resume.png" alt="" />
+              <img src="/how-it-works-article-thumbnail.png" alt="" className={styles.article_image} />
               <div className={styles.article_card_text} >
               Discover how our platform can empower you in your career journey. 
+              ...read more
               </div>
-              Click To Read...
             </div>
             </Link>
 
-        </div>
+          </div>
         </div>
       </section>
       
     </div>
-    <Footer/>
+    </Layout2>
+
     </>
   )
 }
