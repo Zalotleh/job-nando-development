@@ -73,8 +73,8 @@ export default function CoverLetterRequest({cvData, cv_id}) {
 
   return (
 
-    <div className="mb-8 w-[90%] mx-auto ">
-      <h2 className="text-2xl font-medium mb-4 px-2 py-4">Please copy and paste the job description here & any other relevant information:</h2>
+    <div className="mb-8 w-[70%] mx-auto ">
+      <h2 className="text-base font-medium mt-4 mb-2 px-2 py-4">Please add the job description & any other relevant information here:</h2>
       <form className="space-y-4">
         <div>
           <label htmlFor="jobDescriptionText" className="block font-bold mb-1">
@@ -84,9 +84,10 @@ export default function CoverLetterRequest({cvData, cv_id}) {
             id="jobDescriptionText"
             value={jobDescription}
             onChange={handleChange}
+            placeholder='Job description and information here...'
             disabled = {loading}
-            className=" text-lg w-full border border-cyan-500 px-4 py-2 rounded-sm shadow-lg shadow-cyan-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
-            rows={15}
+            className=" text-sm w-full border border-cyan-500 px-4 py-2 rounded-sm shadow-lg shadow-cyan-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
+            rows={14}
           />
         </div>
       </form>
@@ -94,7 +95,7 @@ export default function CoverLetterRequest({cvData, cv_id}) {
       {loading? (
         <>
         <div className="text-center mt-20">
-          <h2 className="text-2xl font-bold mb-4">Thank you for submitting!</h2>
+          <h2 className="text-base font-bold mb-4">Thank you for submitting!</h2>
           <p className="text-black-600">This may take a while.</p>
           <p className="text-black-600">Waiting for the cover letter to be generated.</p>
         </div>
@@ -108,7 +109,7 @@ export default function CoverLetterRequest({cvData, cv_id}) {
         <div>
           <button 
             onClick={handleGetCoverLetterButton}
-            className="ml-5 mt-10 mb-10 mr-2 px-4 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-cyan-900 hover:bg-cyan-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
+            className="ml-5 mt-6 mb-10 mr-2 px-4 py-4 border border-transparent text-sm font-medium rounded-md text-white bg-cyan-900 hover:bg-cyan-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
             disabled={loading} // Disable the button when loading is true
 
           >
@@ -118,25 +119,25 @@ export default function CoverLetterRequest({cvData, cv_id}) {
 
       {coverLetter && (
         <div>
-        <h2 className="text-2xl font-medium mb-4 px-2 py-4">Your Cover Letter is ready:</h2>
+        <h2 className="text-base font-medium mb-4 px-2 py-4">Your Cover Letter is ready:</h2>
         <textarea
         name="coverLetterText"
         id="coverLetterText"
         value={coverLetter}
         onChange={(e) => setCoverLetter(e.target.value)}
         disabled={loading} // Disable the textarea when loading is true
-        className=" text-lg w-full border border-cyan-500 px-4 py-2 rounded-sm shadow-lg shadow-cyan-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
+        className=" text-sm w-full border border-cyan-500 px-4 py-2 rounded-sm shadow-lg shadow-cyan-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
         rows="20"
         />
         <div>
-          <div className='mb-5 mt-5 text-cyan-900'>
-            <p>*Are you satisfied with the generated cover letter?</p>
+          <div className='mb-5 mt-5 text-cyan-900 text-xs'>
+            <p>If required you can edit the generated cover letter.</p>
             <p>Give it a relevant title and click the 'Save Cover Letter' button.</p>
           </div>
 
         <label
          htmlFor="coverLetterTitle" 
-         className="text-2xl text-cyan-900 font-medium mb-4 px-2 py-4"
+         className="text-sm text-cyan-900 font-medium mb-4 px-2 py-4"
         >
           Cover Letter Title
         </label>
@@ -147,14 +148,14 @@ export default function CoverLetterRequest({cvData, cv_id}) {
         value={coverLetterTitle} 
         onChange={handleChangeCLTitle}
         disabled={loading} // Disable the input when loading is true
-        className="w-auto text-lg py-2 px-4 mb-2 mr-5 border border-cyan-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+        className="w-auto text-sm py-1 px-2 mb-2 mr-5 border border-cyan-500 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
         />
         </div>
         
         <button 
         type='button' 
         onClick={handleSaveCoverLetterButton}
-        className="ml-5 mt-10 mb-10 mr-2 px-4 py-4 border border-transparent text-xl font-medium rounded-md text-white bg-cyan-900 hover:bg-cyan-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
+        className=" mt-4 mb-10 mr-2 px-4 py-4 border border-transparent text-sm font-medium rounded-md text-white bg-cyan-900 hover:bg-cyan-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
         disabled={loading} // Disable the input when loading is true
         >
         Save Cover Letter

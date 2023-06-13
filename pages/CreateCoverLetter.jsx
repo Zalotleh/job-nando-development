@@ -39,7 +39,7 @@ export default function CreateCoverLetter() {
           }
         metaTitle={"Create a customized cover Letter"}
       >
-        <section className='m-16'>
+        <section className='m-8'>
         {loading?(
           <p>...Loading</p>
           ):(
@@ -58,18 +58,18 @@ export default function CreateCoverLetter() {
                               >
                               <button 
                                 type="button"
-                                className="ml-5 mt-2 mr-2 px-10 py-8 border border-transparent text-lg font-medium rounded-md text-white bg-cyan-900 hover:bg-cyan-500 shadow-lg shadow-grey focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
+                                className="ml-5 mt-2 mr-2 px-10 py-8 border border-transparent text-sm font-medium rounded-md text-white bg-cyan-900 hover:bg-cyan-500 shadow-lg shadow-grey focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
                                 >
                                 Create Cover Letter
                               </button>
                             </Link>
-                            <h2 className='text-md ml-5 mt-2 mr-2 px-3 py-8'>
+                            <h2 className='text-sm ml-5 mt-2 mr-2 px-3 py-8'>
                             - for resume -
                             </h2>
                             <Link 
                               href={`./account/cvs/${cv.id}`} 
                               as={`./account/cvs/${cv.id}`}
-                              className="flex flex-col ml-5 mt-2 mr-2 px-10 py-4 border border-transparent text-lg font-medium rounded-md text-cyan-900 hover:bg-slate-100 hover:shadow-cyan-100 shadow-md shadow-grey focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
+                              className="flex flex-col ml-5 mt-2 mr-2 px-10 py-4 border border-transparent text-sm font-medium rounded-md text-cyan-900 hover:bg-slate-100 hover:shadow-cyan-100 shadow-md shadow-grey focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
                               >
                               {cv.cvTitle}
                               <p className='text-sm mt-2'>

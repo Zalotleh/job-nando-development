@@ -60,13 +60,13 @@ export default function CreateCVPage() {
             <ObjectiveForm />
             <SummaryForm />
             <WorkExperienceForm />
-            <CertificatesForm />
             <EducationsForm />
+            <CertificatesForm />
             <SkillsForm />
-            <LinksForm />
             <ProjectsForm />
             <VolunteersForm />
             <LanguageForm />
+            <LinksForm />
           </section>
 
 
@@ -85,17 +85,14 @@ export default function CreateCVPage() {
               <div className={styles.work_experience_section}>
                 <WorkExperiencePreview />
               </div>
-              <div className={styles.certificates_section}>
-                <CertificatesPreview />
-              </div>
               <div className={styles.educations_section}>
                 <EducationsPreview />
               </div>
+              <div className={styles.certificates_section}>
+                <CertificatesPreview />
+              </div>
               <div className={styles.skills_section}>
                 <SkillsPreview />
-              </div>
-              <div className={styles.links_section}>
-                <LinksPreview />
               </div>
               <div className={styles.projects_section}>
                 <ProjectsPreview />
@@ -105,6 +102,9 @@ export default function CreateCVPage() {
               </div>
               <div className={styles.languages_section}>
                 <LanguagesPreview />
+              </div>
+              <div className={styles.links_section}>
+                <LinksPreview />
               </div>
             </section>
 

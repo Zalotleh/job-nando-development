@@ -19,25 +19,25 @@ const WorkExperiencePreview = () => {
     <>
       {workExperiences.length > 0 && (
         //The section will be displayed only if .length is greater than 0. Otherwise, it won't render anything.
-      <div className='flex flex-col ml-8'>
-      <h2 className="text-2xl font-medium underline mb-4 mr-14">Work Experience:</h2>
+      <div className='flex flex-col ml-8 mt-6'>
+      <h2 className="text-base font-medium underline mb-2 mr-14">Work Experience:</h2>
       <div className="my-5 px-10 mr-10">
         {workExperiences.map((job) => (
 
-            <div className="flex flex-col content-center justify-center gap-2 space-y-2 mb-14" key={job.id}>
-              <p>
-                <span className="font-medium">Company:</span> {job.company}
+            <div className="flex flex-col content-center justify-center gap-2 space-y-1 mb-14" key={job.id}>
+              <p className="text-sm" >
+                <span className="font-medium">{job.id}-Company:</span> {job.company}
               </p>
-              <p>
-                <span className="font-medium">Position:</span> {job.jobTitle}
+              <p className="text-sm">
+                <span className="font-medium ">Position:</span> {job.jobTitle}
               </p>
-              <p>
+              <p className="text-sm">
                 <span className="font-medium">Start Date:</span>  {job.startDate} <span className="font-medium ml-7">End Date:</span> {job.endDate}
               </p>
-              <p>
+              <p className="text-sm">
                 <span className="font-medium">Responsibilities:</span>
               </p>
-              <p className="list-disc pl-6 max-w-7xl">
+              <p className="list-disc pl-6 max-w-7xl text-sm">
               {formatText(job.responsibilities)}
               </p>
             </div>

@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 30px;
     margin-top: 50px;
     font-family: sans-serif,Arial, Helvetica;
@@ -51,7 +51,7 @@ max-width: 400px;
 }
 
 .our_mission_image{
-max-width: 400px;
+max-width: 350px;
 }
 
 .our_mission_text p{
@@ -79,6 +79,15 @@ margin-bottom: 50px;
   border-radius: 5px;
 }
 
+@media screen and (max-width:400px){
+  .what_we_offer_image{
+    max-height: 200px;
+    width: 100px;
+    border-radius: 5px;
+  }
+
+}
+
 .what_we_offer_section p {
 font-size: 12px;
 margin: 10px  0 25px 0;
@@ -89,7 +98,7 @@ list-style-type: circle;
 padding-left: 20px;
 margin-top: 10px;
 margin-bottom: 20px;
-max-width: 700px;
+max-width: 400px;
 }
 
 
@@ -104,18 +113,18 @@ font-size: 16px;
 
 .why_choose_us_section{
 margin-top: 100px;
+
 }
 .why_choose_us_section_container{
   display: flex;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
+justify-content: space-around;
 }
 
 .why_choose_us_image{
-max-width: 500px;
+max-width: 300px;
 margin-left: 50px;
 border-radius: 5px;
 }
@@ -129,7 +138,7 @@ margin: 10px  0 25px 0;
 list-style-type: decimal;
 padding-left: 20px;
 margin-bottom: 20px;
-max-width: 600px;
+max-width: 400px;
 }
 
 
@@ -143,11 +152,12 @@ font-size: 16px;
 
 .get_started_section{
   margin-top: 50px;
+
 }
 
 .get_started_section p {
   font-size: 12px;
-  max-width: 1000px;
+  max-width: 600px;
   padding-left: 20px;
-  font-weight: 600;
+  font-weight: 1000;
 }

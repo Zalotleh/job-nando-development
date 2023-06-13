@@ -25,9 +25,18 @@
   max-height: 1200px;
 }
 
+
+
 .text_container{
   max-width: 700px;
   padding: 20px;
+}
+
+@media screen and (max-width:400px){
+  .main_image{
+    display: none;
+  }
+
 }
 
 .title{

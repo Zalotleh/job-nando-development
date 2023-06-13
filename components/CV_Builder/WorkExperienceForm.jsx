@@ -80,61 +80,61 @@ const WorkExperienceForm = () => {
     return (
         <> 
           <div className="mb-8 shadow-lg border py-4">
-            <h2 className="text-2xl font-bold mb-4">Work Experience:</h2>
+            <h2 className="text-base font-bold mb-4">Work Experience:</h2>
             {workExperiences.map((exp) => (
               <>
               <div key={exp.id} className="mb-10 mt-5 px-2">
-                <label htmlFor={`company_${exp.id}`} className="text-lg font-bold ">Company:</label>
+                <label htmlFor={`company_${exp.id}`} className="text-sm font-bold ">Company:</label>
                 <input
                   type="text"
                   name="company"
                   id={`company_${exp.id}`}
                   value={exp.company}
                   onChange={(e) => handleChange(e, exp.id)}
-                  className="block w-full text-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="block w-full text-sm rounded-md px-2 py-1 mb-2 border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
-                <label htmlFor={`jobTitle_${exp.id}`} className="text-lg font-bold ">Job Title:</label>
+                <label htmlFor={`jobTitle_${exp.id}`} className="text-sm font-bold ">Job Title:</label>
                 <input
                   type="text"
                   name="jobTitle"
                   id={`jobTitle_${exp.id}`}
                   value={exp.jobTitle}
                   onChange={(e) => handleChange(e, exp.id)}
-                  className="block w-full text-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="block w-full text-sm  px-2 py-1 mb-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
-                <label htmlFor={`startDate_${exp.id}`} className="text-lg font-bold ">Start Date:</label>
+                <label htmlFor={`startDate_${exp.id}`} className="text-sm font-bold ">Start Date:</label>
                 <input
                   type="text"
                   name="startDate"
                   id={`startDate_${exp.id}`}
                   value={exp.startDate}
                   onChange={(e) => handleChange(e, exp.id)}
-                  className="block w-full text-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="block w-full text-sm px-2  py-1 mb-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
-                <label htmlFor={`endDate_${exp.id}`}className="text-lg font-bold ">End Date:</label>
+                <label htmlFor={`endDate_${exp.id}`}className="text-sm font-bold ">End Date:</label>
                 <input
                   type="text"
                   name="endDate"
                   id={`endDate_${exp.id}`}
                   value={exp.endDate}
                   onChange={(e) => handleChange(e, exp.id)}
-                  className="block w-full text-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="block w-full text-sm px-2  py-1  mb-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
-                <label htmlFor={`responsibilities_${exp.id}`} className="text-lg font-bold">Responsibilities:</label>
+                <label htmlFor={`responsibilities_${exp.id}`} className="text-sm font-bold">Responsibilities:</label>
                 <textarea
                   name="responsibilities"
                   id={`responsibilities_${exp.id}`}
                   value={exp.responsibilities}
                   onChange={(e) => handleResponsibilitiesChange(e, exp.id)}
                   rows={10}
-                  className="block w-full text-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="block w-full text-sm px-2 py-1  mb-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
                 {loading && <p>waiting for the AI response, hold on...</p>}
                 {error&&error}
 
                 <div className="flex justify-between ">
                 <button
-                  className="flex gap-5 content-center justify-center ml-2 mt-2  bg-cyan-500 hover:bg-cyan-700 text-lg text-white font-bold py-2 px-4 rounded"
+                  className="flex gap-4 content-center justify-center ml-2 mt-2  bg-cyan-500 hover:bg-cyan-700 text-sm text-white font-bold py-2 px-2 rounded"
                   onClick={(e) => handleResponsibilitiesGpt3(e, exp.id)}
                   >
                   <img src="/wand.png" alt="magic wand icon"  className="max-w-[25px]"/> AI Magic
@@ -143,7 +143,7 @@ const WorkExperienceForm = () => {
                 <button
                   type="button"
                   onClick={() => handleDeleteWorkExperience(exp.id)}
-                  className="mt-2 mr-2 px-4 py-2 border border-transparent text-lg font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+                  className="mt-2 mr-2 px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
                   >
                   Delete
                 </button>
@@ -156,7 +156,7 @@ const WorkExperienceForm = () => {
         <button
           type="button"
           onClick={handleAddWorkExperience}
-          className="mt-4 px-4 py-2 border border-transparent font-medium rounded-md text-lg text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+          className="mt-4 px-2 py-2 border border-transparent font-medium rounded-md text-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
         >
           Add New Work Experience
         </button>

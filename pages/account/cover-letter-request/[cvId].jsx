@@ -49,10 +49,8 @@ export default function CoverLetterRequestPage() {
         notificationText={ 
           <>
             <p>
-              * To create a cover letter, simply add the job description you are applying for and any relevant details. Then, click on the 'Get Cover Letter' button to generate a personalized cover letter.
-            </p>
-            <p>
-              * You can further edit and customize the cover letter as needed. All your saved cover letters can be found in the "Your Resumes and Cover Letters Lists" section of your Dashboard page.
+            <pre-line> * To create a cover letter, simply add the job description you are applying for and any relevant details. Then, click on the 'Get Cover Letter' button to generate a personalized cover letter.</pre-line>
+            <pre-line> * You can further edit and customize the cover letter as needed. All your saved cover letters can be found in the "Your Resumes and Cover Letters Lists" section of your Dashboard page.</pre-line>
             </p>
           </>
         }
