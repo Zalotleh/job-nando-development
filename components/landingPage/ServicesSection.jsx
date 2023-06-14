@@ -1,25 +1,35 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import styles from '../../styles/LandingPage.module.css'
 import Link from 'next/link'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 
 function ServicesSection() {
+
+  useEffect(()=>{
+    AOS.init({duration:2500,
+      once: true
+    });
+  },[])
+
   return (
     <>
     
       {/* services section */}
 
       <section className={styles.services_section}>
-        <h1 className={styles.section_title}>Our Services</h1>
+        <h1 className={styles.section_title} data-aos="zoom-in-left">Our Services</h1>
         <div className={styles.services_container}>
 
                 {/* resume service section */}
 
           <div className={styles.resume_service_container}>
-            <h1 className={styles.service_title}>
+            <h1 className={styles.service_title} data-aos="zoom-in-left">
               Build your <span className={styles.service_title_span}>resume</span> in 3 steps
             </h1>
             <div className={styles.resume_service_cards}>
-              <div className={styles.resume_service_card}>
+              <div className={styles.resume_service_card} data-aos="zoom-in-left">
                 <img src="/writing-resume.png" alt="minimalist graphic for someone writing a resume" className={styles.resume_service_card_image}/>
                 <div className={styles.resume_service_card_text}>
                   <h1 className={styles.resume_service_card_number}>1.</h1>
@@ -30,7 +40,7 @@ function ServicesSection() {
                 </div>
               </div>
 
-              <div className={styles.resume_service_card}>
+              <div className={styles.resume_service_card} data-aos="zoom-in-left">
                 <img src="/magic-wand.png" alt="minimalist graphic for magic wand" className={styles.resume_service_card_image}/>
                 <div className={styles.resume_service_card_text}>
                   <h1 className={styles.resume_service_card_number}>2.</h1>
@@ -41,7 +51,7 @@ function ServicesSection() {
                 </div>
               </div>
 
-              <div className={styles.resume_service_card}>
+              <div className={styles.resume_service_card} data-aos="zoom-in-left">
                 <img src="/woman-download.png" alt="minimalist graphic for someone writing a resume" className={styles.resume_service_card_image}/>
                 <div className={styles.resume_service_card_text}>
                   <h1 className={styles.resume_service_card_number}>3.</h1>
@@ -52,7 +62,7 @@ function ServicesSection() {
                 </div>
               </div>
             </div>
-            <Link href="/auth/signup"><button className={styles.CTA_btn}>Start Building Your Resume</button></Link>
+            <Link href="/auth/signup" data-aos="zoom-in"><button className={styles.CTA_btn}>Start Building Your Resume</button></Link>
           </div>
 
             {/* Cover Letter service section */}
@@ -60,7 +70,7 @@ function ServicesSection() {
 
             <div className={styles.service_container}>
                 
-              <div className={styles.service_card}>
+              <div className={styles.service_card} data-aos='fade-up'>
                   <img src="/fingers-snapping.png" alt="minimalist graphic for someone fingers snapping" className={styles.service_card_image}/>
 
                   <div className={styles.service_card_content}>
@@ -86,7 +96,7 @@ function ServicesSection() {
 
             <div className={styles.service_container}>
               
-              <div className={styles.service_card}>
+              <div className={styles.service_card} data-aos='fade-down' >
                 
               <img src="/interview.png" alt="minimalist graphic for someone having an interview" className={styles.service_card_image}/>
 
@@ -115,7 +125,7 @@ function ServicesSection() {
           <div className={styles.services_group}>
             <div className={styles.service_container}>
                 
-                    <div className={styles.service_card}>
+                    <div className={styles.service_card} data-aos='fade-right'>
                       <img src="/career-coach.png" alt="minimalist graphic for someone having an advice" className={styles.service_card_image}/>
 
                         <div className={styles.service_card_content}>
@@ -142,7 +152,7 @@ function ServicesSection() {
 
             <div className={styles.service_container}>
               
-                  <div className={styles.service_card}>
+                  <div className={styles.service_card} data-aos='fade-left'>
                   <img src="/learning-path.png" alt="minimalist graphic for someone having an learningPath" className={styles.service_card_image}/>
 
                       <div className={styles.service_card_content}>

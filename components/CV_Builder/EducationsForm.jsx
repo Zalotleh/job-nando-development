@@ -94,7 +94,7 @@ const EducationsForm = () => {
                   id={`additionalInfo_${edu.id}`}
                   value={edu.additionalInfo}
                   onChange={(e) => handleChange(e, edu.id)}
-                  rows={8}
+                  rows={6}
                   className="block w-full text-sm  px-2  py-1 mb-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
       
@@ -111,13 +111,13 @@ const EducationsForm = () => {
 
             ))}
 
-        <button
-          type="button"
-          onClick={handleAddEducation}
-          className="mt-4 px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
-        >
-          Add New Education
-        </button>
+          <button
+            type="button"
+            onClick={handleAddEducation}
+            className="mt-4 px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+          >
+            Add New Education
+          </button>
       </div>
     </>
   );

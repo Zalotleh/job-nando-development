@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
-import styles from '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
+import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 import chatStyles from '../styles/InterviewRoom.module.css'
-import { 
-    MainContainer,
-    ChatContainer,
-    MessageList,
-    Message,
-    MessageInput,
-    TypingIndicator,
-} from '@chatscope/chat-ui-kit-react';
+import {
+  MainContainer,
+  ChatContainer,
+  MessageList,
+  Message,
+  MessageInput,
+} from "@chatscope/chat-ui-kit-react";
 import {getAuth} from 'firebase/auth';
 import { useAuth } from '@/context/AuthContext';
 import { createCheckoutSession } from '@/stripe/createCheckoutSession';
@@ -128,8 +127,10 @@ const systemMessage = {
       pageTitle={'Interview Room'}
       notificationText={
         <div>
-            <p>Welcome to your interview room! Here, you can have a conversation with Nando, our AI model. he is professional and specialized recruiter and career coach.</p>
-    <p>Start by saying hello and let's get you prepared for your interview!</p>
+          <p>
+            <pre-line>-Welcome to your interview room! Here, you can have a conversation with Nando, our AI model. he is professional and specialized recruiter and career coach.</pre-line>
+            <pre-line>-Start by saying hello and let's get you prepared for your interview!</pre-line>
+          </p>
           </div>
       }
     >
@@ -142,28 +143,29 @@ const systemMessage = {
                       Upgrade to premium!
                     </button>
                   ) : ( */}
-                <div>
-                    <MainContainer className={chatStyles.mainContainer}>
-                        <ChatContainer className={chatStyles.chatContainer}>       
-                        <MessageList
-                            className={chatStyles.messageList}
-                            scrollBehavior="smooth" 
-                            typingIndicator={isTyping ? <TypingIndicator className={chatStyles.typingIndicator} content="Career coach Nando is typing" /> : null}
+                <div style={{ position: "relative", height: "400px" }}>
+                    <MainContainer className={chatStyles.main_container}>
+                        <ChatContainer className={chatStyles.chat_container}>       
+                          <MessageList
+                              className={chatStyles.message_list}
+                              scrollBehavior="smooth" 
+                              typingIndicator={isTyping ? <TypingIndicator className={chatStyles.typing_indicator} content="Career coach Nando is typing" /> : null}
 
-                        >
+                          >
                             {messages.map((message, i) => {
                                     console.log(message)
                                     return (<Message key={i} model={message} className={message.sender === 'user' ? chatStyles.sent : chatStyles.received}>
-                                            <div className={chatStyles.messageText}>{message.message}</div>
+                                            <div className={chatStyles.message_text}>{message.message}</div>
                                            </Message>
                                     );
                                 })}
                             </MessageList>
                             <MessageInput 
-                              placeholder="Type message here" 
+                              placeholder="Type message here and press 'Enter' to send" 
                               onSend={handleSend}
-                              className={chatStyles.messageInput}
-                            />        
+                              
+                            />
+
                         </ChatContainer>
                     </MainContainer>
                 </div>

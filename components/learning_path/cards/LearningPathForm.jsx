@@ -61,14 +61,14 @@ const LearningPathForm = () => {
       }
 
   return (
-        <div className="max-w-100% mx-auto bg-white p-8 shadow-lg rounded-lg mt-20">
+        <div className="max-w-100% mx-auto bg-white p-8 shadow-lg rounded-lg mt-8">
             {loading && !learningPathGenerated ? (
                 <>
                     <div className="text-center">
-                        <h2 className="text-2xl text-cyan-900 font-bold m-10">Thank you for submitting your answers!</h2>
+                        <h2 className="text-base text-cyan-900 font-bold m-4">Thank you for submitting your answers!</h2>
                         <p className="text-cyan-700">This may take a while, we are working on providing you with a personalized learning path based on your answers.</p>
                     </div>
-                    <div className="flex items-center justify-center h-24">
+                    <div className="flex items-center justify-center h-20">
                         <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-cyan-900">
                         </div>
                         <span className="ml-2">Loading...</span>
@@ -79,12 +79,14 @@ const LearningPathForm = () => {
                     {learningPath && learningPathGenerated ? (
                         // Render the learning path response
                         <>
-                            <div mb-20>
-                                <h1 className='text-2xl text-cyan-900 mb-16 font-bold'>Here we go...</h1>
-                                <p className='text-xl text-cyan-900 leading-10 mb-10'>{formatText(learningPath)}</p>
+                            <div className='  mb-20 '>
+                                <div className='px-6 py-6 mb-4 border-4 border-cyan-500 shadow-md shadow-cyan-500'>
+                                    <h1 className='text-base text-cyan-900 mb-8 font-bold'>Here we go...</h1>
+                                    <p className='text-sm text-cyan-900 mb-10'>{formatText(learningPath)}</p>
+                                </div>
                                 <button
                                     onClick={handleRestart}
-                                    className="ml-5 mt-2 mr-2 px-5 py-4 border border-transparent text-xl font-medium rounded-md text-white bg-cyan-900 hover:bg-cyan-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
+                                    className="ml-5 mt-2 mr-2 px-5 py-3 border border-transparent text-sm font-medium rounded-md text-white bg-cyan-900 hover:bg-cyan-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
                                     >
                                     Start Over
                                 </button>
@@ -93,28 +95,30 @@ const LearningPathForm = () => {
 
                     ) : (
                         <>
-                            <h2 className="text-2xl  text-cyan-900 px-4 font-bold mb-4">Discover Your Personalized Learning Path</h2>
-                            <p className="text-lg text-cyan-700 px-4 mb-4">**It is important to answer all the questions to receive comprehensive learning recommendations</p>
+                            <h2 className="text-lg  text-cyan-900 px-4 font-bold mb-4">Discover Your Personalized Learning Path</h2>
+                            <p className="text-sm text-cyan-700 px-4">*10 questions.</p>
+                            <p className="text-sm text-cyan-700 px-4 mb-2">**It is important to answer all the questions to receive comprehensive learning recommendations.</p>
 
-                            <form ref={formRef} className='mt-20 px-4'>
-                                <div className="mb-20">
-                                    <label htmlFor="skills" className="text-xl text-cyan-900 font-medium mb-4">
+                            <form ref={formRef} className='mt-12 px-4'>
+                                <div className="mb-14">
+                                    <label htmlFor="skills" className="text-base text-cyan-900 font-medium mb-4">
                                         What specific skills or knowledge do you want to acquire or improve upon?
                                     </label>
-                                    <input
-                                        type="text"
+                                    <textarea
+                                        type="textarea"
                                         id="skills"
                                         name="skills"
                                         value={skills}
                                         onChange={(e) => setSkills(e.target.value)}
                                         placeholder='Example answers: "Web development," "Digital marketing," "Data analysis," "Graphic design," "Project management," etc.'
                                         required
-                                        className=" text-lg font-normal text-cyan-900 w-full p-2 mt-2 border border-cyan-300 rounded focus:outline-none focus:ring focus:ring-cyan-500 focus:border-[#37C9EF]"
+                                        className=" text-sm font-normal text-cyan-900 w-full p-1 mt-2 border border-cyan-300 rounded focus:outline-none focus:ring focus:ring-cyan-500 focus:border-[#37C9EF]"
+                                        rows={2}
                                     />
                                 </div>
 
-                                <div className="mb-20">
-                                    <label htmlFor="proficiency_Level" className="text-xl text-cyan-900  font-medium mb-2">
+                                <div className="mb-14">
+                                    <label htmlFor="proficiency_Level" className="text-base text-cyan-900  font-medium mb-2">
                                         What is your current proficiency level in the desired skills?
                                     </label>
                                     <select
@@ -122,7 +126,7 @@ const LearningPathForm = () => {
                                         name="proficiency_Level"
                                         value={proficiencyLevel}
                                         onChange={(e) => setProficiencyLevel(e.target.value)}
-                                        className=" text-lg  text-cyan-900 font-normal w-full p-2 mt-2 border border-cyan-300 rounded focus:outline-none focus:ring focus:ring-cyan-500 focus:border-[#37C9EF]"
+                                        className=" text-sm  text-cyan-900 font-normal w-full p-1 mt-2 border border-cyan-300 rounded focus:outline-none focus:ring focus:ring-cyan-500 focus:border-[#37C9EF]"
                                     >
                                         <option value="" >Select proficiency level</option>
                                         <option value="Beginner" > Beginner </option>
@@ -132,8 +136,8 @@ const LearningPathForm = () => {
                                     </select>
                                 </div>
 
-                                <div className="mb-20">
-                                    <label htmlFor="learning_Motivation" className="text-xl  text-cyan-900 font-medium mb-2">
+                                <div className="mb-14">
+                                    <label htmlFor="learning_Motivation" className="text-base  text-cyan-900 font-medium mb-2">
                                         Why do you want to learn these skills? How do you envision using them in your career or personal life?
                                     </label>
                                     <textarea
@@ -143,12 +147,12 @@ const LearningPathForm = () => {
                                         value={learningMotivation}
                                         onChange={(e) => setLearningMotivation(e.target.value)}
                                         placeholder='Example answers: "To transition into a new career," "To enhance my job prospects," "To start my own business," "To pursue a hobby or personal interest," etc.'
-                                        className="text-lg font-normal text-cyan-900  w-full p-2 mt-2 border border-cyan-300 rounded focus:outline-none focus:ring focus:ring-cyan-500 focus:border-[#37C9EF]"
+                                        className="text-sm font-normal text-cyan-900  w-full p-1 mt-2 border border-cyan-300 rounded focus:outline-none focus:ring focus:ring-cyan-500 focus:border-[#37C9EF]"
                                     ></textarea>
                                 </div>
 
-                                <div className="mb-20">
-                                    <label htmlFor="targeted_Certifications" className="text-xl text-cyan-900  font-medium mb-2">
+                                <div className="mb-14">
+                                    <label htmlFor="targeted_Certifications" className="text-base text-cyan-900  font-medium mb-2">
                                         Do you have any specific certifications or qualifications you are targeting?
                                     </label>
                                     <input
@@ -158,12 +162,12 @@ const LearningPathForm = () => {
                                         value={targetedCertifications}
                                         placeholder='Example answers: "Microsoft Azure certification," "Google Ads certification," "Project Management Professional (PMP) certification," etc.'
                                         onChange={(e) => setTargetedCertifications(e.target.value)}
-                                        className="text-lg font-normal text-cyan-900  w-full p-2 mt-2 border border-cyan-300 rounded focus:outline-none focus:ring focus:ring-cyan-500 focus:border-[#37C9EF]"
+                                        className="text-sm font-normal text-cyan-900  w-full p-1 mt-2 border border-cyan-300 rounded focus:outline-none focus:ring focus:ring-cyan-500 focus:border-[#37C9EF]"
                                     />
                                 </div>
 
-                                <div className="mb-20">
-                                    <label htmlFor="learning_Style" className="text-xl text-cyan-900  font-medium mb-2">
+                                <div className="mb-14">
+                                    <label htmlFor="learning_Style" className="text-base text-cyan-900  font-medium mb-2">
                                         What is your preferred learning style? Do you prefer self-paced online courses, interactive tutorials,books, or other formats?
                                     </label>
                                     <textarea
@@ -173,12 +177,12 @@ const LearningPathForm = () => {
                                         value={learningStyle}
                                         onChange={(e) => setLearningStyle(e.target.value)}
                                         placeholder='Example answers: "Online courses with video lectures," "Hands-on coding exercises," "Written tutorials with practical examples," "Live webinars and workshops," etc.'
-                                        className="text-lg font-normal w-full p-2 mt-2 text-cyan-900 border border-cyan-300 rounded focus:outline-none focus:ring focus:ring-cyan-500 focus:border-[#37C9EF]"
+                                        className="text-sm font-normal w-full p-1 mt-2 text-cyan-900 border border-cyan-300 rounded focus:outline-none focus:ring focus:ring-cyan-500 focus:border-[#37C9EF]"
                                     ></textarea>
                                 </div>
 
-                                <div className="mb-20">
-                                    <label htmlFor="weekly_Time_Commitment" className="text-xl  text-cyan-900 font-medium mb-2">
+                                <div className="mb-14">
+                                    <label htmlFor="weekly_Time_Commitment" className="text-base  text-cyan-900 font-medium mb-2">
                                         How much time are you willing to commit to learning per week? Are there any time constraints or deadlines?
                                     </label>
                                     <input
@@ -188,12 +192,12 @@ const LearningPathForm = () => {
                                         value={weeklyTimeCommitment}
                                         placeholder='Example answers: "5-10 hours per week," "Flexible schedule," "I need to complete the learning within 3 months," etc.'
                                         onChange={(e) => setWeeklyTimeCommitment(e.target.value)}
-                                        className="text-lg font-normal w-full p-2 mt-2 border text-cyan-900  border-cyan-300 rounded focus:outline-none focus:ring focus:ring-cyan-500 focus:border-[#37C9EF]"
+                                        className="text-sm font-normal w-full p-1 mt-2 border text-cyan-900  border-cyan-300 rounded focus:outline-none focus:ring focus:ring-cyan-500 focus:border-[#37C9EF]"
                                     />
                                 </div>
 
-                                <div className="mb-20">
-                                    <label htmlFor="targeted_Industries" className="text-xl text-cyan-900  font-medium mb-2">
+                                <div className="mb-14">
+                                    <label htmlFor="targeted_Industries" className="text-base text-cyan-900  font-medium mb-2">
                                         Are there any specific industries or job roles you are targeting with your newly acquired skills?
                                     </label>
                                     <input
@@ -203,12 +207,12 @@ const LearningPathForm = () => {
                                         value={targetedIndustries}
                                         placeholder='Example answers: "Software development in the tech industry," "Digital marketing for e-commerce companies," "Data analysis for healthcare organizations," etc.'
                                         onChange={(e) => setTargetedIndustries(e.target.value)}
-                                        className="text-lg font-normal w-full p-2 mt-2 border text-cyan-900  border-cyan-300 rounded focus:outline-none focus:ring focus:ring-cyan-500 focus:border-[#37C9EF]"
+                                        className="text-sm font-normal w-full p-1 mt-2 border text-cyan-900  border-cyan-300 rounded focus:outline-none focus:ring focus:ring-cyan-500 focus:border-[#37C9EF]"
                                     />
                                 </div>
 
-                                <div className="mb-20">
-                                    <label htmlFor="prior_Experience" className="text-xl  text-cyan-900 font-medium mb-2">
+                                <div className="mb-14">
+                                    <label htmlFor="prior_Experience" className="text-base  text-cyan-900 font-medium mb-2">
                                         Have you taken any courses or gained any experience in the desired skills before? If yes, please provide details.
                                     </label>
                                     <textarea
@@ -218,12 +222,12 @@ const LearningPathForm = () => {
                                         value={priorExperience}
                                         placeholder='Example answers: "I have completed an introductory web development course," "I have basic knowledge of digital marketing through previous work experience," etc.'
                                         onChange={(e) => setPriorExperience(e.target.value)}
-                                        className="text-lg font-normal w-full p-2 mt-2 border text-cyan-900  border-cyan-300 rounded focus:outline-none focus:ring focus:ring-cyan-500 focus:border-[#37C9EF]"
+                                        className="text-sm font-normal w-full p-1 mt-2 border text-cyan-900  border-cyan-300 rounded focus:outline-none focus:ring focus:ring-cyan-500 focus:border-[#37C9EF]"
                                     ></textarea>
                                 </div>
 
-                                <div className="mb-20">
-                                    <label htmlFor="practical_Projects_Preference" className="text-xl  text-cyan-900 font-medium mb-2">
+                                <div className="mb-14">
+                                    <label htmlFor="practical_Projects_Preference" className="text-base  text-cyan-900 font-medium mb-2">
                                         Do you prefer courses with practical projects or real-world applications?
                                     </label>
                                     <textarea
@@ -232,12 +236,12 @@ const LearningPathForm = () => {
                                         value={practicalProjectsPreference}
                                         placeholder='Example answers: "Yes, I want to apply my learning through hands-on projects," "I prefer courses that provide real-life examples and case studies," "I want to build a portfolio of projects," etc.'
                                         onChange={(e) => setPracticalProjectsPreference(e.target.value)}
-                                        className="text-lg font-normal w-full p-2 mt-2 border border-cyan-300 text-cyan-900  rounded focus:outline-none focus:ring focus:ring-cyan-500 focus:border-[#37C9EF]"
+                                        className="text-sm font-normal w-full p-1 mt-2 border border-cyan-300 text-cyan-900  rounded focus:outline-none focus:ring focus:ring-cyan-500 focus:border-[#37C9EF]"
                                     ></textarea>
                                 </div>
 
-                                <div className="mb-20">
-                                    <label htmlFor="preferred_Platform" className="text-xl  text-cyan-900 font-medium mb-2">
+                                <div className="mb-14">
+                                    <label htmlFor="preferred_Platform" className="text-base  text-cyan-900 font-medium mb-2">
                                         Is there any specific learning platform or website you prefer for online courses?
                                     </label>
                                     <input
@@ -247,20 +251,20 @@ const LearningPathForm = () => {
                                         value={preferredPlatform}
                                         placeholder='Example answers: "Udemy," "Coursera," "LinkedIn Learning," "edX," etc.'
                                         onChange={(e) => setPreferredPlatform(e.target.value)}
-                                        className="text-lg font-normal w-full p-2 mt-2 border text-cyan-900  border-cyan-300 rounded focus:outline-none focus:ring focus:ring-cyan-500 focus:border-[#37C9EF]"
+                                        className="text-sm font-normal w-full p-1 mt-2 border text-cyan-900  border-cyan-300 rounded focus:outline-none focus:ring focus:ring-cyan-500 focus:border-[#37C9EF]"
                                     />
                                 </div>
 
                                 <button
                                     type="submit"
                                     onClick={handleSubmit}
-                                    className="text-lg w-full bg-cyan-900  text-white font-semibold py-2 px-4 rounded hover:bg-cyan-500 transition-colors duration-300"
+                                    className="text-sm w-[100px] bg-cyan-900  text-white font-semibold py-2 px-4 rounded hover:bg-cyan-500 transition-colors duration-300"
                                 >
-                                    Discover My Learning Path
+                                    Submit
                                 </button>
                             </form>
 
-                            {errorMessage&& <p className="ml-5 mt-2 py-4 text-red-500" >{errorMessage}</p> }
+                            {errorMessage&& <p className="ml-5 mt-2 py-2 text-red-500" >{errorMessage}</p> }
                         </>
                         
                     )}

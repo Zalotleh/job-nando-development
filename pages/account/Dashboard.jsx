@@ -81,9 +81,8 @@ function Dashboard() {
               
               <hr />
                 <h2>Profile Information:</h2>
-                <h3>-User Name: {userName}</h3>
-                <h3>-Email address: {userEmail}</h3>
-                <h3>-Plan: Premium</h3>
+                <h3>-User Name: <span className={styles.user_data}>{userName}</span> </h3>
+                <h3>-Email address: <span className={styles.user_data}>{userEmail}</span></h3>
             </div>
             <div className={styles.update_profile}>
             

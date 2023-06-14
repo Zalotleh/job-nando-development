@@ -26,11 +26,11 @@ const SavedCvPreviewPage = ({cvTitle}) => {
 
   return (
     <>
-    <div className='flex flex-row content-around gap-10 flex-wrap bg-slate-100 px-6 py-3'>
+    <div className='flex flex-row content-around gap-10 flex-wrap bg-slate-100 py-4 px-4'>
       <button
         type='button'
         onClick={handlePrint}
-        className='flex flex-row content-center justify-center gap-3 px-5 py-5 w-max border border-b-gray-400 rounded-md text-white text-xl font-bold bg-cyan-500 hover:bg-cyan-900 hover:text-white '
+        className='flex flex-row content-center justify-center gap-3 px-2 py-2 w-max border border-b-gray-400 rounded-md text-white text-sm font-bold bg-cyan-500 hover:bg-cyan-900 hover:text-white '
         >
         Download in PDF
         <img src="/download.png" alt="download icon" className='w-6 ml-2' />
@@ -39,7 +39,7 @@ const SavedCvPreviewPage = ({cvTitle}) => {
       <button
         type='button'
         onClick={handlePrint}
-        className='flex flex-row content-center justify-center gap-3 px-5 py-5 w-max border border-b-gray-400 rounded-md text-white text-xl font-bold bg-cyan-500 hover:bg-cyan-900 hover:text-white'
+        className='flex flex-row content-center justify-center gap-3 px-2 py-2 w-max border border-b-gray-400 rounded-md text-white text-sm font-bold bg-cyan-500 hover:bg-cyan-900 hover:text-white'
         >
           Print
           <img src="/printer.png" alt="printer icon" className='w-6 ml-2'/>
@@ -67,20 +67,17 @@ const SavedCvPreviewPage = ({cvTitle}) => {
         <SavedWorkExperiencePreview/>
         </div>
         
+        <div className={styles.educations_section}>
+        <SavedEducationsPreview/>
+        </div>
+        
         <div className={styles.certificates_section}>
         <SavedCertificatesPreview/>
         </div>
 
-        <div className={styles.educations_section}>
-        <SavedEducationsPreview/>
-        </div>
 
         <div className={styles.skills_section}>
         <SavedSkillsPreview/>
-        </div>
-
-        <div className={styles.links_section}>
-        <SavedLinksPreview/>
         </div>
 
         <div className={styles.projects_section}>
@@ -93,6 +90,10 @@ const SavedCvPreviewPage = ({cvTitle}) => {
 
         <div className={styles.languages_section}>
         <SavedLanguagesPreview/>
+        </div>
+
+        <div className={styles.links_section}>
+        <SavedLinksPreview/>
         </div>
 
       </section>

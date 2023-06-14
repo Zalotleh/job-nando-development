@@ -96,13 +96,13 @@ export default function CvPage({cvId}) {
 
               <section className={styles.forms_section}>
 
-                <div className='flex flex-col border-2 rounded-md px-5 py-5 shadow-lg bg-cyan-900 mt-5'>
-                  <div className='flex flex-col border border-b-gray-400 rounded-md text-white text-xl font-bold bg-cyan-500 hover:bg-cyan-700 hover:text-white px-5 py-5 mt-10'>
+                <div className='flex flex-row py-4 px-2 items-center justify-between border-2 rounded-md  shadow-lg bg-cyan-900 mt-2'>
+                  <div className='px-1 py-2 border border-b-gray-400 rounded-md text-white text-sm font-bold bg-cyan-500 hover:bg-cyan-700 hover:text-white '>
                     <CvUpdateButton/>
                   </div>
                   <button
                    onClick={() => handleDeleteCv(cvId)}
-                   className='border border-b-gray-400 rounded-md text-white hover:text-red-200 text-xl font-bold bg-[#ef3737] hover:bg-red-700 px-5 py-5 mt-10 '
+                   className=' px-1 py-2 border border-b-gray-400 rounded-md text-white hover:text-red-200 text-sm font-bold bg-[#ef3737] hover:bg-red-700 '
                   >
                     Delete Resume
                   </button>
@@ -117,6 +117,12 @@ export default function CvPage({cvId}) {
                 }
 
                 <SavedCvEditorPage cvData={cvData} cvId={cvId} />
+
+                <div className='flex flex-row py-4 px-2 items-center justify-center border-2 rounded-md  shadow-lg bg-cyan-900 mt-2'>
+                  <div className='px-2 py-2 border border-b-gray-400 rounded-md text-white text-sm font-bold bg-cyan-500 hover:bg-cyan-700 hover:text-white '>
+                    <CvUpdateButton/>
+                  </div>
+                </div>
 
               </section>
               

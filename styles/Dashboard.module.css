@@ -222,6 +222,10 @@
   font-size: 12px;
 }
 
+.user_data{
+  color: rgb(6 182 212);
+}
+
 .update_profile{
   display: flex;
   flex-direction: row;

@@ -26,9 +26,9 @@ export default function ProjectsPreview () {
             {projects.map((project) => (
               <div className="flex flex-col content-center justify-center gap-1 space-y-1 mb-10" key={project.id}>
                 <p className="text-sm">
-                  <span className="font-medium">{project.id}-Project Title:</span> {project.projectTitle}
+                  <span className="font-medium">-Project Title:</span> {project.projectTitle}
                 </p>
-                <p className="text-sm">
+                <p className="text-sm ml-2">
                   <span className="font-medium">Description:</span>
                 </p>
                 <p className="list-disc pl-6 text-sm max-w-7xl">{formatText(project.description)} </p>

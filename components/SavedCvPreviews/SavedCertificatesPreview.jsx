@@ -21,24 +21,24 @@ export default function SavedCertificatesPreview () {
       {certificates.length > 0 && (
         //The section will be displayed only if .length is greater than 0. Otherwise, it won't render anything.
         <div className='flex flex-col ml-8'>
-        <h2 className="text-2xl font-medium underline mb-4 mr-14">Certificates:</h2>
+        <h2 className="text-base font-medium underline mb-4 mr-14">Certificates:</h2>
         <div className="my-5 px-10 mr-10">
           {certificates.map((certificate) => (
-            <div className="flex flex-col content-center justify-center gap-1 space-y-2 mb-16" key={certificate.id}>
-              <p>
-                <span className="font-medium">Title:</span> {certificate.title}
+            <div className="flex flex-col content-center justify-center gap-1 space-y-1 mb-16" key={certificate.id}>
+              <p className="text-sm">
+                <span className="font-medium">-Title:</span> {certificate.title}
               </p>
-              <p>
+              <p className="text-sm ml-2">
                 <span className="font-medium">Issuing Organization:</span> {certificate.issuingOrganization}
               </p>
-              <p>
+              <p className="text-sm ml-2">
                 <span className="font-medium">Issue Date:</span> {certificate.issueDate}
               </p>
               
-              <p>
+              <p className="text-sm ml-2">
                 <span className="font-medium">Description:</span>
               </p>
-              <p className="list-disc pl-6 max-w-7xl">{formatText(certificate.description)} </p>
+              <p className="list-disc pl-6 max-w-7xl text-sm">{formatText(certificate.description)} </p>
             </div>
           ))}
         </div>

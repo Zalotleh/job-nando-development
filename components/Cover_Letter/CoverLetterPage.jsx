@@ -73,7 +73,7 @@ export default function CoverLetterPage({coverLetterId}) {
     <>
       {loading ? (
         <div className={styles.loading}>
-          <div className={styles.loadingSpinner}></div>
+          <div className={styles.loading_spinner}></div>
           <span>Loading...</span>
         </div>
       ) : errorMessage ? (
@@ -85,30 +85,30 @@ export default function CoverLetterPage({coverLetterId}) {
         notificationText={
           <p>
           Here, you can preview, print, or delete your cover letter: 
-          "{coverLetterData?.coverLetterTitle}"
+          <span className={styles.cover_letter_title}> "{coverLetterData?.coverLetterTitle}"</span>
           </p>
         }
     
         >
-        <div className={styles.coverLetterPage}>
+        <div className={styles.cover_letter_page}>
           
-        <div className={styles.buttonGroup}>
+        <div className={styles.button_group}>
             <button
-              className={styles.deleteButton}
+              className={styles.delete_button}
               onClick={handleDeleteCoverLetter}
             >
               Delete Cover Letter 
               <img src="/delete.png" alt="delete icon" />
             </button>
-            <button className={styles.printButton} onClick={handlePrint}>
+            <button className={styles.print_button} onClick={handlePrint}>
               Print Cover Letter
               <img src="/printer.png" alt="delete icon" />
             </button>
           </div>
 
-        <div className={styles.coverLetterContainer1}>
-          <div className={styles.coverLetterContainer}>
-            <div ref={componentRef} className={styles.coverLetterContent}>
+        <div className={styles.cover_letter_container1}>
+          <div className={styles.cover_letter_container}>
+            <div ref={componentRef} className={styles.cover_letter_content}>
               <p>{formatText(coverLetterData.coverLetter)}</p>
             </div>
             </div>

@@ -1,15 +1,26 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import styles from '../../styles/PlansSection.module.css';
 import Link from 'next/link';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 
 const PlansSection = () => {
+
+  useEffect(()=>{
+    AOS.init({
+      duration:'2500',
+      once:true,
+  })
+  },[])
   return (
     <>
       <h3 className={styles.section_title}>Plans & Pricing</h3>
 
       <section className={styles.plans_section}>
         <div className={styles.plan_options}>
-          <div className={styles.plan_option}>
+
+          <div className={styles.plan_option} data-aos="flip-down">
             <h1 className={styles.plan_title}>Free Plan</h1>
             <h2 className={styles.plans_price}>
               <span className={styles.dollar_sign}>$</span>
@@ -30,7 +41,7 @@ const PlansSection = () => {
             </Link>
           </div>
 
-          <div className={styles.plan_option}>
+          <div className={styles.plan_option} data-aos="flip-down">
             <h1 className={styles.plan_title}>Premium Plan</h1>
             <h2 className={styles.plans_price}>
               <span className={styles.dollar_sign}>$</span>

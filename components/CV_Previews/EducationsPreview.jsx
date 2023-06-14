@@ -25,22 +25,22 @@ const EducationsPreview = () => {
           {educations.map((education) => (
             <div className="flex flex-col content-center justify-center gap-1 space-y-1 mb-16" key={education.id}>
               <p className='text-sm'>
-                <span className="font-medium">{education.id}-Degree:</span> {education.degree}
+                <span className="font-medium">-Degree:</span> {education.degree}
               </p>
-              <p className='text-sm'>
+              <p className='text-sm ml-2'>
                 <span className="font-medium">Field of Study:</span> {education.fieldOfStudy}
               </p>
-              <p className='text-sm'>
+              <p className='text-sm ml-2'>
                 <span className="font-medium">Instituin Name:</span> {education.institutionName}
               </p>
-              <p className='text-sm'>
+              <p className='text-sm ml-2'>
                 <span className="font-medium">Location:</span> {education.location}
               </p>
-              <p className='text-sm'>
+              <p className='text-sm ml-2'>
                 <span className="font-medium">Graduation Date:</span> {education.graduationDate}
               </p>
               
-              <p className='text-sm'>
+              <p className='text-sm ml-2'>
                 <span className="font-medium">Additional Info:</span>
               </p>
               <p className="list-disc pl-6 max-w-7xl text-sm">{formatText(education.additionalInfo)} </p>

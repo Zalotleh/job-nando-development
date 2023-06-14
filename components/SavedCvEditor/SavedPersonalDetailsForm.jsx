@@ -17,10 +17,10 @@ export default function SavedPersonalDetailsForm(props) {
 
   return (
     <div className="mb-8 shadow-lg border py-4">
-      <h2 className="text-2xl font-bold mb-4">Personal Details</h2>
+      <h2 className="text-base font-bold mb-4">Personal Details</h2>
       <form className="space-y-4 px-2">
         <div>
-          <label htmlFor="name" className="block text-lg font-bold mb-1">
+          <label htmlFor="name" className="block text-sm font-bold mb-1">
             Name:
           </label>
           <input
@@ -30,11 +30,11 @@ export default function SavedPersonalDetailsForm(props) {
             value={personalDetails.name}
             initialvalues={props.InitialValues.name}
             onChange={handleChange}
-            className="w-full text-lg border border-gray-300 px-4 py-2 rounded-sm"
+            className="w-full text-sm border border-gray-300 px-2 py-2 rounded-sm"
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-lg font-bold mb-1">
+          <label htmlFor="email" className="block text-sm font-bold mb-1">
             Email:
           </label>
           <input
@@ -44,11 +44,11 @@ export default function SavedPersonalDetailsForm(props) {
             value={personalDetails.email}
             initialvalues={props.InitialValues.email}
             onChange={handleChange}
-            className="w-full border text-lg border-gray-300 px-4 py-2 rounded-sm"
+            className="w-full text-sm border border-gray-300 px-2 py-2 rounded-sm"
           />
         </div>
         <div>
-          <label htmlFor="phone" className="block text-lg font-bold mb-1">
+          <label htmlFor="phone" className="block text-sm font-bold mb-1">
             Phone:
           </label>
           <input
@@ -58,11 +58,11 @@ export default function SavedPersonalDetailsForm(props) {
             value={personalDetails.phone}
             initialvalues={props.InitialValues.phone}
             onChange={handleChange}
-            className="w-full text-lg border border-gray-300 px-4 py-2 rounded-sm"
+            className="w-full text-sm border border-gray-300 px-2 py-2 rounded-sm"
           />
         </div>
         <div>
-          <label htmlFor="address" className="block text-lg font-bold mb-1">
+          <label htmlFor="address" className="block text-sm font-bold mb-1">
             Address:
           </label>
           <textarea
@@ -71,8 +71,8 @@ export default function SavedPersonalDetailsForm(props) {
             value={personalDetails.address}
             initialvalues={props.InitialValues.address}
             onChange={handleChange}
-            className="w-full text-lg border border-gray-300 px-4 py-2 rounded-sm"
-            rows="4"
+            className="w-full text-sm border border-gray-300 px-2 py-2 rounded-sm"
+            rows="2"
           />
         </div>
       </form>

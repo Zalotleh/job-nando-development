@@ -40,22 +40,20 @@ const SavedCvEditorPage = ({ cvData, cvId }) => {
             workExperiences={cvData.CvData.workExperiences}
             InitialValues={cvData.CvData.workExperiences}
             />
-            <SavedCertificatesForm
-            certificates={cvData.CvData.certificates}
-            InitialValues={cvData.CvData.certificates}
-            />
+
             <SavedEducationsForm
             educations={cvData.CvData.educations}
             InitialValues={cvData.CvData.educations}
             />
+
+            <SavedCertificatesForm
+            certificates={cvData.CvData.certificates}
+            InitialValues={cvData.CvData.certificates}
+            />
+            
             <SavedSkillsForm
             skills={cvData.CvData.skills}
             InitialValues={cvData.CvData.skills}
-            />
-
-            <SavedLinksForm
-            links={cvData.CvData.links}
-            InitialValues={cvData.CvData.links}
             />
 
             <SavedProjectsForm
@@ -70,6 +68,11 @@ const SavedCvEditorPage = ({ cvData, cvId }) => {
             <SavedLanguagesForm
             languages={cvData.CvData.languages}
             InitialValues={cvData.CvData.languages}
+            />
+
+            <SavedLinksForm
+            links={cvData.CvData.links}
+            InitialValues={cvData.CvData.links}
             />
         </div>
     </>

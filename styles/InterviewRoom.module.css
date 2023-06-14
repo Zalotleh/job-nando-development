@@ -1,52 +1,47 @@
 /* Chat.module.css */
 
 
-  .mainContainer{
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 20px;
+  .main_container{
+    max-width: 1200px;
+    margin: 8px auto;
+    padding: 10px;
     border-radius: 8px;
     background-color: #e4f1f5;
   }
-  .chatContainer {
+  .chat_container {
     border: 5px solid #ffffff;
     border-radius: 8px;
     box-shadow:  0 5px 5px 5px #ffffff;
+
   }
   
-  .messageList {
-    padding: 20px;
+  .message_list {
+    padding: 6px;
     background-color: #ecf6f8;
-    font-size: larger;
+    font-size: 14px;
   }
   
   .message {
     margin-bottom: 10px;
   }
   
-  .message.sent .messageText {
+  .message.sent .message_text {
     background-color: rgb(22 78 99);
     color: #fff;
   }
   
-  .message.received .messageText {
+  .message.received .message_text {
     background-color: #fff;
     color: rgb(22 78 99);
   }
   
-  .messageText {
-    padding: 10px;
-    border-radius: 8px;
+  .message_text {
+    padding: 6px;
+    border-radius: 4px;
   }
   
-  .typingIndicator {
-    padding: 5px;
+  .typing_indicator {
+    padding: 4px;
   }
   
-  .messageInput {
-    padding: 10px;
-    border: none;
-    font-size: larger;
-    border-top: 1px solid rgb(22 78 99);
-  }
-  
+

@@ -26,15 +26,15 @@ const WorkExperiencePreview = () => {
 
             <div className="flex flex-col content-center justify-center gap-2 space-y-1 mb-14" key={job.id}>
               <p className="text-sm" >
-                <span className="font-medium">{job.id}-Company:</span> {job.company}
+                <span className="font-medium">-Company:</span> {job.company}
               </p>
-              <p className="text-sm">
+              <p className="text-sm ml-2">
                 <span className="font-medium ">Position:</span> {job.jobTitle}
               </p>
-              <p className="text-sm">
+              <p className="text-sm ml-2">
                 <span className="font-medium">Start Date:</span>  {job.startDate} <span className="font-medium ml-7">End Date:</span> {job.endDate}
               </p>
-              <p className="text-sm">
+              <p className="text-sm ml-2">
                 <span className="font-medium">Responsibilities:</span>
               </p>
               <p className="list-disc pl-6 max-w-7xl text-sm">

@@ -25,16 +25,16 @@ const CertificatesPreview = () => {
           {certificates.map((certificate) => (
             <div className="flex flex-col content-center justify-center gap-1 space-y-1 mb-16" key={certificate.id}>
               <p className="text-sm">
-                <span className="font-medium">{certificate.id}-Title:</span> {certificate.title}
+                <span className="font-medium">-Title:</span> {certificate.title}
               </p>
-              <p className="text-sm">
+              <p className="text-sm ml-2">
                 <span className="font-medium">Issuing Organization:</span> {certificate.issuingOrganization}
               </p>
-              <p className="text-sm">
+              <p className="text-sm ml-2">
                 <span className="font-medium">Issue Date:</span> {certificate.issueDate}
               </p>
               
-              <p className="text-sm">
+              <p className="text-sm ml-2">
                 <span className="font-medium">Description:</span>
               </p>
               <p className="list-disc pl-6 max-w-7xl text-sm">{formatText(certificate.description)} </p>

@@ -205,7 +205,7 @@ const formatText = (text) =>{
         {loading ? (
           <>
             <div className="text-center">
-              <h2 className="text-2xl font-bold mb-4 text-cyan-900">Thank you for submitting!</h2>
+              <h2 className="text-base font-bold mb-4 text-cyan-900">Thank you for submitting!</h2>
               <p className="text-cyan-700">This may take a while, hang on we will provide you with a personalized career advice.</p>
             </div>
             <div className="flex items-center justify-center h-24">
@@ -217,12 +217,14 @@ const formatText = (text) =>{
           <>
             {careerAdvice? (
               <>
-                <div mb-20>
-                  <h1 className='text-xl text-cyan-900 mb-16 font-bold'>Your Career Advice is Ready...</h1>
-                  <p className='text-xl text-cyan-900 leading-10 mb-10'>{formatText(careerAdvice)}</p>
+                <div className=' mt-16 mb-20 '>
+                  <div className='px-6 py-6 mb-4 border-4 border-cyan-500 shadow-md shadow-cyan-500'>
+                    <h1 className='text-base text-cyan-900 mb-8 font-bold'>Your Career Advice is Ready...</h1>
+                    <p className='text-sm text-cyan-900 mb-10'>{formatText(careerAdvice)}</p>
+                  </div>
                   <button 
                     onClick={handleStartOver}
-                    className="ml-5 mt-2 mr-2 px-5 py-4 border border-transparent text-xl font-medium rounded-md text-white bg-cyan-900 hover:bg-cyan-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
+                    className=" mt-2 mr-2 px-5 py-3 border border-transparent text-sm font-medium rounded-md text-white bg-cyan-900 hover:bg-cyan-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
                     >
                     Start Over
                   </button>
@@ -241,20 +243,22 @@ const formatText = (text) =>{
                 {errorMessage&&<p className='ml-5 mb-4 text-red-500'>{errorMessage}</p>}
               
                 <div>
-                  <div className='ml-5 mt-10 mb-10 text-xl text-black'>
-                    <span className=' text-green-600'>
+                <hr />
+                  <div className='ml-5 mt-4 mb-6 text-base text-black '>
+                    <span className=' text-white bg-green-600 border border-grey-600 rounded-md px-2 py-2'>
                       Step {currentCardIndex + 1}
                     </span> / {cards.length}
+                    
                   </div>
 
                   {cards[currentCardIndex]}
 
-                  <div className='flex justify-between content-center mt-10'>
+                  <div className='flex justify-between content-center mt-2 max-w-[750px]'>
 
                     {currentCardIndex > 0 && (
                       <button 
                         onClick={handlePreviousCard}
-                        className="ml-5 mt-2 mr-2 px-8 py-2 border border-transparent text-lg font-medium rounded-md text-white bg-cyan-900 hover:bg-slate-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
+                        className="ml-5 mt-2 mr-2 px-6 py-2 border border-transparent text-base font-medium rounded-md text-white bg-cyan-900 hover:bg-slate-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
                       >
                         Back
                       </button>
@@ -265,14 +269,14 @@ const formatText = (text) =>{
                         <div className='flex flex-row flex-wrap content-center justify-center '>
 
                           {isNextButtonDisabled && (
-                            <p className="ml-5 mt-2 py-4 text-red-500">
+                            <p className="ml-5 mt-2 py-2 text-red-500">
                               Please fill in the required field to proceed.
                             </p>
                           )}
                           <button
                             onClick={handleNextCard}
                             disabled={isNextButtonDisabled}
-                            className={`ml-5 mt-2 mr-2 px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white ${
+                            className={`ml-5 mt-2 mr-2 px-6 py-2 border border-transparent text-base font-medium rounded-md text-white ${
                               isNextButtonDisabled
                               ? 'bg-gray-400 cursor-not-allowed'
                               : 'bg-[#08aa00] hover:bg-[#0edc03]'
@@ -280,6 +284,7 @@ const formatText = (text) =>{
                             >
                             Next
                           </button>
+                          {errorMessage&&<p className='ml-5 mb-4 text-red-500'>{errorMessage}</p>}
                         </div>
                       </>
                     )}
@@ -287,7 +292,7 @@ const formatText = (text) =>{
                     {currentCardIndex === cards.length - 1 && (
                       <button 
                         onClick={handleSubmit}
-                        className="ml-5 mt-2 mr-2 px-8 py-4 border border-transparent text-xl font-medium rounded-md text-white bg-[#08aa00] hover:bg-[#0edc03] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
+                        className="ml-5 mt-2 mr-2 px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-[#08aa00] hover:bg-[#0edc03] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
                       >
                         Submit
                       </button>

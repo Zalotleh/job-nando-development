@@ -1,11 +1,11 @@
-.coverLetterPage {
+.cover_letter_page {
     padding: 20px;
     width: 70%;
     margin: auto;
 
   }
 
-  .coverLetterContainer{
+  .cover_letter_container{
     border: 5px solid rgb(6 182 212);
     box-shadow: 0 0 10px 7px rgb(6 182 212) ;
     border-radius: 10px;
@@ -13,35 +13,36 @@
 
 
   }
-  .coverLetterContainer1{
+  .cover_letter_container1{
     border: 5px solid rgb(22 78 99);
     border-radius: 10px;
 
   }
   
-  .coverLetterTitle {
-    font-size: 24px;
+  .cover_letter_title {
+    font-size: 12px;
     font-weight: bold;
+    margin: auto;
   }
   
-  .coverLetterContent {
-    margin-top: 40px;
-    line-height: 30px;
+  .cover_letter_content {
+    margin-top: 35px;
+    line-height: 20px;
     padding: 30px 30px;
-    font-size: larger;
+    font-size: 12px;
   }
   
-  .buttonGroup {
+  .button_group {
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     background-color: aliceblue;
-    padding: 15px;
+    padding: 10px;
   }
   
-  .deleteButton {
+  .delete_button {
     margin-right: 10px;
-    padding: 8px 16px;
+    padding: 4px 8px;
     background-color: #a8101f;
     color: #fff;
     border: none;
@@ -49,22 +50,24 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    font-size: large;
+    font-size: 12px;
+    font-weight: 600;
+
     gap: 5px;
   }
 
-  .deleteButton:hover{
+  .delete_button:hover{
     background-color: #f81128;
   }
 
-  .deleteButton img{
-    width: 35px;
+  .delete_button img{
+    width: 25px;
     margin: 5px;
 
   }
   
-  .printButton {
-    padding: 8px 16px;
+  .print_button {
+    padding: 4px 8px;
     background-color: rgb(22 78 99);
     color: #fff;
     border: none;
@@ -72,18 +75,18 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    font-size: large;
+    font-size: 12px;
     font-weight: 600;
     gap: 5px;
 
   }
 
-  .printButton:hover {
+  .print_button:hover {
     background-color:rgb(6 182 212) ;
   }
 
-  .printButton img{
-    width: 35px;
+  .print_button img{
+    width: 25px;
     margin: 5px;
 
   }
@@ -95,7 +98,7 @@
     height: 100px;
   }
   
-  .loadingSpinner {
+  .loading_spinner {
     border: 6px solid #f3f3f3;
     border-top: 6px solid #333;
     border-radius: 50%;

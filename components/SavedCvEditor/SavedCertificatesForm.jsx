@@ -79,11 +79,11 @@ const SavedCertificatesForm = (props) => {
     return (
         <>
           <div className="mb-8 shadow-lg border py-4">
-            <h2 className="text-2xl font-bold mb-4">Certificates:</h2>
+            <h2 className="text-base font-bold mb-4">Certificates:</h2>
             {certificates.map((cert) => (
-             <>
+              <>
               <div key={cert.id} className="mb-10 mt-5 px-2">
-                <label htmlFor={`title_${cert.id}`} className="text-lg font-bold ">Title:</label>
+                <label htmlFor={`title_${cert.id}`} className="text-sm font-bold ">Title:</label>
                 <input
                   type="text"
                   name="title"
@@ -91,9 +91,9 @@ const SavedCertificatesForm = (props) => {
                   value={cert.title}
                   initialvalues={props.InitialValues.title}
                   onChange={(e) => handleChange(e, cert.id)}
-                  className="block w-full text-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="block w-full text-sm px-2  py-1  mb-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
-                <label htmlFor={`issuingOrganization_${cert.id}`} className="text-lg font-bold ">Issuing Organization:</label>
+               <label htmlFor={`issuingOrganization_${cert.id}`}className="text-sm font-bold ">Issuing Organization:</label>
                 <input
                   type="text"
                   name="issuingOrganization"
@@ -101,9 +101,9 @@ const SavedCertificatesForm = (props) => {
                   value={cert.issuingOrganization}
                   initialvalues={props.InitialValues.issuingOrganization}
                   onChange={(e) => handleChange(e, cert.id)}
-                  className="block w-full text-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="block w-full text-sm px-2  py-1  mb-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
-                <label htmlFor={`issueDate_${cert.id}`} className="text-lg font-bold ">Issue Date:</label>
+                <label htmlFor={`issueDate_${cert.id}`}className="text-sm font-bold ">Issuing Date:</label>
                 <input
                   type="text"
                   name="issueDate"
@@ -111,10 +111,10 @@ const SavedCertificatesForm = (props) => {
                   value={cert.issueDate}
                   initialvalues={props.InitialValues.issueDate}
                   onChange={(e) => handleChange(e, cert.id)}
-                  className="block w-full text-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="block w-full text-sm px-2  py-1  mb-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
                 
-                <label htmlFor={`description_${cert.id}`} className="text-lg font-bold ">Description:</label>
+                <label htmlFor={`description_${cert.id}`}className="text-sm font-bold ">Description:</label>
                 <textarea
                   name="description"
                   id={`description_${cert.id}`}
@@ -122,14 +122,14 @@ const SavedCertificatesForm = (props) => {
                   initialvalues={props.InitialValues.description}
                   onChange={(e) => handleDescriptionChange(e, cert.id)}
                   rows={8}
-                  className="block w-full text-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="block w-full text-sm px-2  py-1 mb-2  rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
                 {loading && <p>waiting for the AI response, hold on...</p>}
                 {error&&error}
                 
                 <div className="flex justify-between content-center ">
                 <button
-                  className="bg-cyan-500 hover:bg-cyan-700 text-lg text-white font-bold py-2 px-4 mt-2 rounded flex gap-5 content-center justify-center"
+                  className="bg-cyan-500 hover:bg-cyan-700 text-sm text-white font-bold py-2 px-4 mt-2 rounded flex gap-4 content-center justify-center"
                   onClick={(e) => handleDescriptionGpt3(e, cert.id)}
                   >
                   <img src="/wand.png" alt="magic wand icon"  className="max-w-[25px]"/> AI Magic
@@ -138,7 +138,7 @@ const SavedCertificatesForm = (props) => {
                 <button
                   type="button"
                   onClick={() => handleDeleteCertificates(cert.id)}
-                  className="mt-2 mr-2 px-4 py-2 border border-transparent  font-medium rounded-md text-lg text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+                  className="mt-2 mr-2 px-4 py-2 border border-transparent  font-medium rounded-md text-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
                   >
                   Delete
                 </button>
@@ -150,7 +150,7 @@ const SavedCertificatesForm = (props) => {
         <button
           type="button"
           onClick={handleAddCertificate}
-          className="mt-4 px-4 py-2 border border-transparent text-lg font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+          className="mt-4 px-2 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
         >
           Add New Certificate
         </button>

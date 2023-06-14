@@ -10,7 +10,7 @@ export default function PersonalDetailsForm() {
       [e.target.name]: e.target.value,
     });
   };
- 
+  
   return (
     <div className="mb-8 shadow-lg border py-4">
       <h2 className="text-base font-bold mb-4">Personal Details</h2>
@@ -64,7 +64,7 @@ export default function PersonalDetailsForm() {
             value={personalDetails.address}
             onChange={handleChange}
             className="w-full text-sm border border-gray-300 px-2 py-2 rounded-sm"
-            rows="4"
+            rows="2"
           />
         </div>
       </form>
