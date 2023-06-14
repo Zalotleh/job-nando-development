@@ -8,6 +8,7 @@ import {
   MessageList,
   Message,
   MessageInput,
+  TypingIndicator,
 } from "@chatscope/chat-ui-kit-react";
 import {getAuth} from 'firebase/auth';
 import { useAuth } from '@/context/AuthContext';
