@@ -10,7 +10,7 @@ export default function DeleteAccount() {
   const auth = getAuth();
   const user = auth.currentUser;
   const router = useRouter();
-
+// TODO check why the user data is not deleted from the database
   const handleDelete = async (e) => {
     e.preventDefault()
     setStatus('pending');
