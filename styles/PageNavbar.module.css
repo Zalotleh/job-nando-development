@@ -4,26 +4,20 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 10px 20px;
     position: sticky;
     top: 0;
     z-index: 50;
     font-family: sans-serif, Helvetica, Arial;
     max-width: 2000px;
-    background-color: rgb(22 78 99);
+    background-color: #164e63;
   }
 
-
+.logo{
+  display: flex;
+  flex-direction: column;
+}
   
-.logo_text {
-  font-size: 26px;
-  font-style: normal;
-  font-weight: 800;
-  color: white; 
-  text-decoration: none;
-  letter-spacing: 0.01em;
-  }
-
 
 .nav_links {
     width: auto;

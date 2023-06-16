@@ -12,8 +12,6 @@ import {
 } from "@chatscope/chat-ui-kit-react";
 import {getAuth} from 'firebase/auth';
 import { useAuth } from '@/context/AuthContext';
-import { createCheckoutSession } from '@/stripe/createCheckoutSession';
-import usePremiumStatus from '@/stripe/usePremiumStatus';
 import Layout from '@/components/Layout';
 
 
@@ -24,7 +22,6 @@ function InterviewRoom() {
   const {user} = useAuth()
   const [currentUser, setCurrentUser] = useState(null);
   const [userLoading, setUserLoading] = useState(true);
-  const userIsPremium = usePremiumStatus(currentUser);
   const [errorMessage, setErrorMessage] = useState('')
 
   useEffect(() => {
@@ -138,12 +135,7 @@ const systemMessage = {
 
         {currentUser && !userLoading && (
           <>
-    
-            {/* {!userIsPremium ? (
-                    <button onClick={() => createCheckoutSession(currentUser.uid)}>
-                      Upgrade to premium!
-                    </button>
-                  ) : ( */}
+
                 <div style={{ position: "relative", height: "400px" }}>
                     <MainContainer className={chatStyles.main_container}>
                         <ChatContainer className={chatStyles.chat_container}>       
@@ -170,7 +162,7 @@ const systemMessage = {
                         </ChatContainer>
                     </MainContainer>
                 </div>
-              {/* )} */}
+
           </>
         )}
       </Layout>

@@ -4,10 +4,12 @@ import styles from '../../styles/Dashboard.module.css';
 import { useAuth } from '@/context/AuthContext';
 import getCvsList from '../api/CvProcessing/getCvsList'
 import Layout2 from '@/components/Layout2';
+import userSubscriptionStatus from '@/stripe/useSubscriptionStatus';
 
 
 function Dashboard() {
   const {user} = useAuth()
+  const userIsSubscribed = userSubscriptionStatus(user);
   const [showNotification, setShowNotification] = useState(true);
   const [cvsList, setCvsList] = useState([])
   const [isLoading, setIsLoading] = useState(true); // State for loading status
@@ -83,6 +85,7 @@ function Dashboard() {
                 <h2>Profile Information:</h2>
                 <h3>-User Name: <span className={styles.user_data}>{userName}</span> </h3>
                 <h3>-Email address: <span className={styles.user_data}>{userEmail}</span></h3>
+                <h3>-Subscription status: <span className={styles.user_data}>{userIsSubscribed? 'Active':'Canceled'}</span></h3>
             </div>
             <div className={styles.update_profile}>
             
@@ -106,8 +109,10 @@ function Dashboard() {
             </Link>
 
             <Link 
-              href={'/account/SubscriptionPage'} 
-              className={styles.profile_link}> 
+              href={'https://billing.stripe.com/p/login/9AQ2bgg9H4xuaJy288'} 
+              className={styles.profile_link}
+              target = "_blank"
+              >
               <img src="/subscription.png" alt="plan or subscription details" /> 
               Subscription Details
             </Link>
@@ -115,7 +120,7 @@ function Dashboard() {
             <Link 
               href={'/account/deleteProfile'} 
               className={styles.profile_link}> 
-              <img src="/delete.png" alt="remove user icon" /> 
+              <img src="/delete.png" alt="remove user icon" />
               Delete Account
             </Link>
 

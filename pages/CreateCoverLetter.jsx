@@ -6,6 +6,7 @@ import {ResumeContext} from '@/context/ResumeContext'
 import getCvsList from './api/CvProcessing/getCvsList'
 import Layout from '@/components/Layout'
 
+
 export default function CreateCoverLetter() {
   const {cvsList, setCvsList} = useContext(ResumeContext)
   const [loading, setLoading] = useState(false)
@@ -39,7 +40,7 @@ export default function CreateCoverLetter() {
           }
         metaTitle={"Create a customized cover Letter"}
       >
-        <section className='m-8'>
+        <section className='m-8 flex flex-col items-center'>
         {loading?(
           <p>...Loading</p>
           ):(
@@ -85,14 +86,19 @@ export default function CreateCoverLetter() {
 
                     </ul>
                   ):(
-                    <Link href={'../CreateCVPage'}>
-                      <button
-                        type='button'
-                        className="ml-20 mt-2 mr-2 px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
-                        >
-                        Create CV First
-                      </button>
-                    </Link>
+                    <>
+                      <p>
+                        You will need to create a resume first...
+                      </p>
+                      <Link href={'../CreateCVPage'}>
+                        <button
+                          type='button'
+                          className=" mt-2  px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-cyan-900 hover:bg-cyan-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-800"
+                          >
+                          Click Here to Create Resume
+                        </button>
+                      </Link>
+                    </>
                   )
                 }
               </>

@@ -10,6 +10,7 @@ import {
 } from 'firebase/auth';
 import  firebase_app from '../firebase/config'
 import { collection, getFirestore, setDoc, doc } from '@firebase/firestore'
+import { createSubscription } from "@/stripe/subscription";
 
 const database = getFirestore(firebase_app);
 
@@ -52,13 +53,12 @@ export const AuthContextProvider = ({ children }) => {
         try {
             const credentials = await createUserWithEmailAndPassword(auth, email, password );
             const user = credentials.user
-            
             setUser({
                 email:user.email,
                 name: user.displayName,
                 uid:user.uid,
             });
-            
+            createSubscription(user.uid)
             await saveUser(user.uid, user.email, user.displayName)
         }catch(error){
             console.log(error);
@@ -75,11 +75,17 @@ export const AuthContextProvider = ({ children }) => {
         try {
             const result = await signInWithPopup(auth, provider);
             const user = result.user;
+             // Check if the user is signing up (new user) or signing in (existing user)
+            const isNewUser = user.metadata.creationTime === user.metadata.lastSignInTime;
+
             setUser({ 
                 email: user.email,
                 displayName: user.displayName,
                 uid: user.uid,
              });
+             if (isNewUser) {
+             createSubscription(user.uid)
+             }
              setIsAuthorized(true)
             await saveUser(user.uid, user.email, user.displayName)
 

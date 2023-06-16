@@ -26,9 +26,14 @@ import Layout from '@/components/Layout'
 import styles from '../styles/ResumePreview.module.css'
 
 
+
+
 export default function CreateCVPage() {
+
+
   return (
     <div>
+
       <Layout
         metaTitle={"Create and Save your Resume"}
         pageTitle={"Create Resume"}
@@ -111,6 +116,7 @@ export default function CreateCVPage() {
           </div>
         </ResumeProvider>
       </Layout>
+
     </div>
   )
 }

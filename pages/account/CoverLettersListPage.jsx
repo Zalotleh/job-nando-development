@@ -29,18 +29,6 @@ export default function CoverLettersListPage () {
     fetchCoverLetters()
     
   }, [])
-  // const handleDeleteCoverLetter = async (coverLetter_id)=>{
-  //   const confirmDelete = window.confirm('Are you sure you want to delete this Cover Letter?');
-  //   if (confirmDelete) {
-  //   try{
-  //     await deleteCoverLetterFunction(user_id, coverLetter_id)
-  //     setCoverLettersList((prevClsList)=> prevClsList.filter((coverLetter)=> coverLetter.id !==coverLetter_id));
-  //   }
-  //   catch(error){
-  //     console.log("something wrong happened while deleting the Cover Letter: ",error)
-  //   }
-  // }
-  // }
 
   return (
     <>

@@ -95,7 +95,7 @@ const SignupPage = () => {
                   type="email"
                   disabled={isLoading}
                   {...register("email", { required: "Email is required" })}
-                  className={`border border-solid rounded-lg ring:0 focus:ring-0 focus:outline-none border-cyan-500 text-black-500 text-normal py-2 h-10 px-6 text-base w-full flex items-center`}
+                  className={`border border-solid rounded-lg ring:0 focus:ring-0 focus:outline-none border-cyan-500 text-black-500 text-normal py-2 h-10 px-1 text-base w-full flex items-center`}
                 />
                 {errors.email && <p className="text-red-400">{errors.email.message}</p>}
               </div>
@@ -110,7 +110,7 @@ const SignupPage = () => {
                   type="password"
                   disabled={isLoading}
                   {...register("password", { required: "Password is required" })}
-                  className={`border border-solid rounded-lg ring:0 focus:ring-0 focus:outline-none border-cyan-500 text-black-500 text-normal py-2 h-10 px-6 text-base w-full flex items-center`}
+                  className={`border border-solid rounded-lg ring:0 focus:ring-0 focus:outline-none border-cyan-500 text-black-500 text-normal py-2 h-10 px-1 text-base w-full flex items-center`}
                 />
                 {errors.password && <p className="text-red-400">{errors.password.message}</p>}
               </div>
@@ -128,7 +128,7 @@ const SignupPage = () => {
                   {...register("confirmPassword", {
                     required: "Verify your password",
                   })}
-                  className={`border border-solid rounded-lg ring:0 focus:ring-0 focus:outline-none border-cyan-500 text-black-500 text-normal py-2 h-10 px-6 text-base w-full flex items-center`}
+                  className={`border border-solid rounded-lg ring:0 focus:ring-0 focus:outline-none border-cyan-500 text-black-500 text-normal py-2 h-10 px-1 text-base w-full flex items-center`}
                 />
                 {errors.confirmPassword && (
                   <p className="text-red-400">{errors.confirmPassword.message}</p>

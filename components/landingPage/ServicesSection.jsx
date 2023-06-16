@@ -125,7 +125,7 @@ function ServicesSection() {
           <div className={styles.services_group}>
             <div className={styles.service_container}>
                 
-                    <div className={styles.service_card} data-aos='fade-right'>
+                    <div className={styles.service_card} data-aos='zoom-in-up'>
                       <img src="/career-coach.png" alt="minimalist graphic for someone having an advice" className={styles.service_card_image}/>
 
                         <div className={styles.service_card_content}>
@@ -152,7 +152,7 @@ function ServicesSection() {
 
             <div className={styles.service_container}>
               
-                  <div className={styles.service_card} data-aos='fade-left'>
+                  <div className={styles.service_card} data-aos='zoom-in-down'>
                   <img src="/learning-path.png" alt="minimalist graphic for someone having an learningPath" className={styles.service_card_image}/>
 
                       <div className={styles.service_card_content}>

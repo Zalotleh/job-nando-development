@@ -3,6 +3,7 @@ import { AuthContextProvider } from '@/context/AuthContext'
 import { ResumeProvider } from '@/context/ResumeContext'
 import { SavedResumeProvider } from '@/context/SavedResumeContext'
 import ProtectedRoute from '@/components/ProtectedRoute'
+import SubscribedOnlyRoute from '@/components/SubscribedOnlyRoute'
 
 
 export default function App({ 
@@ -14,9 +15,11 @@ export default function App({
     <AuthContextProvider>
       <ResumeProvider>
       <SavedResumeProvider>
-      <ProtectedRoute>
+        <ProtectedRoute>
+          <SubscribedOnlyRoute>
         <Component {...pageProps} />
-    </ProtectedRoute>
+          </SubscribedOnlyRoute>
+        </ProtectedRoute>
       </SavedResumeProvider>
       </ResumeProvider>
     </AuthContextProvider>

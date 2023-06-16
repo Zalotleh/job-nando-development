@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React, {useState, useEffect} from "react";
 import {getAuth} from 'firebase/auth';
 import { createCheckoutSession } from '@/stripe/createCheckoutSession';
-import usePremiumStatus from '@/stripe/usePremiumStatus';
+import usePremiumStatus from '@/stripe/useSubscriptionStatus';
 
 
 export default function Home() {

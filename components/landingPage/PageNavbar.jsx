@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useAuth } from "@/context/AuthContext";
 import styles from "@/styles/PageNavbar.module.css";
@@ -11,21 +12,19 @@ const PageNavbar = ({ children }) => {
   const handleLogout = async () => {
     try {
       await logOut();
-      router.push("/auth/login");
+      router.push("/");
     } catch (error) {
       console.log(error.message);
     }
   };
 
-  console.log(user.uid)
-
   return (
     <>
 
       <section className={styles.container}>
-        <div className={styles.logo}>
-          <Link href="/">
-            <span className={styles.logo_text}>365 Talent Hub</span>
+        <div>
+          <Link href="/"  className={styles.logo}>
+            <Image src={'/logo-image.png'} width={70} height={70} alt="logo image"></Image>
           </Link>
         </div>
 

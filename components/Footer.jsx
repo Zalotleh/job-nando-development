@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from '../styles/Footer.module.css'
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
@@ -44,6 +45,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className={styles.footer_section}>
+          <Image src={'/logo-image.png'} width={70} height={70} className={styles.logo_image} alt="logo image"></Image>
           <h3 className={styles.footer_section_title}>Follow Us</h3>
           <div className={styles.social_media_icons}>
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
@@ -57,6 +59,8 @@ const Footer = () => {
             </a>
           </div>
         </div>
+
+        
       </div>
       <div className={styles.footer_bottom}>
         &copy; 2023 Ziad Alotleh. All rights reserved.

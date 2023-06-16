@@ -1,9 +1,13 @@
 import React from 'react'
 import CareerAdviceForm from '@/components/career_advice/CareerAdviceForm'
 import Layout from '@/components/Layout'
-import styles from '../styles/GetCareerAdvice.module.css' 
+import styles from '../styles/GetCareerAdvice.module.css'
+
+
 
 export default function GetCareerAdvice() {
+
+
   return (
     <>
 

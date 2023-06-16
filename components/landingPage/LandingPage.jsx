@@ -4,12 +4,13 @@ import styles from '../../styles/LandingPage.module.css'
 import Header from './Header'
 import ServicesSection from './ServicesSection'
 import BenefitsSection from './BenefitsSection'
-import PlansSection from './PlansSection'
+import PriceSection from './PriceSection'
 import PageNavbar from './PageNavbar'
 import Footer from '../Footer'
 import QA from './Q&A'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import CookieAccept from '../CookieAccept'
 
 
 function LandingPage() {
@@ -34,7 +35,7 @@ useEffect(()=>{
       <main className={styles.page_container}>
         <ServicesSection/>
         <BenefitsSection/>
-        <PlansSection/>
+        <PriceSection/>
         <QA/>
         <div className={styles.articles_section}>
           <h2 className={styles.section_title}>Tips for you</h2>
@@ -76,6 +77,8 @@ useEffect(()=>{
         </div>
       </main>
       <Footer/>
+      <CookieAccept/>
+
     </body>
   )
 }

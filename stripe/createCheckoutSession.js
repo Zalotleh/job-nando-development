@@ -11,19 +11,18 @@ export async function createCheckoutSession(user_id) {
 
   // Create a new checkout session in the subollection inside this users document
   const checkoutSession  = await addDoc( collectionRef,
-      {
+      { 
+        billing_address_collection: 'auto',
+        line_items: [
+          {
+              price: 'price_1NJAugL6LNzUqrJyWWvmDN4P',
+              quantity: 1,
+          },
+        ],
         mode: 'subscription',
-          price: 'price_1N3cerL6LNzUqrJybC8jXFuW',
+          price: 'price_1NJAugL6LNzUqrJyWWvmDN4P',
           success_url: window.location.origin,
           cancel_url: window.location.origin,
-          subscription_data: {
-            trial_settings: {
-              end_behavior: {
-                missing_payment_method: 'cancel',
-              },
-            },
-            trial_period_days: 30,
-          },
           payment_method_collection: 'if_required',
         }
         )
@@ -38,7 +37,7 @@ export async function createCheckoutSession(user_id) {
             // Init Stripe
             const stripe = await initializeStripe();
 
-            stripe.redirectToCheckout({ sessionId:data.sessionId });
+            await stripe.redirectToCheckout({ sessionId:data.sessionId });
           }
         });
 

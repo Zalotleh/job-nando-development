@@ -22,7 +22,13 @@ function Header() {
             Gain the confidence to ace your interviews and land your dream job.
             </h2>
           </div>
-          <Link href="/auth/signup"><button className={styles.CTA_btn}>Create Your FREE Account Now</button></Link>
+          <div className={styles.btn_note_text}>
+            <Link href="/auth/signup"><button className={styles.CTA_btn}>Create Your FREE Account Now</button></Link>
+            <div className={styles.note_text}>
+              <p >*14 Days Free Trial.</p>
+              <p >*No Credit Card required.</p>
+            </div>
+          </div>
         </div>
       </header>
 

@@ -39,6 +39,10 @@
     font-size: 12px;
     margin-bottom: 5px;
 }
+
+.logo_image{
+    padding: 5px;
+}
   
 .social_media_icons {
     display: flex;
