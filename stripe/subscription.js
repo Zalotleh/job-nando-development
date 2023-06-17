@@ -1,5 +1,6 @@
 import firebase_app from '../firebase/config'
 import { doc, getFirestore, onSnapshot} from '@firebase/firestore';
+import Stripe from 'stripe';
 
 
 const database = getFirestore(firebase_app);
@@ -11,7 +12,7 @@ export async function createSubscription(user_id) {
         const stripe_id = data.stripeId
 
         if(stripe_id){
-            const stripe = require('stripe')(process.env.STRIPE_TEST_SECRET_KEY);
+            const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_TEST_SECRET_KEY);
             await stripe.subscriptions.create({
                 customer: stripe_id,
                 items:[

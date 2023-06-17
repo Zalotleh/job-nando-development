@@ -84,7 +84,7 @@ export const AuthContextProvider = ({ children }) => {
                 uid: user.uid,
              });
              if (isNewUser) {
-             createSubscription(user.uid)
+                createSubscription(user.uid)
              }
              setIsAuthorized(true)
             await saveUser(user.uid, user.email, user.displayName)
