@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import Head from "next/head";
 import { FormProvider, useForm } from "react-hook-form";
 import { useRouter } from "next/router";
 import { useAuth } from "@/context/AuthContext";
-import AllNavbar from "@/components/landingPage/PageNavbar";
 import Layout2 from "@/components/Layout2";
 
 const LoginPage = () => {

@@ -12,9 +12,11 @@ export default async function isUserSubscribed() {
       const collectionRef = collection(database, 'users', user_id, 'subscriptions');
       
       return new Promise((resolve) => {
+        
         let isSubscribed = false;
         
         onSnapshot(collectionRef, async (snap) => {
+
           snap.forEach((doc) => {
             const subscription = doc.data()
             const firstItem = subscription.items[0];
@@ -25,7 +27,6 @@ export default async function isUserSubscribed() {
           });
           resolve(isSubscribed);
         });
-        console.log('in isUserSubscribed 2',isSubscribed)
       });
     }
 }
