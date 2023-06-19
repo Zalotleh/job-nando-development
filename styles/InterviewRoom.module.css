@@ -3,6 +3,7 @@
 
   .main_container{
     max-width: 1200px;
+    max-height: 100vh;
     margin: 8px auto;
     padding: 10px;
     border-radius: 8px;

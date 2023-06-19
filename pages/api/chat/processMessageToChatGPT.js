@@ -20,7 +20,7 @@ async function processMessageToChatGPT(req, res) {
             systemMessage,  // The system message DEFINES the logic of our chatGPT
             ...apiMessages // The messages from our chat with ChatGPT
           ],
-        temperature: 0.1,
+        temperature: 0.2,
     });
 
     const resultStr = response.data.choices[0].message.content;

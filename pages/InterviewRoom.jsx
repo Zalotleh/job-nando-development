@@ -62,7 +62,7 @@ const systemMessage = {
       Thank you for entrusting me with your interview preparation. 
       Let's begin!`,
       sentTime: "just now",
-      sender: "ChatGPT"
+      sender: "Nando"
     }
   ]);
   const [isTyping, setIsTyping] = useState(false);
@@ -136,7 +136,7 @@ const systemMessage = {
         {currentUser && !userLoading && (
           <>
 
-                <div style={{ position: "relative", height: "400px" }}>
+                <div>
                     <MainContainer className={chatStyles.main_container}>
                         <ChatContainer className={chatStyles.chat_container}>       
                           <MessageList
@@ -154,7 +154,7 @@ const systemMessage = {
                                 })}
                             </MessageList>
                             <MessageInput 
-                              placeholder="Type message here and press 'Enter' to send" 
+                              placeholder="Type your message here and press 'Enter' to send" 
                               onSend={handleSend}
                               
                             />
