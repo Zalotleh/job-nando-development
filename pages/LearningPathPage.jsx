@@ -2,14 +2,10 @@ import React from 'react'
 import LearningPathForm from '@/components/learning_path/cards/LearningPathForm'
 import Layout from '@/components/Layout'
 import styles from '../styles/GetCareerAdvice.module.css'
-import userSubscriptionStatus from '@/stripe/useSubscriptionStatus';
-import { useAuth } from '@/context/AuthContext';
 
 
 export default function LearningPathPage() {
 
-  const {user} = useAuth()
-  const userIsSubscribed = userSubscriptionStatus(user);
   
   return (
     <>

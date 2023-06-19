@@ -1,13 +1,14 @@
 import { useRouter } from "next/router";
 import { useAuth } from "@/context/AuthContext";
 import React, {useEffect, useState} from "react";
-import useSubscriptionStatus from '@/stripe/useSubscriptionStatus';
+import getSubscriptionStatus from "@/pages/api/subscription/getSubscriptionStatus";
 import CheckoutPage from "./CheckoutPage";
 
 const SubscribedOnlyRoute = ({ children }) => {
   const router = useRouter();
   const {user, isLoading} = useAuth();
-  const userIsSubscribed = useSubscriptionStatus(user);
+  const user_id = user.uid
+
 
   const onlySubscribedRoutes = [
     "/CreateCVPage",
@@ -22,25 +23,35 @@ const SubscribedOnlyRoute = ({ children }) => {
 
   const isOnlySubscribedRoutes = onlySubscribedRoutes.includes(router.pathname);
 
-  const [isAllowed, setIsAllowed] = useState(false);
+  const [isAllowed, setIsAllowed] = useState(null);
+
 
   useEffect(() => {
-    if (user && !isLoading && isOnlySubscribedRoutes) {
-      setIsAllowed(userIsSubscribed);
-    }
-  }, [isLoading, isOnlySubscribedRoutes, userIsSubscribed]);
+    const unsubscribe = getSubscriptionStatus(user_id, (newIsSubscribed) => {
+      setIsAllowed(newIsSubscribed);
+    });
 
-  if (!isLoading && isOnlySubscribedRoutes && !isAllowed) {
+      if (user && !isLoading && isOnlySubscribedRoutes) {
+        return () => {
+          unsubscribe();
+        };
+      }
+   
+
+  }, [isLoading, isOnlySubscribedRoutes, user]);
+
+  
+  if (isLoading || isAllowed === null) {
+    return <div>Loading...</div>;
+  }
+
+  if ( isOnlySubscribedRoutes && !isAllowed) {
 
 
     // this is for the button inside the checkout page
 
     return <CheckoutPage/>;
   
-  }
-
-  if (isLoading) {
-    return <div>Loading...</div>;
   }
 
   return <div>{children}</div>;
