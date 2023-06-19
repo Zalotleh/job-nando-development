@@ -4,24 +4,31 @@ import { collection, getFirestore, onSnapshot } from '@firebase/firestore';
 const database = getFirestore(firebase_app);
 
 const getSubscriptionStatus = (user_id, callback) => {
-  const collectionRef = collection(database, 'users', user_id, 'subscriptions');
-  const unsubscribe = onSnapshot(collectionRef, (snap) => {
-    let newIsSubscribed = false;
-
-    snap.forEach((doc) => {
-      const subscription = doc.data();
-      const firstItem = subscription.items[0];
-
-      if (firstItem && firstItem.plan) {
-        newIsSubscribed = firstItem.plan.active;
-        console.log('Subscription status changed:', newIsSubscribed);
-      }
+  if (!user_id) {
+    // User is not logged in, invoke callback with false
+    callback(false);
+    return () => {};
+  }
+  
+    const collectionRef = collection(database, 'users', user_id, 'subscriptions');
+    
+      const unsubscribe = onSnapshot(collectionRef, (snap) => {
+      let newIsSubscribed = false;
+      
+      snap.forEach((doc) => {
+        const subscription = doc.data();
+        const firstItem = subscription.items[0];
+        
+        if (firstItem && firstItem.plan) {
+          newIsSubscribed = firstItem.plan.active;
+          console.log('Subscription status changed:', newIsSubscribed);
+        }
+      });
+      
+      callback(newIsSubscribed);
     });
-
-    callback(newIsSubscribed);
-  });
-
-  return unsubscribe;
+    
+    return unsubscribe;
 };
 
 export default getSubscriptionStatus;

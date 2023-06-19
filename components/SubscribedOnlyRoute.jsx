@@ -45,13 +45,9 @@ const SubscribedOnlyRoute = ({ children }) => {
     return <div>Loading...</div>;
   }
 
-  if ( isOnlySubscribedRoutes && !isAllowed) {
-
-
+  if (!isLoading && isOnlySubscribedRoutes && !isAllowed) {
     // this is for the button inside the checkout page
-
     return <CheckoutPage/>;
-  
   }
 
   return <div>{children}</div>;
